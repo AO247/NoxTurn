@@ -1,0 +1,39 @@
+using UnityEngine;
+
+public class PickUp : MonoBehaviour
+{
+    private Inventory inventory;
+    public GameObject item;
+
+    private bool isPickedUp = false; // Flaga zapobiegaj¹ca wielokrotnemu podniesieniu
+
+    void Start()
+    {
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //if (isPickedUp) return; // Jeœli przedmiot zosta³ ju¿ podniesiony, ignorujemy
+
+        if (other.CompareTag("Player"))
+        {
+            for (int i = 0; i < inventory.slots.Length; i++)
+            {
+                if (inventory.isFull[i] == false)
+                {
+                    if(!isPickedUp)
+                    {
+                        isPickedUp = true; // Oznacz przedmiot jako podniesiony
+                        inventory.isFull[i] = true;
+                        Instantiate(item, inventory.slots[i].transform, false);
+                        inventory.notification = true;
+                        Destroy(gameObject); // Usuñ przedmiot z poziomu
+                    }
+
+                    break;
+                }
+            }
+        }
+    }
+}
