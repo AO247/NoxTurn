@@ -234,7 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5134602557918750719}
   - component: {fileID: 9215671637704852080}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Decal_Projector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,13 +249,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067588849882766447}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.15, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 5.15, z: 0.379}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1132596496943654584}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &9215671637704852080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 2c7a1f47368e6d348a74bf1d3767c6c2, type: 2}
-  m_DrawDistance: 1000
+  m_DrawDistance: 999.92
   m_FadeScale: 0.9
   m_StartAngleFade: 180
   m_EndAngleFade: 180
@@ -281,9 +281,9 @@ MonoBehaviour:
     m_UseOverride: 1
     m_Level: 0
   m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: 0.07184142, y: -1.8852403, z: 0.12812063}
-  m_Size: {x: 0.5460557, y: 4.7704816, z: 0.4562574}
+  m_ScaleMode: 1
+  m_Offset: {x: 0, y: 0, z: 6.74}
+  m_Size: {x: 2.5, y: 2.5, z: 4.85}
   m_FadeFactor: 1
   m_Version: 3
 --- !u!1 &1082439731720629297
@@ -1230,7 +1230,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3964447919951040231}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -2441,7 +2441,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.29, y: 0.29, z: 0.29}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 524772812690480652}
@@ -3666,7 +3666,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7431167572479400887}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -5472,7 +5472,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8331135293753302609}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -6241,6 +6241,10 @@ PrefabInstance:
     - target: {fileID: 8895315948368872528, guid: 6f189459360ae40478e998612ffdd95c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927664191949620316, guid: 6f189459360ae40478e998612ffdd95c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8973638510594602953, guid: 6f189459360ae40478e998612ffdd95c, type: 3}
       propertyPath: m_Layer
