@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _object: {fileID: 0}
+  _parkour: {fileID: 0}
   _text: {fileID: 8206672284475874860}
 --- !u!65 &6466396673546991304
 BoxCollider:
@@ -135,7 +136,6 @@ GameObject:
   - component: {fileID: 3683037453043310303}
   - component: {fileID: 2715959810077554346}
   - component: {fileID: 7068791026028602502}
-  - component: {fileID: 7082716651998051686}
   m_Layer: 13
   m_Name: Text
   m_TagString: Untagged
@@ -301,15 +301,3 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2715959810077554346}
   m_maskType: 0
---- !u!114 &7082716651998051686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8206672284475874860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0368fa5e7d22d834b90f92287cb2fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
