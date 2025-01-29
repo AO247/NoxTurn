@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Shadow
   - Gravestone
+  - Movable
   layers:
   - Default
   - TransparentFX
