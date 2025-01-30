@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class player : MonoBehaviour
 {
@@ -36,7 +37,8 @@ public class player : MonoBehaviour
     private Color targetColor = Color.white;
     private Vector3 targetScale;
     public bool _isImmortal = false;
-    
+    private Gamepad pad;
+    private Coroutine stopRumbleAfterTime;
     AudioManager audioManager;
     
     private void Awake()
@@ -99,20 +101,37 @@ public class player : MonoBehaviour
 
             if (shadowExposure == 0)
             {
-                if(_time < _deathTime)
+                RumblePulse2(0f, 0f);
+                if (_time < _deathTime)
                 {
                     _time += Time.deltaTime * 2;
 
                 }
                 //audioManager.StopPlaying();
             }
-            else if (shadowExposure > 0 && shadowExposure < 5) 
+            else if (shadowExposure == 1)
             {
-                //audioManager.PlaySFXInLoop(audioManager.scorching);
-                //float scaleFactor = (float)(_time / _deathTime);
-                //armature.transform.localScale = Vector3.Lerp(armature.transform.localScale, _basicScale * scaleFactor, Time.deltaTime * 5);
             }
-            else if(shadowExposure == 5)
+            else if (shadowExposure == 2)
+            {
+                RumblePulse2(0.07f, 0.07f);
+            }
+            else if (shadowExposure == 3)
+            {
+                RumblePulse2(0.2f, 0.2f);
+            }
+            else if (shadowExposure == 4)
+            {
+                RumblePulse2(0.4f, 0.4f);
+            }
+            //else if (shadowExposure > 0 && shadowExposure < 5)
+            //{
+            //    RumblePulse2(0.5f, 0.5f);
+            //    //audioManager.PlaySFXInLoop(audioManager.scorching);
+            //    //float scaleFactor = (float)(_time / _deathTime);
+            //    //armature.transform.localScale = Vector3.Lerp(armature.transform.localScale, _basicScale * scaleFactor, Time.deltaTime * 5);
+            //}
+            else if (shadowExposure == 5)
             {
                 _time -= Time.deltaTime * shadowExposure;
             }
@@ -159,6 +178,10 @@ public class player : MonoBehaviour
             //    }
             //    _renderer.material.color = _defaultColor;
             //}
+        }
+        else
+        {
+            RumblePulse2(0f, 0f);
         }
     }
 
@@ -232,6 +255,7 @@ public class player : MonoBehaviour
         _time = _deathTime;
         shadowExposure = 0;
         armature.SetActive(false);
+        RumblePulse(1f, 1f, 0.2f);
         _renderer.enabled = false;
         deathParticle.Play();
         // Poczekaj na zakoñczenie dŸwiêku (lub ustalony czas
@@ -243,6 +267,38 @@ public class player : MonoBehaviour
         // Prze³aduj scenê
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    private void RumblePulse2(float lowFrequency, float highFrequency)
+    {
+        pad = Gamepad.current;
+
+        if (pad != null)
+        {
+            Gamepad.current.SetMotorSpeeds(lowFrequency, highFrequency);
+        }
+    }
+    private void RumblePulse(float lowFrequency, float highFrequency, float duration)
+    {
+        pad = Gamepad.current;
+
+        if (pad != null)
+        {
+            Gamepad.current.SetMotorSpeeds(lowFrequency, highFrequency);
+            stopRumbleAfterTime = StartCoroutine(StopRumble(duration, pad));
+
+        }
+    }
+
+    private IEnumerator StopRumble(float duration, Gamepad pad)
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        pad.SetMotorSpeeds(0f, 0f);
+    }
+
 
 }
 
