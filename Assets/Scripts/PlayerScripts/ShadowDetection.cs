@@ -11,12 +11,14 @@ public class ShadowDetection : MonoBehaviour
     public int thirdStagePercentage = 50;
     public int fourthStagePercentage = 30;
     public int fifthStagePercentage = 1;
+
+    public LayerMask ignoreGroundLayer; // Dodana zmienna LayerMask
+
     void Start()
     {
         playerScript = GetComponent<player>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         float lightCount = 0;
@@ -31,11 +33,11 @@ public class ShadowDetection : MonoBehaviour
                 float hitCount = 0;
                 if (light.type == UnityEngine.LightType.Directional)
                 {
-                    Vector3 lightDirection = -light.transform.forward; // Kierunek œwiat³a jest przeciwny do jego "forward"
+                    Vector3 lightDirection = -light.transform.forward;
                     foreach (var origin in origins)
                     {
-                        // Wykonujemy raycast w kierunku œwiat³a
-                        if (Physics.Raycast(origin.position, lightDirection, out RaycastHit hit))
+                        // Dodano layerMask do raycast
+                        if (Physics.Raycast(origin.position, lightDirection, out RaycastHit hit, Mathf.Infinity, ~ignoreGroundLayer))
                         {
                             hitCount++;
                             Debug.DrawRay(origin.position, lightDirection * 100, Color.green);
@@ -51,16 +53,16 @@ public class ShadowDetection : MonoBehaviour
                 {
                     foreach (var origin in origins)
                     {
-                        if (Physics.Raycast(origin.position, light.transform.position, out RaycastHit hit, Vector3.Distance(origin.position, light.transform.position)))
+                        // Dodano layerMask do raycast
+                        if (Physics.Raycast(origin.position, (light.transform.position - origin.position), out RaycastHit hit, Vector3.Distance(origin.position, light.transform.position), ~ignoreGroundLayer))
                         {
                             hitCount++;
-                            Debug.DrawRay(origin.position, light.transform.position, Color.green);
+                            Debug.DrawRay(origin.position, (light.transform.position - origin.position), Color.green);
 
                         }
                         else
                         {
-                            Debug.DrawRay(origin.position, light.transform.position, Color.red);
-
+                            Debug.DrawRay(origin.position, (light.transform.position - origin.position), Color.red);
                         }
 
                     }
@@ -74,8 +76,6 @@ public class ShadowDetection : MonoBehaviour
             }
         }
 
-        //percentage = (hitCount / (lightCount * (float)origins.Length)) * 100;
-        //Debug.Log(percentage);
         if (percentage > firstStagePercentage)
         {
             playerScript.shadowExposure = 0;
@@ -100,6 +100,5 @@ public class ShadowDetection : MonoBehaviour
         {
             playerScript.shadowExposure = 5;
         }
-
     }
 }

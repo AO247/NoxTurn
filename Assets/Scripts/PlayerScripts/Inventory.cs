@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -57,5 +58,16 @@ public class Inventory : MonoBehaviour
         // P³ynne przemieszczanie do celu
         inventory.transform.position = Vector3.Lerp(
         inventory.transform.position, targetPosition, Time.deltaTime * moveSpeed);
+    }
+    public void GetAllItems()
+    {
+        Debug.Log("Items in inventory:");
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (isFull[i] == true)
+            {
+                 Debug.Log(slots[i].name);
+            }
+        }
     }
 }

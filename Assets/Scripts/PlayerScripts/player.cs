@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,7 +14,7 @@ public class player : MonoBehaviour
     [SerializeField] private float _jumpForce = 5;
     [SerializeField] private float _deathTime = 15f;
     [SerializeField] private SkinnedMeshRenderer _renderer;
-
+    [SerializeField] private ParticleSystem deathParticle;
     public Animator animator;
     private float _time = 1;
     private Vector3 _input;
@@ -25,7 +26,6 @@ public class player : MonoBehaviour
     public int shadowExposure = 0;
     private Rigidbody _rb;
     public GameObject armature;
-
 
     public float normalScale = 100f; // Normalna wielkoœæ
     public float minScale = 0.1f; // Minimalna wielkoœæ
@@ -44,6 +44,8 @@ public class player : MonoBehaviour
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody>();
+        armature.SetActive(true);
+        _renderer.enabled = true;
     }
     
     private void Start()
@@ -191,11 +193,14 @@ public class player : MonoBehaviour
 
     private void GatherInput()
     {
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire1")) && _isGrounded)
+        if (!isDead)
         {
-            //Jump();
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire1")) && _isGrounded)
+            {
+                Jump();
+            }
+            _input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         }
-        _input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
     }
 
     private void Look()
@@ -220,12 +225,15 @@ public class player : MonoBehaviour
     private IEnumerator HandleDeath()
     {
         // Odtwórz dŸwiêk œmierci
-       // audioManager.StopPlaying();
+        // audioManager.StopPlaying();
+        _rb.linearVelocity = Vector3.zero;
         audioManager.PlaySFX(audioManager.death);
         isDead = true;
         _time = _deathTime;
         shadowExposure = 0;
-
+        armature.SetActive(false);
+        _renderer.enabled = false;
+        deathParticle.Play();
         // Poczekaj na zakoñczenie dŸwiêku (lub ustalony czas
         yield return new WaitForSeconds(audioManager.death.length);
 
