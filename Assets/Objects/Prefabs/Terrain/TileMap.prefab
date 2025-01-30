@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 3948555763717126213}
   - component: {fileID: 5673410114467642227}
   - component: {fileID: 9177659329664805686}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SideWalks
   m_TagString: Untagged
   m_Icon: {fileID: 0}

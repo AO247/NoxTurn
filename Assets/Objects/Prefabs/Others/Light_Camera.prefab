@@ -289,6 +289,10 @@ PrefabInstance:
       propertyPath: m_AllowMSAA
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4865375981661288382, guid: 9e3beadf8a849db44b645b960754cda3, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 30711
+      objectReference: {fileID: 0}
     - target: {fileID: 7334341693555231174, guid: 9e3beadf8a849db44b645b960754cda3, type: 3}
       propertyPath: m_Name
       value: CameraPos
