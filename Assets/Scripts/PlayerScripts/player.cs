@@ -27,7 +27,6 @@ public class player : MonoBehaviour
     public int shadowExposure = 0;
     private Rigidbody _rb;
     public GameObject armature;
-
     public float normalScale = 100f; // Normalna wielkoœæ
     public float minScale = 0.1f; // Minimalna wielkoœæ
     public float scalingSpeed = 1f; // Szybkoœæ skalowania
@@ -46,8 +45,6 @@ public class player : MonoBehaviour
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody>();
-        armature.SetActive(true);
-        _renderer.enabled = true;
     }
     
     private void Start()
@@ -223,6 +220,7 @@ public class player : MonoBehaviour
                 Jump();
             }
             _input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+            Debug.Log(_input);
         }
     }
 
@@ -236,7 +234,7 @@ public class player : MonoBehaviour
 
     private void Move()
     {
-        Vector3 velocity = transform.forward * _input.normalized.magnitude * _speed;
+        Vector3 velocity = transform.forward * _input.magnitude * _speed;
         _rb.linearVelocity = new Vector3(velocity.x, _rb.linearVelocity.y, velocity.z);
     }
     private void Jump()
@@ -254,9 +252,8 @@ public class player : MonoBehaviour
         isDead = true;
         _time = _deathTime;
         shadowExposure = 0;
-        armature.SetActive(false);
+        PlayerVisibility(false);
         RumblePulse(1f, 1f, 0.2f);
-        _renderer.enabled = false;
         deathParticle.Play();
         // Poczekaj na zakoñczenie dŸwiêku (lub ustalony czas
         yield return new WaitForSeconds(audioManager.death.length);
@@ -267,6 +264,13 @@ public class player : MonoBehaviour
         // Prze³aduj scenê
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void PlayerVisibility(bool isVisible)
+    {
+        armature.SetActive(isVisible);
+        _renderer.enabled = isVisible;
+    }
+
     private void RumblePulse2(float lowFrequency, float highFrequency)
     {
         pad = Gamepad.current;

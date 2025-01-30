@@ -7462,7 +7462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de93fb8c5d16a640a174529c99c8c69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trans: {fileID: 1516390040897756346}
+  _blob: 0
   hair: {fileID: 865692488713798838}
 --- !u!54 &2149359740038967556
 Rigidbody:

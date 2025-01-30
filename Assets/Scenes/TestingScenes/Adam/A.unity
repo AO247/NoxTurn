@@ -2572,10 +2572,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 7042031180683279004, guid: 60f27e5f8d774b840a122727c9047c54, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7345116695035338043, guid: 60f27e5f8d774b840a122727c9047c54, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 979e659991be59840b2456bc9ee46738, type: 2}
+    - target: {fileID: 7345116695035338043, guid: 60f27e5f8d774b840a122727c9047c54, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 8192
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4794,6 +4802,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 988963126733332680, guid: 6f75e25e808d4004b913d008865890bc, type: 3}
+      propertyPath: turnSpeed
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 1547456400297819088, guid: 6f75e25e808d4004b913d008865890bc, type: 3}
       propertyPath: orthographic size
       value: 10
@@ -7040,6 +7052,14 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 4f58e0537471689408a021e574a62c7d, type: 2}
+    - target: {fileID: 2916086822586620865, guid: c81ada5f07390ed44900160706613ebf, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693835925715597133, guid: c81ada5f07390ed44900160706613ebf, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7281672692997330266, guid: c81ada5f07390ed44900160706613ebf, type: 3}
       propertyPath: m_Constraints
       value: 112
