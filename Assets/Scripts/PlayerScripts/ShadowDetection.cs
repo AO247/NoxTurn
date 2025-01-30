@@ -23,7 +23,7 @@ public class ShadowDetection : MonoBehaviour
     {
         float lightCount = 0;
         float percentage = 100;
-
+        
         lights = Object.FindObjectsByType<Light>(FindObjectsSortMode.None);
         foreach (var light in lights)
         {
@@ -49,22 +49,32 @@ public class ShadowDetection : MonoBehaviour
                     }
 
                 }
-                else
+                else if (light.type == UnityEngine.LightType.Point)
                 {
                     foreach (var origin in origins)
                     {
-                        // Dodano layerMask do raycast
-                        if (Physics.Raycast(origin.position, (light.transform.position - origin.position), out RaycastHit hit, Vector3.Distance(origin.position, light.transform.position), ~ignoreGroundLayer))
-                        {
-                            hitCount++;
-                            Debug.DrawRay(origin.position, (light.transform.position - origin.position), Color.green);
+                        float distanceToLight = Vector3.Distance(origin.position, light.transform.position);
 
+                        // Dodano sprawdzenie zasiêgu œwiat³a
+                        if (distanceToLight <= light.range)
+                        {
+
+                            if (Physics.Raycast(origin.position, (light.transform.position - origin.position), out RaycastHit hit, distanceToLight, ~ignoreGroundLayer))
+                            {
+                                hitCount++;
+                                Debug.DrawRay(origin.position, (light.transform.position - origin.position), Color.green);
+
+                            }
+                            else
+                            {
+                                Debug.DrawRay(origin.position, (light.transform.position - origin.position), Color.red);
+                            }
                         }
                         else
                         {
-                            Debug.DrawRay(origin.position, (light.transform.position - origin.position), Color.red);
+                            hitCount++;
+                            Debug.DrawRay(origin.position, (light.transform.position - origin.position), Color.yellow); // Rysuje linie zó³t¹ je¿eli obiekt nie jest w zasiêgu
                         }
-
                     }
                 }
                 float tymPercentage = (hitCount / (float)origins.Length) * 100;
