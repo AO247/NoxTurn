@@ -77,6 +77,42 @@ public class ShadowDetection : MonoBehaviour
                         }
                     }
                 }
+                else if (light.type == UnityEngine.LightType.Spot)
+                {
+                    foreach (var origin in origins)
+                    {
+                        Vector3 lightDirection = light.transform.position - origin.position; //Kierunek œwiat³a od obiektu do punktu
+                        float distanceToLight = lightDirection.magnitude; // D³ugoœæ wektora = odleg³oœæ
+
+                        if (distanceToLight <= light.range) // Sprawdzamy czy obiekt jest w zasiegu
+                        {
+                            float angle = Vector3.Angle(-light.transform.forward, lightDirection); // Obliczamy k¹t pomiêdzy kierunkiem œwiat³a a pozycj¹ obiektu
+                            if (angle <= light.spotAngle / 2) // Sprawdzamy czy obiekt jest w sto¿ku œwiat³a
+                            {
+                                if (Physics.Raycast(origin.position, (light.transform.position - origin.position), out RaycastHit hit, distanceToLight, ~ignoreGroundLayer))
+                                {
+                                    hitCount++;
+                                    Debug.DrawRay(origin.position, (light.transform.position - origin.position), Color.green);
+
+                                }
+                                else
+                                {
+                                    Debug.DrawRay(origin.position, (light.transform.position - origin.position), Color.red);
+                                }
+                            }
+                            else
+                            {
+                                hitCount++;
+                                Debug.DrawRay(light.transform.position, (origin.position - light.transform.position), Color.cyan); // Obiekt poza sto¿kiem, kolor cyan
+                            }
+                        }
+                        else
+                        {
+                            hitCount++;
+                            Debug.DrawRay(light.transform.position, (origin.position - light.transform.position), Color.yellow); // Obiekt poza zasiêgiem, kolor zolty
+                        }
+                    }
+                }
                 float tymPercentage = (hitCount / (float)origins.Length) * 100;
                 if (percentage > tymPercentage)
                 {

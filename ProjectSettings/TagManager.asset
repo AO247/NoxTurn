@@ -9,6 +9,7 @@ TagManager:
   - Shadow
   - Gravestone
   - Movable
+  - CameraPos
   layers:
   - Default
   - TransparentFX

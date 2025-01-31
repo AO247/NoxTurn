@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6576771070469270694}
   m_Layer: 0
   m_Name: CameraPos
-  m_TagString: Untagged
+  m_TagString: CameraPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,10 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   playerInput: {fileID: 0}
+  player: {fileID: 0}
   turnSpeed: 10
+  smoothTime: 0.2
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &7922430309855839949
 GameObject:
   m_ObjectHideFlags: 0

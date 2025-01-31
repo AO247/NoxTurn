@@ -5,6 +5,8 @@ using UnityEngine.InputSystem.LowLevel;
 
 public class Floor : MonoBehaviour
 {
+    [SerializeField] private GameObject cameraPos;
+    [SerializeField] private GameObject player;
     public float turnSpeed = 50f;
 
     // Docelowa rotacja
@@ -24,7 +26,8 @@ public class Floor : MonoBehaviour
         // Ustawienie pocz¹tkowej rotacji jako docelowej, aby nie wykonywaæ rotacji od razu
         targetRotation = transform.rotation;
         baseRotation = transform.rotation;
-
+        cameraPos = GameObject.FindGameObjectWithTag("CameraPos");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
@@ -82,7 +85,7 @@ public class Floor : MonoBehaviour
         {
             
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
-
+            cameraPos.transform.position = player.transform.position;
             // Sprawdzanie, czy osi¹gniêto docelow¹ rotacjê
             if (Quaternion.Angle(transform.rotation, targetRotation) < 0.1f)
             {

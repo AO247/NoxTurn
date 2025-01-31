@@ -217,7 +217,7 @@ public class player : MonoBehaviour
         {
             if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire1")) && _isGrounded)
             {
-                Jump();
+                //Jump();
             }
             _input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
             Debug.Log(_input);
