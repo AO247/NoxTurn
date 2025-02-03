@@ -1,15 +1,15 @@
+using TMPro;
 using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject item;
-
     private bool isPickedUp = false; // Flaga zapobiegaj¹ca wielokrotnemu podniesieniu
 
     void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,6 +27,7 @@ public class PickUp : MonoBehaviour
                         isPickedUp = true; // Oznacz przedmiot jako podniesiony
                         inventory.isFull[i] = true;
                         Instantiate(item, inventory.slots[i].transform, false);
+                        inventory.slots[i].GetComponent<ItemDescription>().itemDescription = item.GetComponent<ItemDescription>().itemDescription;
                         inventory.notification = true;
                         Destroy(gameObject); // Usuñ przedmiot z poziomu
                     }

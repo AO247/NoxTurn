@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 966548771910719365}
   - component: {fileID: 5104794548535765748}
   - component: {fileID: 3967254196975687159}
+  - component: {fileID: 314703738692943476}
   m_Layer: 5
   m_Name: Key_UI
   m_TagString: Untagged
@@ -75,3 +76,16 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &314703738692943476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5500223150436983677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073877e1e0097f4499e6fa91cc27a519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDescription: To jest KLUCZ. WOW

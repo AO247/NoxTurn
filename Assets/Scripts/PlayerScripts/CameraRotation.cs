@@ -42,7 +42,6 @@ public class CameraRotation : MonoBehaviour
         // P³ynne pod¹¿anie kamery za graczem z offsetem
         Vector3 targetPosition = player.transform.position + offset;
         _transform.position = Vector3.SmoothDamp(_transform.position, targetPosition, ref _currentVelocity, smoothTime);
-        Debug.Log("Player position: " + targetPosition);
 
         // Odczyt wartoœci akcji
         bool isRotLeftPressed = rotLeft.ReadValue<float>() > 0;

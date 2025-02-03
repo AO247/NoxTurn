@@ -23,7 +23,6 @@ public class player : MonoBehaviour
     private Color _defaultColor;
     private bool _isGrounded = true;
     private Vector3 _basicScale;
-    bool isDead = false;
     public int shadowExposure = 0;
     private Rigidbody _rb;
     public GameObject armature;
@@ -35,11 +34,22 @@ public class player : MonoBehaviour
     private Color originalColor = Color.black; 
     private Color targetColor = Color.white;
     private Vector3 targetScale;
-    public bool _isImmortal = false;
     private Gamepad pad;
     private Coroutine stopRumbleAfterTime;
     AudioManager audioManager;
     
+    public InputActionReference moveAction;
+
+
+
+    public bool isImmortal = false;
+    public bool isDead = false;
+    public bool isMoving = false;
+    public bool isPaused = false;
+    public bool isStanding = false;
+
+
+
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -77,7 +87,7 @@ public class player : MonoBehaviour
 
     private void isInShadows()
     {
-        if (!_isImmortal && !isDead)
+        if (!isImmortal && !isDead)
         {
 
 
@@ -102,9 +112,7 @@ public class player : MonoBehaviour
                 if (_time < _deathTime)
                 {
                     _time += Time.deltaTime * 2;
-
                 }
-                //audioManager.StopPlaying();
             }
             else if (shadowExposure == 1)
             {
@@ -121,60 +129,18 @@ public class player : MonoBehaviour
             {
                 RumblePulse2(0.4f, 0.4f);
             }
-            //else if (shadowExposure > 0 && shadowExposure < 5)
-            //{
-            //    RumblePulse2(0.5f, 0.5f);
-            //    //audioManager.PlaySFXInLoop(audioManager.scorching);
-            //    //float scaleFactor = (float)(_time / _deathTime);
-            //    //armature.transform.localScale = Vector3.Lerp(armature.transform.localScale, _basicScale * scaleFactor, Time.deltaTime * 5);
-            //}
+
             else if (shadowExposure == 5)
             {
                 _time -= Time.deltaTime * shadowExposure;
             }
 
-            //_time = Mathf.Clamp(_time, 0, _deathTime);
-            //float t = _time / _deathTime; // Przeskaluj _time na przedział [0, 1]
-            //Color currentColor = Color.Lerp(targetColor, originalColor, t);
 
-            // Ustaw kolor materiału obiektu
-           //_renderer.material.color = currentColor;
             if (_time <= 0)
             {
-                //transform.localScale += new Vector3(0, 0, 0);
                 StartCoroutine(HandleDeath());                
-                //audioManager.PlaySFX(audioManager.death);
-                //_time = _deathTime;
-                //shadowExposure = 0;
-                //_renderer.material.color = originalColor;
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
 
-
-
-            //if (_time <= _deathTime)
-            //{
-            //    _time -= Time.deltaTime;
-
-            //}
-            //if (_time < _deathTime - 0.05)
-            //{
-            //    float scaleFactor = (float)(_time / _deathTime);
-            //    transform.localScale = Vector3.Lerp(transform.localScale, _basicScale * scaleFactor, Time.deltaTime * 5);
-
-            //}
-            //else
-            //{
-            //    if (transform.localScale.x < _basicScale.x)
-            //    {
-            //        transform.localScale = Vector3.Lerp(transform.localScale, _basicScale, Time.deltaTime * 5);
-            //    }
-            //    else
-            //    {
-            //        transform.localScale = _basicScale;
-            //    }
-            //    _renderer.material.color = _defaultColor;
-            //}
         }
         else
         {
@@ -220,7 +186,6 @@ public class player : MonoBehaviour
                 //Jump();
             }
             _input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-            Debug.Log(_input);
         }
     }
 
@@ -241,11 +206,7 @@ public class player : MonoBehaviour
         Vector3 velocity = moveDirection.normalized * _input.magnitude * _speed;
         _rb.linearVelocity = new Vector3(velocity.x, _rb.linearVelocity.y, velocity.z);
     }
-    //private void Move()
-    //{
-    //    Vector3 velocity = transform.forward * _input.magnitude * _speed;
-    //    _rb.linearVelocity = new Vector3(velocity.x, _rb.linearVelocity.y, velocity.z);
-    //}
+    
     private void Jump()
     {
         _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);

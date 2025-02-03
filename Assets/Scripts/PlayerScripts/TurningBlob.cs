@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class TurningBlob : MonoBehaviour
@@ -24,12 +25,13 @@ public class TurningBlob : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton4)
             || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton5)) // Fire1 for LB
         {
             _rb.linearVelocity = Vector3.zero;
             _blob = true;
-            _player._isImmortal = true;
+            _player.isImmortal = true;
         }
         hair.SetActive(_blob);
         if (_blob)
@@ -39,7 +41,7 @@ public class TurningBlob : MonoBehaviour
             {
                 _player.PlayerVisibility(true);
                 _blob = false;
-                _player._isImmortal = false;
+                _player.isImmortal = false;
 
             }
             
