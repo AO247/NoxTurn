@@ -27,9 +27,9 @@ public class player : MonoBehaviour
     public int shadowExposure = 0;
     private Rigidbody _rb;
     public GameObject armature;
-    public float normalScale = 100f; // Normalna wielkoœæ
-    public float minScale = 0.1f; // Minimalna wielkoœæ
-    public float scalingSpeed = 1f; // Szybkoœæ skalowania
+    public float normalScale = 100f; // Normalna wielkoÅ›Ä‡
+    public float minScale = 0.1f; // Minimalna wielkoÅ›Ä‡
+    public float scalingSpeed = 1f; // SzybkoÅ›Ä‡ skalowania
 
 
     private Color originalColor = Color.black; 
@@ -56,7 +56,7 @@ public class player : MonoBehaviour
         _basicScale = transform.localScale;
         _time = _deathTime;
         Physics.gravity = new Vector3(0, -50.81f, 0);
-        targetScale = Vector3.one * 1f; // Ustaw pocz¹tkow¹ skalê
+        targetScale = Vector3.one * 1f; // Ustaw poczÄ…tkowÄ… skalÄ™
 
 
     }
@@ -83,11 +83,11 @@ public class player : MonoBehaviour
 
             if (shadowExposure == 0)
             {
-                targetScale = Vector3.one * normalScale; // Powrót do normalnej wielkoœci
+                targetScale = Vector3.one * normalScale; // PowrÃ³t do normalnej wielkoÅ›ci
             }
             else
             {
-                // Im wiêksze shadowExposure, tym mniejsza skala
+                // Im wiÄ™ksze shadowExposure, tym mniejsza skala
                 float scaleFactor = Mathf.Lerp(normalScale, minScale, shadowExposure / 8f);
                 targetScale = Vector3.one * scaleFactor;
             }
@@ -134,10 +134,10 @@ public class player : MonoBehaviour
             }
 
             //_time = Mathf.Clamp(_time, 0, _deathTime);
-            //float t = _time / _deathTime; // Przeskaluj _time na przedzia³ [0, 1]
+            //float t = _time / _deathTime; // Przeskaluj _time na przedziaÅ‚ [0, 1]
             //Color currentColor = Color.Lerp(targetColor, originalColor, t);
 
-            // Ustaw kolor materia³u obiektu
+            // Ustaw kolor materiaÅ‚u obiektu
            //_renderer.material.color = currentColor;
             if (_time <= 0)
             {
@@ -197,14 +197,14 @@ public class player : MonoBehaviour
             }
 
             Move();
-            if (!_isGrounded && _rb.linearVelocity.y < 0) // Postaæ opada
+            if (!_isGrounded && _rb.linearVelocity.y < 0) // PostaÄ‡ opada
             {
                 _rb.linearVelocity += Vector3.up * Physics.gravity.y * 3.0f * Time.fixedDeltaTime;
-                // 1.5f to wspó³czynnik "przyspieszonego" opadania, mo¿esz go dostosowaæ
+                // 1.5f to wspÃ³Å‚czynnik "przyspieszonego" opadania, moÅ¼esz go dostosowaÄ‡
             }
             else if (!_isGrounded && _rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space))
             {
-                // Utrzymuj ni¿szy skok po puszczeniu przycisku (efekt "krótkiego skoku")
+                // Utrzymuj niÅ¼szy skok po puszczeniu przycisku (efekt "krÃ³tkiego skoku")
                 _rb.linearVelocity += Vector3.up * Physics.gravity.y * 0.8f * Time.fixedDeltaTime;
             }
         }
@@ -226,26 +226,50 @@ public class player : MonoBehaviour
 
     private void Look()
     {
-        if (_input == Vector3.zero) return;
+        // Pobierz kierunek ruchu wzglÄ™dem kamery
+        Vector3 moveDirection = GetCameraRelativeInput();
 
-        var rot = Quaternion.LookRotation(_input.ToIso(), Vector3.up);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, _turnSpeed * Time.deltaTime);
+        if (moveDirection == Vector3.zero) return;
+
+        Quaternion targetRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _turnSpeed * Time.deltaTime);
     }
 
     private void Move()
     {
-        Vector3 velocity = transform.forward * _input.magnitude * _speed;
+        Vector3 moveDirection = GetCameraRelativeInput();
+        Vector3 velocity = moveDirection.normalized * _input.magnitude * _speed;
         _rb.linearVelocity = new Vector3(velocity.x, _rb.linearVelocity.y, velocity.z);
     }
+    //private void Move()
+    //{
+    //    Vector3 velocity = transform.forward * _input.magnitude * _speed;
+    //    _rb.linearVelocity = new Vector3(velocity.x, _rb.linearVelocity.y, velocity.z);
+    //}
     private void Jump()
     {
         _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
-        _isGrounded = false; // Blokujemy mo¿liwoœæ skoku w powietrzu
+        _isGrounded = false; // Blokujemy moÅ¼liwoÅ›Ä‡ skoku w powietrzu
     }
+    private Vector3 GetCameraRelativeInput()
+    {
+        // Pobierz kierunek "do przodu" kamery (bez skÅ‚adowej Y)
+        Vector3 cameraForward = Camera.main.transform.forward;
+        cameraForward.y = 0;
+        cameraForward.Normalize();
 
+        // Pobierz kierunek "w prawo" kamery (bez skÅ‚adowej Y)
+        Vector3 cameraRight = Camera.main.transform.right;
+        cameraRight.y = 0;
+        cameraRight.Normalize();
+
+        // Oblicz kierunek ruchu wzglÄ™dem kamery
+        Vector3 moveDirection = (cameraRight * _input.x + cameraForward * _input.z);
+        return moveDirection;
+    }
     private IEnumerator HandleDeath()
     {
-        // Odtwórz dŸwiêk œmierci
+        // OdtwÃ³rz dÅºwiÄ™k Å›mierci
         // audioManager.StopPlaying();
         _rb.linearVelocity = Vector3.zero;
         audioManager.PlaySFX(audioManager.death);
@@ -255,13 +279,13 @@ public class player : MonoBehaviour
         PlayerVisibility(false);
         RumblePulse(1f, 1f, 0.2f);
         deathParticle.Play();
-        // Poczekaj na zakoñczenie dŸwiêku (lub ustalony czas
+        // Poczekaj na zakoÅ„czenie dÅºwiÄ™ku (lub ustalony czas
         yield return new WaitForSeconds(audioManager.death.length);
 
-        // Resetuj w³aœciwoœci postaci
+        // Resetuj wÅ‚aÅ›ciwoÅ›ci postaci
         _renderer.material.color = originalColor;
 
-        // Prze³aduj scenê
+        // PrzeÅ‚aduj scenÄ™
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
