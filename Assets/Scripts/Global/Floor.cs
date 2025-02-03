@@ -7,8 +7,9 @@ public class Floor : MonoBehaviour
 {
     [SerializeField] private GameObject cameraPos;
     [SerializeField] private GameObject player;
-    public float turnSpeed = 50f;
 
+    public float turnSpeed = 50f;
+    public InputActionReference worldLeft;
     // Docelowa rotacja
     private Quaternion targetRotation;
     private Quaternion baseRotation;
@@ -33,25 +34,6 @@ public class Floor : MonoBehaviour
     private void Update()
     {
 
-        //if (!isRotating)
-        //{
-        //    if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton4)) // Fire1 for LB
-        //    {
-        //        audioManager.PlaySFX(audioManager.turn);
-        //        targetRotation *= Quaternion.Euler(0, -10f, 0);
-        //        isPressed = true;
-        //        isRotating = true;
-        //        time = 0.0f;
-        //    }
-        //    else if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton5)) // Fire2 for RB
-        //    {
-        //        audioManager.PlaySFX(audioManager.turn);
-        //        targetRotation *= Quaternion.Euler(0, 10f, 0);
-        //        isPressed = true;
-        //        isRotating = true;
-        //        time = 0.0f;
-        //    }
-        //}
         if (!isRotating)
         {
             time += Time.deltaTime;

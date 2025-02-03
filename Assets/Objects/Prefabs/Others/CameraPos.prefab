@@ -45,41 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00de11cab27c0f468f5fac3fb45c39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotLeft:
-    m_Name: Rot Left
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: b564569c-38a9-431e-ae1b-8a66cf40f143
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 15d974ed-70dd-452f-aab1-ad99a82e5a67
-      m_Path: <Gamepad>/leftTrigger
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rot Left
-      m_Flags: 0
-    m_Flags: 0
-  rotRight:
-    m_Name: Rot Right
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: f51b27d7-00c3-483a-916f-64008c181709
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 32747381-7f10-4f0c-9b71-19fdda9ea9fc
-      m_Path: <Gamepad>/rightTrigger
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rot Right
-      m_Flags: 0
-    m_Flags: 0
-  playerInput: {fileID: 0}
+  rotLeft: {fileID: 3411087046543851498, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
+  rotRight: {fileID: 4439481503163755637, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
   player: {fileID: 0}
   turnSpeed: 10
   smoothTime: 0.2

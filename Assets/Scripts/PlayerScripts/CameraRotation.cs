@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 public class CameraRotation : MonoBehaviour
 {
-    public InputAction rotLeft; // Akcja obrotu w lewo
-    public InputAction rotRight; // Akcja obrotu w prawo
+    public InputActionReference rotLeft; // Akcja obrotu w lewo
+    public InputActionReference rotRight; // Akcja obrotu w prawo
     public PlayerInput playerInput;
     public Transform player; // Obiekt gracza - zamieniono GameObject na Transform
     public float turnSpeed = 80f; // Prêdkoœæ obrotu
@@ -24,28 +24,29 @@ public class CameraRotation : MonoBehaviour
         if (player == null)
             player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        // Aktywacja akcji
-        rotLeft.Enable();
-        rotRight.Enable();
+        // Aktywacja akcji za pomoc¹ w³aœciwoœci .action
+        rotLeft.action.Enable();
+        rotRight.action.Enable();
     }
 
     private void OnDestroy()
     {
         // Wy³¹czanie akcji
-        rotLeft.Disable();
-        rotRight.Disable();
+        rotLeft.action.Disable();
+        rotRight.action.Disable();
     }
 
     private void Update()
     {
         if (player == null) return;
+
         // P³ynne pod¹¿anie kamery za graczem z offsetem
-        Vector3 targetPosition = player.transform.position + offset;
+        Vector3 targetPosition = player.position + offset;
         _transform.position = Vector3.SmoothDamp(_transform.position, targetPosition, ref _currentVelocity, smoothTime);
 
-        // Odczyt wartoœci akcji
-        bool isRotLeftPressed = rotLeft.ReadValue<float>() > 0;
-        bool isRotRightPressed = rotRight.ReadValue<float>() > 0;
+        // Odczyt wartoœci akcji (korzystamy z w³aœciwoœci .action)
+        bool isRotLeftPressed = rotLeft.action.ReadValue<float>() > 0;
+        bool isRotRightPressed = rotRight.action.ReadValue<float>() > 0;
 
         // Obracanie kamery
         if (isRotLeftPressed)
