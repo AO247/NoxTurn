@@ -85,6 +85,7 @@ public class Settings : MonoBehaviour
                 break;
             }
         }
+        Inventory.needUpadate = true;
     }
 
     public void SetMaster(float volume)
