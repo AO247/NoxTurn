@@ -85,7 +85,7 @@ PrefabInstance:
       addedObject: {fileID: 7281672692997330266}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 138e5fc684f0a0f4e8163bc5246773f0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6693835925715597133}
+      addedObject: {fileID: 4782685083788049761}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 138e5fc684f0a0f4e8163bc5246773f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2916086822586620865}
@@ -122,8 +122,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &6693835925715597133
-BoxCollider:
+--- !u!64 &4782685083788049761
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -140,9 +140,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.8788664, y: 2.7165725, z: 1.8788664}
-  m_Center: {x: 0, y: 1.3582863, z: 0}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: 138e5fc684f0a0f4e8163bc5246773f0, type: 3}
 --- !u!136 &2916086822586620865
 CapsuleCollider:
   m_ObjectHideFlags: 0

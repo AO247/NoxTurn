@@ -1,32 +1,34 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool isPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject settingsUI;
     public InputActionReference pauseAction;
-    public Button resumeButton;
-    public Button settingsButton;
-    public Button quitButton;
+    public GameObject firstSelected;
+    public EventSystem eventSystem;
 
     private void Start()
     {
         // Na starcie ukrywamy menu pauzy
         pauseMenuUI.SetActive(false);
+        settingsUI.SetActive(false);
     }
 
     private void TogglePause()
     {
         isPaused = !isPaused;
         pauseMenuUI.SetActive(isPaused);
-
+        Select();
         // Wstrzymanie lub wznowienie gry
         Time.timeScale = isPaused ? 0f : 1f;
     }
     private void Update()
     {
-        if (pauseAction.action.triggered)
+        if (pauseAction.action.triggered && settingsUI.activeSelf == false)
         {
             TogglePause();
         }
@@ -38,5 +40,15 @@ public class PauseMenu : MonoBehaviour
             TogglePause();
         }
         
+    }
+    public void Setting()
+    {
+        settingsUI.SetActive(true);
+        pauseMenuUI.SetActive(false);
+        settingsUI.GetComponent<Settings>().Select();
+    }
+    public void Select()
+    {
+        eventSystem.SetSelectedGameObject(firstSelected);
     }
 }
