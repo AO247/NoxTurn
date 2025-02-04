@@ -16,6 +16,7 @@ public class player : MonoBehaviour
     [SerializeField] private float _deathTime = 15f;
     [SerializeField] private SkinnedMeshRenderer _renderer;
     [SerializeField] private ParticleSystem deathParticle;
+    [SerializeField] private PlayerSound playerSound;
     public Animator animator;
     private float _time = 1;
     private Vector3 _input;
@@ -93,10 +94,12 @@ public class player : MonoBehaviour
 
             if (shadowExposure == 0)
             {
+                AkSoundEngine.SetState("Life", "Safe");
                 targetScale = Vector3.one * normalScale; // Powrót do normalnej wielkości
             }
             else
             {
+                AkSoundEngine.SetState("Life", "Danger");
                 // Im większe shadowExposure, tym mniejsza skala
                 float scaleFactor = Mathf.Lerp(normalScale, minScale, shadowExposure / 8f);
                 targetScale = Vector3.one * scaleFactor;
@@ -138,7 +141,8 @@ public class player : MonoBehaviour
 
             if (_time <= 0)
             {
-                StartCoroutine(HandleDeath());                
+                AkSoundEngine.SetState("Life", "Safe");
+                StartCoroutine(HandleDeath());
             }
 
         }
@@ -233,12 +237,13 @@ public class player : MonoBehaviour
         // Odtwórz dźwięk śmierci
         // audioManager.StopPlaying();
         _rb.linearVelocity = Vector3.zero;
-        audioManager.PlaySFX(audioManager.death);
+        //audioManager.PlaySFX(audioManager.death);
         isDead = true;
         _time = _deathTime;
         shadowExposure = 0;
         PlayerVisibility(false);
         RumblePulse(1f, 1f, 0.2f);
+        playerSound.PlayDeath();
         deathParticle.Play();
         // Poczekaj na zakończenie dźwięku (lub ustalony czas
         yield return new WaitForSeconds(audioManager.death.length);
@@ -286,6 +291,11 @@ public class player : MonoBehaviour
             yield return null;
         }
         pad.SetMotorSpeeds(0f, 0f);
+    }
+
+    private void PlayFootstep()
+    {
+        playerSound.PlayFootstepSound();
     }
 
 

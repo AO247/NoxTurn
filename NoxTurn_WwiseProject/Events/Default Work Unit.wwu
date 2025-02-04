@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" SchemaVersion="123">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Footsteps" ID="{7F9F4E6B-6A2D-4ADA-9E2D-509DFA0BA33C}">
+					<ChildrenList>
+						<Action Name="" ID="{5B9F7456-7F86-4EAE-9EEA-E14FE44584C0}" ShortID="817785603">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{3FB777C4-988A-46DD-94ED-72B9F082BF08}" WorkUnitID="{2722560C-B43B-483F-9C66-A31FDE31DE63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dying" ID="{913020DC-1EB3-4954-81B7-75676479C43A}">
+					<ChildrenList>
+						<Action Name="" ID="{159FE072-8F0F-49AC-A28D-411658CB935C}" ShortID="1010839864">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dying" ID="{4D1D2092-C931-44D6-BE73-A36EBAF3A33A}" WorkUnitID="{2722560C-B43B-483F-9C66-A31FDE31DE63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Death" ID="{3080D7AF-FBD5-46EC-852A-7A33B4403E1E}">
+					<ChildrenList>
+						<Action Name="" ID="{0D21CED1-4965-4A41-898C-B5D372AEC5DB}" ShortID="483796585">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="death" ID="{1BBE4411-5531-4EA8-BE31-8BB80A31CC20}" WorkUnitID="{2722560C-B43B-483F-9C66-A31FDE31DE63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

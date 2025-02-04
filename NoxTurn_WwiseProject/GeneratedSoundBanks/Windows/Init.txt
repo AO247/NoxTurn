@@ -1,3 +1,12 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	2137943	Life			\Default Work Unit\Life	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Life			
+	779278001	Death	Life			
+	938058686	Safe	Life			
+	4174463524	Danger	Life			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 

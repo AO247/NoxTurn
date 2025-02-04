@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E699C3DB-70A2-456F-BE0E-3F8CA9EA0572}" SchemaVersion="123">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{E699C3DB-70A2-456F-BE0E-3F8CA9EA0572}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E699C3DB-70A2-456F-BE0E-3F8CA9EA0572}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{00412662-A71A-4B63-8EB6-11E19CED35C9}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Death" ID="{3080D7AF-FBD5-46EC-852A-7A33B4403E1E}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Dying" ID="{913020DC-1EB3-4954-81B7-75676479C43A}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Footsteps" ID="{7F9F4E6B-6A2D-4ADA-9E2D-509DFA0BA33C}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>
