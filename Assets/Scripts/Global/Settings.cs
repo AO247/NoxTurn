@@ -14,6 +14,9 @@ public class Settings : MonoBehaviour
     public GameObject graphicsSettings;
     public GameObject controlsSettings;
     public GameObject canvas;
+    public UnityEngine.UI.Button graphicsButton;
+    public UnityEngine.UI.Button controlsButton;
+    public UnityEngine.UI.Button backButton;
 
     public InputActionReference pauseAction;
 
@@ -25,9 +28,12 @@ public class Settings : MonoBehaviour
     public GameObject firstSelected;
     public EventSystem eventSystem;
 
+    public Slider sfxSlider;
+
+
+
     private void Start()
     {
-        // Na starcie ukrywamy menu pauzy
         pauseMenuUI.SetActive(false);
         settingsUI.SetActive(true);
 
@@ -39,14 +45,11 @@ public class Settings : MonoBehaviour
 
         for (int i = 0; i < resolutions.Length; i++)
         {
-            // Tworzymy string zawieraj¹cy tylko szerokoœæ i wysokoœæ
             string option = resolutions[i].width + " x " + resolutions[i].height;
-            // Dodajemy tylko, jeœli taki rozmiar jeszcze nie zosta³ dodany
             if (uniqueResolutions.Add(option))
             {
                 options.Add(option);
-                // Jeœli aktualna rozdzielczoœæ ekranu odpowiada tej opcji,
-                // zapamiêtujemy indeks (uwzglêdniamy, ¿e opcje mog¹ byæ filtrowane)
+
                 if (resolutions[i].width == Screen.currentResolution.width &&
                     resolutions[i].height == Screen.currentResolution.height)
                 {
@@ -71,10 +74,7 @@ public class Settings : MonoBehaviour
 
     public void SetResolution(int resolutionIndex)
     {
-        // Wyszukujemy w³aœciw¹ rozdzielczoœæ na podstawie wybranego indeksu
-        // UWAGA: W tym przypadku, po filtracji unikalnych rozdzielczoœci, mo¿e byæ trudniej
-        // przypisaæ w³aœciwy element z tablicy resolutions. Mo¿esz przechowywaæ dodatkowo listê
-        // dopasowanych Resolution lub wyszukaæ pierwsz¹, która pasuje do wybranej opcji.
+      
         string selectedOption = resolutionDropdown.options[resolutionIndex].text;
         foreach (Resolution res in resolutions)
         {
@@ -85,6 +85,7 @@ public class Settings : MonoBehaviour
                 break;
             }
         }
+        Inventory.needUpadate = true;
     }
 
     public void SetMaster(float volume)
@@ -112,6 +113,18 @@ public class Settings : MonoBehaviour
     {
         graphicsSettings.SetActive(true);
         controlsSettings.SetActive(false);
+        Navigation nav = graphicsButton.navigation;
+        nav.selectOnDown = fullScreenToggle;
+        graphicsButton.navigation = nav;
+        
+        nav = controlsButton.navigation;
+        nav.selectOnDown = fullScreenToggle;
+        controlsButton.navigation = nav;
+
+        nav = backButton.navigation;
+        nav.selectOnUp = sfxSlider;
+        backButton.navigation = nav;
+
     }
 
     public void Controls()

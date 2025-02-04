@@ -31,21 +31,43 @@ public class Inventory : MonoBehaviour
 
     private bool itemDescriptionActive = false;
 
-
+    public static bool needUpadate = false;
 
     [SerializeField] private float moveSpeed = 5f; // Prêdkoœæ ruchu
 
     void Start()
     {
-        originalPosition = inventory.transform.position;
-        leftPosition = new Vector3(originalPosition.x - 130, originalPosition.y, originalPosition.z);
+        originalPosition = new Vector3(0.036f * Screen.width, Screen.height/2, 0.0f);
+        leftPosition = new Vector3(originalPosition.x - (0.0677f * Screen.width), originalPosition.y, 0.0f);
+        //originalPosition = inventory.transform.position;
+        //leftPosition = new Vector3(originalPosition.x - 130, originalPosition.y, originalPosition.z);
         targetPosition = leftPosition; // Startowa pozycja
         inventory.transform.position = leftPosition;
         slotHighlight();
     }
 
+    void updatePosition()
+    { 
+        originalPosition = new Vector3(0.036f * Screen.width, Screen.height / 2, 0.0f);
+        leftPosition = new Vector3(originalPosition.x - (0.0677f * Screen.width), originalPosition.y, 0.0f);
+        notification = false;
+        moving = false;
+        if (isClosed)
+            targetPosition = leftPosition;
+        else
+            targetPosition = originalPosition;
+        isClosed = !isClosed;
+        itemDescriptionVisibility(false);
+
+        needUpadate = false;
+    }
+
     void Update()
     {
+        if (needUpadate)
+        {
+            updatePosition();
+        }
         if (!PauseMenu.isPaused)
         {
             if (!isClosed)
