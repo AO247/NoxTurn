@@ -35,13 +35,13 @@ MonoBehaviour:
     m_Value: 1
   colorMode:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 0
   color:
-    m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 0.9245283, g: 0.501513, b: 0.501513, a: 1}
   tint:
     m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 0.2204076, g: 0.2599482, b: 0.3679245, a: 1}
   maxFogDistance:
     m_OverrideState: 0
     m_Value: 5000
@@ -56,13 +56,13 @@ MonoBehaviour:
     m_Value: 1000
   baseHeight:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 317.58
   maximumHeight:
     m_OverrideState: 1
     m_Value: 500
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 1000
+    m_Value: 415
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
@@ -74,16 +74,19 @@ MonoBehaviour:
     m_Value: 1
   depthExtent:
     m_OverrideState: 1
-    m_Value: 64
+    m_Value: 61.28
   denoisingMode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 0
   anisotropy:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 0.402
   sliceDistributionUniformity:
     m_OverrideState: 1
     m_Value: 0.5
+  multipleScatteringIntensity:
+    m_OverrideState: 0
+    m_Value: 0
   m_FogControlMode:
     m_OverrideState: 1
     m_Value: 1

@@ -12,6 +12,7 @@ public class TurningBlob : MonoBehaviour
     private player _player;
     public GameObject hair;
     float upperY, lowerY; 
+    private Animator animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +20,7 @@ public class TurningBlob : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _renderer = GetComponent<Renderer>();
         _player = GetComponent<player>();
+        animator = GetComponent<Animator>();
 
     }
 
@@ -29,9 +31,12 @@ public class TurningBlob : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton4)
             || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton5)) // Fire1 for LB
         {
+            animator.SetBool("isJumpIn", true);
+            
             _rb.linearVelocity = Vector3.zero;
             _blob = true;
             _player.isImmortal = true;
+
         }
         hair.SetActive(_blob);
         if (_blob)

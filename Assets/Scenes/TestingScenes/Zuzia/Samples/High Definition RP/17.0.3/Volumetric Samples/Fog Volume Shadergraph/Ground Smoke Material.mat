@@ -1,21 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7305898987014203766
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 13
-  hdPluginSubTargetMaterialVersions:
-    m_Keys: []
-    m_Values: 
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -23,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LocalClouds_Material
-  m_Shader: {fileID: -6465566751694194690, guid: 713a6f8cc6afcf64bbac7c8aff8f5e79, type: 3}
+  m_Name: Ground Smoke Material
+  m_Shader: {fileID: -6465566751694194690, guid: 9ad6e7b561ed43442a048712b9e953fc, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -39,20 +23,24 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Main_3D_Noise:
-        m_Texture: {fileID: 11700000, guid: 1fe54a721d0e2504e89f121c723404a8, type: 3}
+    - _Detail_Noise:
+        m_Texture: {fileID: 2800000, guid: 1d8481de16af723418a688958c41224b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture3D_478178ff2845429682ab8d8f14ab7f0c_Texture_1:
-        m_Texture: {fileID: 11700000, guid: bc05f2e39084d7849a52034d2d41f1ef, type: 3}
+    - _SampleTexture2D_6261743b2b0343d483ae0bfaab125d37_Texture_1:
+        m_Texture: {fileID: 2800000, guid: d2a205438dad68e44980e4ba33bd0303, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture3D_ab7a3e35c8414367b5fe9cf1e56e9fe4_Texture_1:
-        m_Texture: {fileID: 11700000, guid: bd96ac1d57f47d34f9f99535cd2acd45, type: 3}
+    - _SampleTexture2D_7a70cec364c6445ab31ee43d6dafc4cd_Texture_1:
+        m_Texture: {fileID: 2800000, guid: d2a205438dad68e44980e4ba33bd0303, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Secondary_3D_Noise:
-        m_Texture: {fileID: 11700000, guid: d1aae012f8a4f23478471851f17ff915, type: 3}
+    - _SampleTexture3D_896cd4fcb1374d958a04f5a89d4b24cf_Texture_1:
+        m_Texture: {fileID: 11700000, guid: dc0f32febfcf46c499fed1f8df013307, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Shaping_Noise:
+        m_Texture: {fileID: 2800000, guid: 1d8481de16af723418a688958c41224b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -74,39 +62,41 @@ Material:
     - _AlphaDstBlend: 0
     - _AlphaSrcBlend: 1
     - _BlendMode: 0
-    - _Cloud_Absorption: 1
+    - _Color_Gradient_End: 2.23
     - _ConservativeDepthOffsetEnable: 0
-    - _Contrast: 0.75
+    - _Counter_Flow_Speed: 0.25
     - _CullMode: 2
     - _CullModeForward: 2
     - _DepthOffsetEnable: 0
+    - _DetailSpeed: 1
+    - _Detail_Tiling: 0.27
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 0
     - _EnableFogOnTransparent: 1
-    - _Erode: 0.75
-    - _Erode_On_Border: 0.75
-    - _Float: 0.47
+    - _Flatten: 5.48
+    - _Float: 4
     - _FogVolumeAlphaBlendOp: 0
     - _FogVolumeBlendMode: 1
     - _FogVolumeColorBlendOp: 0
     - _FogVolumeDstAlphaBlend: 1
     - _FogVolumeDstColorBlend: 1
-    - _FogVolumeFogDistanceProperty: 1
+    - _FogVolumeFogDistanceProperty: 4.83
     - _FogVolumeSrcAlphaBlend: 1
     - _FogVolumeSrcColorBlend: 1
-    - _Main_Noise_Tiling: 0.5
+    - _Height_Tiling: 1.84
+    - _Max_Height: 4
+    - _Min_Height: 0
     - _OpaqueCullMode: 2
-    - _Pow: 0.96
-    - _Power: 2
+    - _Remap: 0
     - _RenderQueueType: 1
-    - _Secondary_Noise: 0.1
-    - _Secondary_Noise_Intensity: 0.1
-    - _Secondary_Noise_Tiling: 3
+    - _Shaping_Tiling: 1
+    - _Speed: 0.05
     - _SrcBlend: 1
     - _SurfaceType: 0
-    - _Tiling: 0.5
+    - _TIling: 1
+    - _Tiling: -0.1
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
@@ -114,21 +104,41 @@ Material:
     - _TransparentSortPriority: 0
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
+    - _Up_Stretch: 4
     - _UseShadowThreshold: 0
-    - _Use_Alpha_Channel: 0
-    - _Wind_Force: 0.1
+    - _Wind_Speed: 0.25
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
+    - _alpha: 1
     m_Colors:
-    - _Clouds_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Color_Border: {r: 0.563071, g: 0.64994293, b: 0.6886792, a: 0}
-    - _Color_Dense: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 0}
+    - _Bottom_Color: {r: 0.112896055, g: 0.4056604, b: 0.11834949, a: 1}
+    - _Color: {r: 1, g: 0.92878336, b: 0.83647794, a: 0}
+    - _Color2: {r: 0.7169812, g: 0.55657834, b: 0.34270793, a: 1}
+    - _DetailDirection: {r: 0, g: 0, b: 1, a: 0}
+    - _Direction: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _FogVolumeSingleScatteringAlbedo: {r: 1, g: 1, b: 1, a: 1}
-    - _Tiling: {r: 0.16, g: 0.1, b: 0.1, a: 0}
-    - _Wind_DIrection: {r: 1, g: -0.1, b: 0, a: 0}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Top_Color: {r: 0.6896582, g: 0.73162156, b: 0.7735849, a: 0.43137255}
+    - _Vector3: {r: 1, g: 0, b: 0, a: 0}
+    - _Wind_Direction: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
+--- !u!114 &2064897693191722383
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
