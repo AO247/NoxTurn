@@ -236,15 +236,23 @@ public class player : MonoBehaviour
     {
         // Odtwórz dźwięk śmierci
         // audioManager.StopPlaying();
+
+
         _rb.linearVelocity = Vector3.zero;
+        audioManager.PlaySFX(audioManager.death);
+        animator.SetBool("isDead", true);
         //audioManager.PlaySFX(audioManager.death);
         isDead = true;
         _time = _deathTime;
         shadowExposure = 0;
-        PlayerVisibility(false);
+        //PlayerVisibility(false);
         RumblePulse(1f, 1f, 0.2f);
+        yield return new WaitForSeconds(.5f);
+
         playerSound.PlayDeath();
         deathParticle.Play();
+        yield return new WaitForSeconds(.2f);
+        PlayerVisibility(false);
         // Poczekaj na zakończenie dźwięku (lub ustalony czas
         yield return new WaitForSeconds(audioManager.death.length);
 
