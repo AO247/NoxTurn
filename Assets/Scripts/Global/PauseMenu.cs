@@ -23,6 +23,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = !isPaused;
         pauseMenuUI.SetActive(isPaused);
         Select();
+
         // Wstrzymanie lub wznowienie gry
         Time.timeScale = isPaused ? 0f : 1f;
     }
