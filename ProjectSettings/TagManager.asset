@@ -12,6 +12,7 @@ TagManager:
   - CameraPos
   - Inventory
   - Key
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - HideObjects
   - SideWalk
   - Movable
-  - 
+  - Enemy
   - 
   - 
   - 

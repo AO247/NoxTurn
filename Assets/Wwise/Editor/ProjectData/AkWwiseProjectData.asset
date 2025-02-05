@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: dbc399e6a2706f45be0e3f8ca9ea0572
     GuidInternal: 
-    m_lastTime: -8584628160840036934
+    m_lastTime: -8584628160401711885
     List:
     - name: Main
       guid: 622641001aa7634b8eb611e19ced35c9
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 86358358613fb4429ce6260e3fb724cb
     GuidInternal: 
-    m_lastTime: -8584628160840872027
+    m_lastTime: -8584628160401955960
     List:
     - name: Death
       guid: afd78030d5fbec46852a7a33b4403e1e
