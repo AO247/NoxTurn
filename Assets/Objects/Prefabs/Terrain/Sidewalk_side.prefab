@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d8d5cdeb8d567894f810aa900f146f24, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7555185752953191562, guid: c093df764e31bd74ea9720f2b5a058a9, type: 3}
+    - target: {fileID: -5754084199372789682, guid: d8d5cdeb8d567894f810aa900f146f24, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1993594184220952901, guid: c093df764e31bd74ea9720f2b5a058a9, type: 3}
     - target: {fileID: 919132149155446097, guid: d8d5cdeb8d567894f810aa900f146f24, type: 3}
       propertyPath: m_Name
       value: Sidewalk_side
@@ -90,4 +98,4 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -1993594184220952901, guid: d8d5cdeb8d567894f810aa900f146f24, type: 3}
+  m_Mesh: {fileID: -1993594184220952901, guid: c093df764e31bd74ea9720f2b5a058a9, type: 3}
