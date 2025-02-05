@@ -10,11 +10,19 @@
     "Type": "User",
     "GUID": "{00412662-A71A-4B63-8EB6-11E19CED35C9}",
     "Language": "SFX",
-    "Hash": "{C8917C53-B3C7-CE00-7243-C6F8735733CA}",
+    "Hash": "{B42D97CE-CFC1-5175-4AE4-17A863C273B2}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
     "Media": [
+     {
+      "Id": "25589250",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "item.wav",
+      "CachePath": "D2/{D2599820-D2F1-5CF2-3D5C-D521E39E4626}.wem"
+     },
      {
       "Id": "45577415",
       "Language": "SFX",
@@ -72,6 +80,14 @@
       "CachePath": "5B/{5B2718AA-4107-D1EB-4D77-0440A28E4C68}.wem"
      },
      {
+      "Id": "435420463",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "gate_open.wav",
+      "CachePath": "0E/{0E3902FA-B0DD-E251-7FC8-343A11BA6A00}.wem"
+     },
+     {
       "Id": "460116762",
       "Language": "SFX",
       "Streaming": "false",
@@ -102,6 +118,14 @@
       "Location": "Memory",
       "ShortName": "dyingNew.wav",
       "CachePath": "A5/{A5BD4708-A394-E84C-4F39-F8058EE9DBD7}.wem"
+     },
+     {
+      "Id": "945806139",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "gate_locked.wav",
+      "CachePath": "7F/{7F8B0222-6A5E-3772-3739-34EC72B4D9E6}.wem"
      },
      {
       "Id": "984025951",
@@ -290,6 +314,48 @@
       ]
      },
      {
+      "Id": "1589953441",
+      "Name": "gate_locked",
+      "ObjectPath": "\\Events\\Default Work Unit\\gate_locked",
+      "GUID": "{15E880ED-5753-47EE-9445-5DF6913BF320}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.77245224",
+      "DurationMax": "0.77245224",
+      "MediaRefs": [
+       {
+        "Id": "945806139"
+       }
+      ]
+     },
+     {
+      "Id": "3328279379",
+      "Name": "gate_open",
+      "ObjectPath": "\\Events\\Default Work Unit\\gate_open",
+      "GUID": "{79FEE1B1-49F7-4A7E-B5A5-42E0E01B8444}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.5369928",
+      "DurationMax": "2.5369928",
+      "MediaRefs": [
+       {
+        "Id": "435420463"
+       }
+      ]
+     },
+     {
+      "Id": "1222624712",
+      "Name": "item",
+      "ObjectPath": "\\Events\\Default Work Unit\\item",
+      "GUID": "{52CD7ED0-1E07-4364-BE3C-24209A336697}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.76242036",
+      "DurationMax": "0.76242036",
+      "MediaRefs": [
+       {
+        "Id": "25589250"
+       }
+      ]
+     },
+     {
       "Id": "4000322109",
       "Name": "shadow_in",
       "ObjectPath": "\\Events\\Default Work Unit\\shadow_in",
@@ -366,6 +432,6 @@
     ]
    }
   ],
-  "FileHash": "{E3B1A24D-9A43-08EF-51DD-5BC62ACFF621}"
+  "FileHash": "{EA7FEE6B-06AC-704E-DFE4-BFAAC3D9C120}"
  }
 }

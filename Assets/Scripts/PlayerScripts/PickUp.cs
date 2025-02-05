@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
+    [SerializeField] private ItemSound itemSound;
     private Inventory inventory;
     public GameObject item;
     private bool isPickedUp = false; // Flaga zapobiegaj¹ca wielokrotnemu podniesieniu
@@ -15,6 +16,7 @@ public class PickUp : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //if (isPickedUp) return; // Jeœli przedmiot zosta³ ju¿ podniesiony, ignorujemy
+        itemSound.PlayItem();
 
         if (other.CompareTag("Player"))
         {

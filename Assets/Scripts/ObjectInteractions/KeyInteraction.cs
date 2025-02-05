@@ -9,8 +9,11 @@ public class KeyInteraction : MonoBehaviour
     public Transform rightGate;
 
     [SerializeField] GameObject text;
+    [SerializeField] private ObjectSound objectSound;
+
     private bool enter = false;
     private bool opened = false;
+    private bool door = false;
     private Quaternion targetRotationRightGate = Quaternion.Euler(0, -75f, 0);
     private Quaternion targetRotationLeftGate = Quaternion.Euler(0, -75f, 0);
     public float turnSpeed = 50f;
@@ -30,13 +33,24 @@ public class KeyInteraction : MonoBehaviour
             {
                 opened = true;
                 isRotating = true;
+                door = true;
                 text.GetComponent<Renderer>().enabled = false;
             }
+            else
+            {
+                objectSound.PlayLock();
+            }
         }
+
         if (opened && isRotating)
         {
             rightGate.transform.rotation = Quaternion.RotateTowards(rightGate.transform.rotation, targetRotationRightGate, turnSpeed * Time.deltaTime);
             leftGate.transform.rotation = Quaternion.RotateTowards(leftGate.transform.rotation, targetRotationLeftGate, turnSpeed * Time.deltaTime);
+            if (door)
+            {
+                objectSound.PlayOpen();
+                door = false;
+            }
             // Sprawdzanie, czy osi¹gniêto docelow¹ rotacjê
             if (Quaternion.Angle(rightGate.transform.rotation, targetRotationRightGate) < 0.1f)
             {
@@ -45,6 +59,7 @@ public class KeyInteraction : MonoBehaviour
                 isRotating = false; // Zakoñczenie obrotu
             }
         }
+  
     }
     private void OnTriggerEnter(Collider other)
     {
