@@ -15,28 +15,13 @@ public class LvlChange : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerInRange = true; // Gracz w zasiêgu
-            Debug.Log("Gracz w zasiêgu! Wciœnij 'F' aby przejœæ do nowej sceny.");
-        }
+        StartCoroutine(ChangeScene());
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerInRange = false; // Gracz opuœci³ zasiêg
-        }
-    }
 
     private void Update()
     {
-        // SprawdŸ, czy gracz nacisn¹³ klawisz F i jest w zasiêgu
-        if (isPlayerInRange && (Input.GetKeyDown(KeyCode.F) || Input.GetButtonDown("Fire3")))
-        {
-            StartCoroutine(ChangeScene());
-        }
+
     }
 
     private IEnumerator ChangeScene()

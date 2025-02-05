@@ -8,10 +8,46 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/OutdoorsScene.unity
     guid: 8124e5870f4fd4c779e7a5f994e84ad1
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 1.unity
+    guid: e46f751af93addc4ab5e8546ac14c696
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 2.unity
+    guid: 90c1a01c3dcfe0d48ad9bdf4e534185a
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 3.unity
+    guid: 776a1303664df4f4ab40a32da07ddbe2
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 4.unity
+    guid: cc78429bd3070124a8ced15c6d30e5aa
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 5.unity
+    guid: ad4c733de8f489948808fd81ef63471c
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 6.unity
+    guid: d67976781cbe74d4d881712715e426ce
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 7.unity
+    guid: b42e9530b559ff5498e2d66fd627722e
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 8.unity
+    guid: 99a341b385f24bf4483a08ffde068aa5
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 9.unity
+    guid: 711f2f8bf82f41f4d988eaba777d99a6
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 10.unity
+    guid: 5dd3a2ce40e2a9e4095386a8ad7cab52
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 11.unity
+    guid: b669725d00d6d44478a679bf122f1612
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 12.unity
+    guid: 459365140d83ef24ca70ddcdefa69736
   - enabled: 0
     path: Assets/Scenes/TestingScenes/Adam/A.unity
     guid: 74c5222096984fd4d8720956538e302f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestingScenes/Zuzia/Z.unity
     guid: e6170efaf1007c741922e3d550e8a7a9
   m_configObjects:

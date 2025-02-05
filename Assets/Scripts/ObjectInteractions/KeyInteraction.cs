@@ -7,21 +7,22 @@ public class KeyInteraction : MonoBehaviour
     public Inventory inventory;
     public Transform leftGate;
     public Transform rightGate;
-
+    public int direction = 1;
     [SerializeField] GameObject text;
     [SerializeField] private ObjectSound objectSound;
 
     private bool enter = false;
     private bool opened = false;
     private bool door = false;
-    private Quaternion targetRotationRightGate = Quaternion.Euler(0, -75f, 0);
-    private Quaternion targetRotationLeftGate = Quaternion.Euler(0, -75f, 0);
+    private Quaternion targetRotationRightGate;
+    private Quaternion targetRotationLeftGate;
     public float turnSpeed = 50f;
     private bool isRotating = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        targetRotationRightGate = Quaternion.Euler(0, direction * -75f, 0);
+        targetRotationLeftGate = Quaternion.Euler(0, direction * -75f, 0);
     }
 
     // Update is called once per frame
@@ -44,6 +45,7 @@ public class KeyInteraction : MonoBehaviour
 
         if (opened && isRotating)
         {
+
             rightGate.transform.rotation = Quaternion.RotateTowards(rightGate.transform.rotation, targetRotationRightGate, turnSpeed * Time.deltaTime);
             leftGate.transform.rotation = Quaternion.RotateTowards(leftGate.transform.rotation, targetRotationLeftGate, turnSpeed * Time.deltaTime);
             if (door)
