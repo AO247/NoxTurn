@@ -14,16 +14,10 @@ public class Enemy : MonoBehaviour
     private bool _start = true;
     private bool _end = false;
     private Vector3 _currentVelocity; // Potrzebne do SmoothDamp
-    private Transform _transform; //zcacheowany transform
     private Transform playerTransform;
     private NavMeshAgent nav;
     public  Light light;
     public bool playerDetected = false;
-
-    private void Awake()
-    {
-        _transform = transform;
-    }
 
     void Start()
     {
@@ -31,7 +25,7 @@ public class Enemy : MonoBehaviour
             Debug.LogError("Brak way pointów dla obiektu: " + gameObject.name);
         else
         {
-            _transform.position = _waypoints[0].position;
+            transform.position = _waypoints[0].position;
             if (_waypoints.Count > 1)
                 _index = 1; // Ustaw indeks na nastêpny waypoint po starcie
         }
@@ -42,9 +36,15 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(_transform.position, playerTransform.position) < 2.0f)
+
+        if (Vector3.Distance(transform.position, playerTransform.position) < 2.0f)
         {
-            playerTransform.gameObject.GetComponent<player>().HandleDeath();
+            Debug.Log("Player SHould Be dead");
+            player player = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
+            if (!player.isDead)
+            {
+                StartCoroutine(player.HandleDeath());
+            }
         }
         PlayerDetection();
         if (!playerDetected)
@@ -61,15 +61,15 @@ public class Enemy : MonoBehaviour
 
 
             // Sprawdzamy, czy osi¹gnêliœmy waypoint
-            float distance = Vector3.Distance(_transform.position, _waypoints[_index].position);
+            float distance = Vector3.Distance(transform.position, _waypoints[_index].position);
             if (distance <= 2.0f)
             {
                 UpdateIndex();
             }
         }
-        else 
+        else
         {
-            float distance = Vector3.Distance(_transform.position, nav.destination);
+            float distance = Vector3.Distance(transform.position, nav.destination);
             if (distance <= 2.0f)
             {
                 playerDetected = false;

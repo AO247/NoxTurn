@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 
@@ -18,12 +19,12 @@ public class Floor : MonoBehaviour
     private bool isRotating = false;
     //private bool isPressed = false;
     private float time = 0.0f;
-
+    private GameObject enemy;
    // AudioManager audioManager;
-    //private void Awake()
-    //{
-        //audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-    //}
+   //private void Awake()
+   //{
+   //audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+   //}
     private void Start()
     {
         // Ustawienie pocz¹tkowej rotacji jako docelowej, aby nie wykonywaæ rotacji od razu
@@ -31,6 +32,7 @@ public class Floor : MonoBehaviour
         baseRotation = transform.rotation;
         cameraPos = GameObject.FindGameObjectWithTag("CameraPos");
         player = GameObject.FindGameObjectWithTag("Player");
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
     }
 
     private void Update()
@@ -48,19 +50,22 @@ public class Floor : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Q) || Input.GetKeyUp(KeyCode.JoystickButton4)) // Fire1 for LB
             {
                 targetRotation = baseRotation;
-                targetRotation *= Quaternion.Euler(0, -90f, 0);
+                targetRotation *= Quaternion.Euler(0, 90f, 0);
                 baseRotation = targetRotation;
                 globalSound.PlayTurn();
                 isRotating = true;
+
+
                 //isPressed = false;
             }
             else if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyUp(KeyCode.JoystickButton5)) // Fire2 for RB
             {
                 targetRotation = baseRotation;
-                targetRotation *= Quaternion.Euler(0, 90f, 0);
+                targetRotation *= Quaternion.Euler(0, -90f, 0);
                 baseRotation = targetRotation;
                 globalSound.PlayTurn();
                 isRotating = true;
+
                 //isPressed = false;
             }
         }
@@ -69,7 +74,6 @@ public class Floor : MonoBehaviour
         // P³ynne obracanie w stronê docelowej rotacji
         if (isRotating)
         {
-            
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
             cameraPos.transform.position = player.transform.position;
             // Sprawdzanie, czy osi¹gniêto docelow¹ rotacjê
