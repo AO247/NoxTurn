@@ -34,8 +34,8 @@ public class MainMenu : MonoBehaviour
     private void Update()
     {
         float rot = island.transform.rotation.eulerAngles.y;
-        //Debug.Log(rot);
-        if (rot == 270) //PLAY
+        Debug.Log(rot);
+        if (rot == 90) //PLAY
         {
             selectedOption = 0;
             //Debug.Log("-90");
@@ -54,7 +54,7 @@ public class MainMenu : MonoBehaviour
             SettingsSign.GetComponent<MeshRenderer>().material = Dark;
         }
 
-        if (rot == 90) //QUIT
+        if (rot == 270) //QUIT
         {
             selectedOption = 2;
             //Debug.Log("180");
