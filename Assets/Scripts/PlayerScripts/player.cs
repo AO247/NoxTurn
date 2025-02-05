@@ -61,8 +61,8 @@ public class player : MonoBehaviour
     
     private void Start()
     {
-        
         //_renderer = GetComponent<Renderer>();
+        AkSoundEngine.SetState("Life", "Safe");
         originalColor = _renderer.material.color;
         _defaultColor = _renderer.material.color;
         _basicScale = transform.localScale;
