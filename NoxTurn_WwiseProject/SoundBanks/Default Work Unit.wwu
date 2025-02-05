@@ -5,10 +5,13 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{00412662-A71A-4B63-8EB6-11E19CED35C9}">
 					<ObjectInclusionList>
+						<ObjectRef Name="item" ID="{52CD7ED0-1E07-4364-BE3C-24209A336697}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="shadow_in" ID="{645E5864-EFD2-43E9-9C03-DDB92E097E77}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="shadow_out" ID="{AB20203C-01DB-4410-88B1-45790359A46F}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Death" ID="{3080D7AF-FBD5-46EC-852A-7A33B4403E1E}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="gate_locked" ID="{15E880ED-5753-47EE-9445-5DF6913BF320}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Dying" ID="{913020DC-1EB3-4954-81B7-75676479C43A}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="gate_open" ID="{79FEE1B1-49F7-4A7E-B5A5-42E0E01B8444}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Footsteps" ID="{7F9F4E6B-6A2D-4ADA-9E2D-509DFA0BA33C}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="turn" ID="{B45087AF-2134-4F24-A7DC-CB9DB3D31DF5}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

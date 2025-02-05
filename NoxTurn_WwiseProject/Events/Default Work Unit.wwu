@@ -69,6 +69,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="gate_locked" ID="{15E880ED-5753-47EE-9445-5DF6913BF320}">
+					<ChildrenList>
+						<Action Name="" ID="{B64F3FE3-E69D-4177-8C8E-1AEA04945003}" ShortID="33910074">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gate_locked" ID="{356A66AB-142F-4BE8-B707-244DAD350ADB}" WorkUnitID="{2722560C-B43B-483F-9C66-A31FDE31DE63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="gate_open" ID="{79FEE1B1-49F7-4A7E-B5A5-42E0E01B8444}">
+					<ChildrenList>
+						<Action Name="" ID="{48369DCB-5BC4-4FD6-BBF2-094F0C28FD02}" ShortID="123028802">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gate_open" ID="{6ECE6D83-C285-4A23-8D39-ECBDCC394AEA}" WorkUnitID="{2722560C-B43B-483F-9C66-A31FDE31DE63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="item" ID="{52CD7ED0-1E07-4364-BE3C-24209A336697}">
+					<ChildrenList>
+						<Action Name="" ID="{A8BF386D-A81D-4836-B894-7C4368BA97E2}" ShortID="1066168586">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="item" ID="{32507245-360D-4EBE-8EB1-ECA0F5764F8B}" WorkUnitID="{2722560C-B43B-483F-9C66-A31FDE31DE63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
