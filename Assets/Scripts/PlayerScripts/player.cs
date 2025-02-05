@@ -162,6 +162,8 @@ public class player : MonoBehaviour
         else
         {
             RumblePulse2(0f, 0f);
+            AkSoundEngine.SetState("Life", "Safe");
+            dyingParticle.Stop();
         }
     }
 
