@@ -1704,6 +1704,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2989285200388650775, guid: 6f75e25e808d4004b913d008865890bc, type: 3}
+      propertyPath: m_AllowDynamicResolution
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3012550977475389051, guid: 6f75e25e808d4004b913d008865890bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1811,6 +1815,14 @@ PrefabInstance:
     - target: {fileID: 7385879872147343425, guid: 6f75e25e808d4004b913d008865890bc, type: 3}
       propertyPath: m_ShadowResolution.m_UseOverride
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7953348333409223598, guid: 6f75e25e808d4004b913d008865890bc, type: 3}
+      propertyPath: antialiasing
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7953348333409223598, guid: 6f75e25e808d4004b913d008865890bc, type: 3}
+      propertyPath: allowDynamicResolution
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7965644613948515533, guid: 6f75e25e808d4004b913d008865890bc, type: 3}
       propertyPath: m_Name
