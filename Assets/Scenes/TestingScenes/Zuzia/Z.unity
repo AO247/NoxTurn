@@ -647,7 +647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1053412083459192564, guid: 60f27e5f8d774b840a122727c9047c54, type: 3}
       propertyPath: m_SelfCollisionDistance
-      value: 1.09
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 1053412083459192564, guid: 60f27e5f8d774b840a122727c9047c54, type: 3}
       propertyPath: m_SelfCollisionStiffness
