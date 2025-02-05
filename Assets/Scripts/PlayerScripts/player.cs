@@ -239,7 +239,7 @@ public class player : MonoBehaviour
         Vector3 moveDirection = (cameraRight * _input.x + cameraForward * _input.z);
         return moveDirection;
     }
-    private IEnumerator HandleDeath()
+    public IEnumerator HandleDeath()
     {
         // Odtwórz dźwięk śmierci
         // audioManager.StopPlaying();
