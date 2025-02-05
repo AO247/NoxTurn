@@ -11,6 +11,7 @@ TagManager:
   - Movable
   - CameraPos
   - Inventory
+  - Key
   layers:
   - Default
   - TransparentFX

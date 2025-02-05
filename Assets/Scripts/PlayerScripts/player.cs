@@ -69,7 +69,7 @@ public class player : MonoBehaviour
         _time = _deathTime;
         Physics.gravity = new Vector3(0, -50.81f, 0);
         targetScale = Vector3.one * 1f; // Ustaw początkową skalę
-
+        dyingParticle.Play();
 
     }
     private void Update()
@@ -93,31 +93,23 @@ public class player : MonoBehaviour
         {
 
 
+            var emission = dyingParticle.emission;
+
             if (shadowExposure == 0)
             {
-                if (dyingParticle.isPlaying)
-                {
-                    dyingParticle.Stop();
-
-                }
+                // Wyłącz emisję
+                emission.enabled = false;
                 AkSoundEngine.SetState("Life", "Safe");
-                targetScale = Vector3.one * normalScale; // Powrót do normalnej wielkości
+                targetScale = Vector3.one * normalScale;
             }
             else
             {
-                if (dyingParticle.isStopped)
-                {
-                    dyingParticle.Play();
-                }
+                // Włącz emisję
+                emission.enabled = true;
                 AkSoundEngine.SetState("Life", "Danger");
-                // Im większe shadowExposure, tym mniejsza skala
                 float scaleFactor = Mathf.Lerp(normalScale, minScale, shadowExposure / 8f);
                 targetScale = Vector3.one * scaleFactor;
             }
-            Debug.Log("isPaused: " + dyingParticle.isPaused);
-            Debug.Log("isStopped: " + dyingParticle.isStopped);
-            Debug.Log("isPlaying: " + dyingParticle.isPlaying);
-
             // Stopniowa zmiana skali
             //armature.transform.localScale = Vector3.Lerp(armature.transform.localScale, targetScale, Time.deltaTime * scalingSpeed);
 

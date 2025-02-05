@@ -28,6 +28,7 @@ public class PickUp : MonoBehaviour
                         inventory.isFull[i] = true;
                         Instantiate(item, inventory.slots[i].transform, false);
                         inventory.slots[i].GetComponent<ItemDescription>().itemDescription = item.GetComponent<ItemDescription>().itemDescription;
+                        inventory.slots[i].GetComponent<ItemDescription>().name = item.GetComponent<ItemDescription>().name;
                         inventory.notification = true;
                         Destroy(gameObject); // Usuñ przedmiot z poziomu
                     }

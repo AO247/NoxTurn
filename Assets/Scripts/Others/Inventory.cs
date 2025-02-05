@@ -161,17 +161,33 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-    public void GetAllItems()
+
+
+    public bool findKey()
     {
-        Debug.Log("Items in inventory:");
         for (int i = 0; i < slots.Length; i++)
         {
-            if (isFull[i] == true)
+            // Sprawdzamy, czy w danym slocie jest jakiœ obiekt (przedmiot zosta³ dodany jako dziecko)
+            if (slots[i].transform.childCount > 0)
             {
-                 Debug.Log(slots[i].name);
+                // Pobieramy pierwsze dziecko – zak³adamy, ¿e w slocie jest tylko jeden item
+                GameObject itemInSlot = slots[i].transform.GetChild(0).gameObject;
+
+                // Sprawdzamy, czy nazwa obiektu (lub inna w³aœciwoœæ, np. tag) odpowiada "Key"
+                // UWAGA: Zwróæ uwagê, ¿e nazwa GameObjectu mo¿e byæ inna ni¿ nazwa komponentu!
+                if (itemInSlot.GetComponent<ItemDescription>().name == "Key")
+                {
+                    // Usuwamy przedmiot (klucz) z ekwipunku
+                    Destroy(itemInSlot);
+                    // Zak³adamy, ¿e masz dostêp do tablicy isFull (np. poprzez referencjê do inventory)
+                    isFull[i] = false;
+                    return true;
+                }
             }
         }
+        return false;
     }
+
     private void itemDescriptionVisibility(bool status = true)
     {
         if(status)
