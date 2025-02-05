@@ -1011,7 +1011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4656741940391797973, guid: 60f27e5f8d774b840a122727c9047c54, type: 3}
       propertyPath: isImmortal
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4700909491311849639, guid: 60f27e5f8d774b840a122727c9047c54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
