@@ -1751,13 +1751,7 @@ PrefabInstance:
     - {fileID: 5811600626992616272, guid: 6f75e25e808d4004b913d008865890bc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4255552744053164707, guid: 6f75e25e808d4004b913d008865890bc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2044624120}
-    - targetCorrespondingSourceObject: {fileID: 4255552744053164707, guid: 6f75e25e808d4004b913d008865890bc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2044624119}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f75e25e808d4004b913d008865890bc, type: 3}
 --- !u!4 &1337006991 stripped
 Transform:
@@ -2313,51 +2307,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b0d8e1ab3b798f4cb26fe1692340cfd, type: 3}
---- !u!1 &2044624117 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4255552744053164707, guid: 6f75e25e808d4004b913d008865890bc, type: 3}
-  m_PrefabInstance: {fileID: 1253588981}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2044624119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044624117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ea4e8da17363e149876364f2546c33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  bOverrideScalingFactor: 0
-  scalingFactor: -1
-  listenerId: 0
---- !u!114 &2044624120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044624117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5469262e2cf842a46a4b63e9dec3dea0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  usePositionOffsetData: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  scalingFactor: 1
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!4 &2059971559 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1940388241940473953, guid: 35315efb3e8bb114185993bf97bb8225, type: 3}
@@ -2386,6 +2335,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4124634087090174363, guid: 953ec94f388ee9e48a543fa20cf04372, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.47
+      objectReference: {fileID: 0}
     - target: {fileID: 5809688814510812921, guid: 953ec94f388ee9e48a543fa20cf04372, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -2445,6 +2398,10 @@ PrefabInstance:
     - target: {fileID: 6399646959199002529, guid: 953ec94f388ee9e48a543fa20cf04372, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706792243594572530, guid: 953ec94f388ee9e48a543fa20cf04372, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
