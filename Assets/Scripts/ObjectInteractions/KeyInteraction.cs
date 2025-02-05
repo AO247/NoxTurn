@@ -11,7 +11,7 @@ public class KeyInteraction : MonoBehaviour
     [SerializeField] GameObject text;
     private bool enter = false;
     private bool opened = false;
-    private Quaternion targetRotationRightGate = Quaternion.Euler(0, 75f, 0);
+    private Quaternion targetRotationRightGate = Quaternion.Euler(0, -75f, 0);
     private Quaternion targetRotationLeftGate = Quaternion.Euler(0, -75f, 0);
     public float turnSpeed = 50f;
     private bool isRotating = false;
