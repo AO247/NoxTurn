@@ -78,6 +78,12 @@
       "GUID": "{A00EEC4D-00DC-4333-992A-E65EF0250057}",
       "Switches": [
        {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps\\Stone",
+        "GUID": "{72F2B243-F5F8-4124-A555-C3485AB412DC}"
+       },
+       {
         "Id": "4248645337",
         "Name": "Grass",
         "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps\\Grass",
@@ -88,6 +94,6 @@
     ]
    }
   ],
-  "FileHash": "{1CF6FA72-2F2B-8CC7-FC9B-AA8925792655}"
+  "FileHash": "{4F2B349F-94FA-4669-16F2-374E8128A976}"
  }
 }

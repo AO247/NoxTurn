@@ -145,8 +145,8 @@ MonoBehaviour:
         guid: 6b4e9f7f2d6ada4a9e2d509dfa0ba33c
       Path: Events\Default Work Unit\Footsteps
       maxAttenuation: 0
-      maxDuration: 0.36195135
-      minDuration: 0.24865219
+      maxDuration: 0.42986313
+      minDuration: 0.14254594
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -253,7 +253,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d37373c6087d5b44b3168f93319907bc
     GuidInternal: 
-    m_lastTime: -8584629242399667248
+    m_lastTime: -8584628946895765714
     List:
     - name: Footsteps
       guid: 4dec0ea0dc003343992ae65ef0250057
@@ -286,6 +286,22 @@ MonoBehaviour:
         - ElementName: Grass
           ObjectType: 10
           guid: bd8d80d44de8cb4b9cc18ab81f7c70c9
+      - name: Stone
+        guid: 43b2f272f8f52441a555c3485ab412dc
+        id: 1216965916
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d37373c6087d5b44b3168f93319907bc
+        - ElementName: Footsteps
+          ObjectType: 11
+          guid: 4dec0ea0dc003343992ae65ef0250057
+        - ElementName: Stone
+          ObjectType: 10
+          guid: 43b2f272f8f52441a555c3485ab412dc
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []

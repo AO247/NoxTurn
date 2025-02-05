@@ -43,6 +43,7 @@ namespace AK
             namespace SWITCH
             {
                 static const AkUniqueID GRASS = 4248645337U;
+                static const AkUniqueID STONE = 1216965916U;
             } // namespace SWITCH
         } // namespace FOOTSTEPS
 
