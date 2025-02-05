@@ -85,8 +85,8 @@ Material:
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 0
     - _EnableFogOnTransparent: 1
-    - _Erode: 0.26
-    - _Erode_On_Border: 1
+    - _Erode: 0
+    - _Erode_On_Border: 0.071
     - _Float: 0.47
     - _FogVolumeAlphaBlendOp: 0
     - _FogVolumeBlendMode: 1
