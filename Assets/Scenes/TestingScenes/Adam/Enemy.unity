@@ -2777,43 +2777,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1993594184220952901, guid: d8d5cdeb8d567894f810aa900f146f24, type: 3}
---- !u!1 &778973047 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3320848700760407490, guid: 953ec94f388ee9e48a543fa20cf04372, type: 3}
-  m_PrefabInstance: {fileID: 3468983829696239584}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &778973049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778973047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 14071
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 5e8537751e923ab41bfc6a862b83a743, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1 &791100548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2947,6 +2910,8 @@ MonoBehaviour:
   _speed: 5
   _rotationSpeed: 2
   _smoothTime: 0.2
+  light: {fileID: 2027380094}
+  playerDetected: 0
 --- !u!195 &791100554
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3085,6 +3050,14 @@ PrefabInstance:
     - target: {fileID: 1132596496943654584, guid: 60f27e5f8d774b840a122727c9047c54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656741940391797973, guid: 60f27e5f8d774b840a122727c9047c54, type: 3}
+      propertyPath: isDead
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656741940391797973, guid: 60f27e5f8d774b840a122727c9047c54, type: 3}
+      propertyPath: isImmortal
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4778743137288585028, guid: 60f27e5f8d774b840a122727c9047c54, type: 3}
       propertyPath: m_Name
@@ -10681,16 +10654,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4124634087090174360, guid: 953ec94f388ee9e48a543fa20cf04372, type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4124634087090174360, guid: 953ec94f388ee9e48a543fa20cf04372, type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4124634087090174360, guid: 953ec94f388ee9e48a543fa20cf04372, type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4244102054713050915, guid: 953ec94f388ee9e48a543fa20cf04372, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 7330fa491693efd46a61ebbdf11b2d2b, type: 2}
     - target: {fileID: 5809688814510812921, guid: 953ec94f388ee9e48a543fa20cf04372, type: 3}
       propertyPath: m_LocalScale.x
       value: 8
@@ -10781,10 +10758,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6399646959199002529, guid: 953ec94f388ee9e48a543fa20cf04372, type: 3}
       insertIndex: -1
       addedObject: {fileID: 791100549}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3320848700760407490, guid: 953ec94f388ee9e48a543fa20cf04372, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 778973049}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 953ec94f388ee9e48a543fa20cf04372, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
