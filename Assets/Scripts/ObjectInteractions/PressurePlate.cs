@@ -4,7 +4,7 @@ public class PressurePlate : MonoBehaviour
 {
     public Vector3 _originalPos;
     bool _isPressed = false;
-    private float _maxDownPos = 0.2f;
+    private float _maxDownPos = 0.1f;
 
     [SerializeField] private Transform _target;
     public Vector3 _targetOriginalPos;
@@ -34,20 +34,20 @@ public class PressurePlate : MonoBehaviour
     void Update()
     {
         if(_isPressed){
-            //if(Vector3.Distance(_target.position, _targetOriginalPos) < _targetMaxTransPos){
+            if(Vector3.Distance(_target.position, _targetOriginalPos) < _targetMaxTransPos){
                 _target.Translate(_targetMovePosition.x, _targetMovePosition.y, _targetMovePosition.z);
-            //}
+            }
             if(transform.position.y > _originalPos.y - _maxDownPos){
                 transform.Translate(0.00f, -0.01f, 0.00f);
             }
         }
-        //else if(!_isPressed){
-         //   if(Vector3.Distance(_target.position, _targetOriginalPos) > 0){
-        //        _target.Translate(-_targetMovePosition.x, -_targetMovePosition.y, -_targetMovePosition.z);
-         //   }
-         //   if(transform.position.y < _originalPos.y){
-         //       transform.Translate(0.00f, 0.01f, 0.00f);
-         //   }
-        //}
+        else if(!_isPressed){
+            if(Vector3.Distance(_target.position, _targetOriginalPos) > 0.2){
+                _target.Translate(-_targetMovePosition.x, -_targetMovePosition.y, -_targetMovePosition.z);
+            }
+            if(transform.position.y < _originalPos.y){
+                transform.Translate(0.00f, 0.01f, 0.00f);
+            }
+        }
     }
 }
