@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
     //AudioManager audioManager;
 
     //[SerializeField] private PlayerSound playerSound;
+    public GameObject settingsUI;
 
     public GameObject PlaySign;
     public GameObject SettingsSign;
@@ -26,6 +27,8 @@ public class MainMenu : MonoBehaviour
     }
     private void Start()
     {
+        settingsUI.SetActive(false);
+
         //sceneFade = Object.FindFirstObjectByType<SceneFade>();
     }
     private void Update()
@@ -80,6 +83,10 @@ public class MainMenu : MonoBehaviour
                 QuitGame();
 
             }
+            if (selectedOption == 1)
+            {
+                Setting();
+            }
             //else if(selectedOption == 3)
             //{
             //    if(pressed)
@@ -127,4 +134,12 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void Setting()
+    {
+        settingsUI.SetActive(true);
+        //pauseMenuUI.SetActive(false);
+        //settingsUI.GetComponent<Settings>().Select();
+    }
 }
+
