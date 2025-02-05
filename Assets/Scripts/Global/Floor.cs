@@ -7,6 +7,8 @@ public class Floor : MonoBehaviour
 {
     [SerializeField] private GameObject cameraPos;
     [SerializeField] private GameObject player;
+    [SerializeField] private GlobalSound globalSound;
+
 
     public float turnSpeed = 50f;
     public InputActionReference worldLeft;
@@ -48,6 +50,7 @@ public class Floor : MonoBehaviour
                 targetRotation = baseRotation;
                 targetRotation *= Quaternion.Euler(0, -90f, 0);
                 baseRotation = targetRotation;
+                globalSound.PlayTurn();
                 isRotating = true;
                 //isPressed = false;
             }
@@ -56,6 +59,7 @@ public class Floor : MonoBehaviour
                 targetRotation = baseRotation;
                 targetRotation *= Quaternion.Euler(0, 90f, 0);
                 baseRotation = targetRotation;
+                globalSound.PlayTurn();
                 isRotating = true;
                 //isPressed = false;
             }

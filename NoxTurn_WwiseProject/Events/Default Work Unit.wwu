@@ -36,6 +36,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="shadow_in" ID="{645E5864-EFD2-43E9-9C03-DDB92E097E77}">
+					<ChildrenList>
+						<Action Name="" ID="{031EB9CF-E1D2-4D63-8038-CA3F3D1B6FB5}" ShortID="892714883">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="shadow_in" ID="{2477C983-9AE2-4A4D-8F6A-9F844EF11FD3}" WorkUnitID="{2722560C-B43B-483F-9C66-A31FDE31DE63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="shadow_out" ID="{AB20203C-01DB-4410-88B1-45790359A46F}">
+					<ChildrenList>
+						<Action Name="" ID="{CCA976FD-58E0-4375-9F5A-7F1D0AA3DF61}" ShortID="25523425">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="shadow_out" ID="{B98E282A-4418-4EBD-AD59-584F7AD8D994}" WorkUnitID="{2722560C-B43B-483F-9C66-A31FDE31DE63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="turn" ID="{B45087AF-2134-4F24-A7DC-CB9DB3D31DF5}">
+					<ChildrenList>
+						<Action Name="" ID="{2089828F-832B-43F5-AD29-BF53AC43A341}" ShortID="625939206">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="turn" ID="{9650097A-9338-4379-91B8-ECA216E12F82}" WorkUnitID="{2722560C-B43B-483F-9C66-A31FDE31DE63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

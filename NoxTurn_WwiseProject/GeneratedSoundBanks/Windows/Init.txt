@@ -3,7 +3,6 @@ State Group	ID	Name			Wwise Object Path	Notes
 
 State	ID	Name	State Group			Notes
 	748895195	None	Life			
-	779278001	Death	Life			
 	938058686	Safe	Life			
 	4174463524	Danger	Life			
 

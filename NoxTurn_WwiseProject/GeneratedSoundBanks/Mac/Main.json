@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{00412662-A71A-4B63-8EB6-11E19CED35C9}",
     "Language": "SFX",
-    "Hash": "{A85B47CE-39ED-E6E6-1F42-EF5FCEA9F28F}",
+    "Hash": "{C8917C53-B3C7-CE00-7243-C6F8735733CA}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -21,7 +21,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps3.wav",
-      "CachePath": "56/{56B4371B-474D-0421-AB1E-B29C6FCE2BB3}.wem"
+      "CachePath": "C1/{C1279509-0CDE-CCDE-8A29-5B5FA918B7FC}.wem"
      },
      {
       "Id": "127839435",
@@ -29,7 +29,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps5.wav",
-      "CachePath": "98/{9887A944-8632-67AD-FD66-01929B97CE69}.wem"
+      "CachePath": "F0/{F0C48AF9-AE2E-D9EE-25D7-58AE947E0913}.wem"
      },
      {
       "Id": "172333205",
@@ -37,7 +37,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps6.wav",
-      "CachePath": "D0/{D0D4B881-4476-1C65-A9A2-E6D8BC212976}.wem"
+      "CachePath": "5B/{5B1E2451-A65C-23E3-9EB3-0EFCF0668239}.wem"
      },
      {
       "Id": "254817739",
@@ -45,7 +45,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps_stone3.wav",
-      "CachePath": "E0/{E073530E-D912-7839-F4A1-A30025FE0570}.wem"
+      "CachePath": "EB/{EBECD530-3CB5-0C93-F2D1-330105321527}.wem"
      },
      {
       "Id": "283228146",
@@ -53,7 +53,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps4.wav",
-      "CachePath": "4C/{4C3CDA1B-0106-82B3-2292-96575FC47D9C}.wem"
+      "CachePath": "03/{03F44398-28A8-5D5A-DAC7-ABCE478A4EBA}.wem"
      },
      {
       "Id": "291255313",
@@ -61,7 +61,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps_stone2.wav",
-      "CachePath": "B9/{B97B25CA-7968-2A11-9387-1A16068AF497}.wem"
+      "CachePath": "AD/{AD509D6A-DE89-7FFB-99F1-BDCA3D5C9C5F}.wem"
      },
      {
       "Id": "417915509",
@@ -69,7 +69,23 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps_stone8.wav",
-      "CachePath": "7D/{7D81CFE6-9068-669E-7229-9DF918ECB439}.wem"
+      "CachePath": "5B/{5B2718AA-4107-D1EB-4D77-0440A28E4C68}.wem"
+     },
+     {
+      "Id": "460116762",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "turn2.wav",
+      "CachePath": "63/{63BA20AF-C0E2-9421-B3AD-1B2783EDAA06}.wem"
+     },
+     {
+      "Id": "525093954",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "turn.wav",
+      "CachePath": "B3/{B3A0A362-3D04-39AD-6DBE-1BF67E12E121}.wem"
      },
      {
       "Id": "666079680",
@@ -77,7 +93,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps_stone5.wav",
-      "CachePath": "D7/{D70036F8-4E8E-F26E-19BE-084A12E29380}.wem"
+      "CachePath": "49/{4931DCD3-9DB4-2E5F-8A5F-D73073938316}.wem"
      },
      {
       "Id": "937973895",
@@ -85,7 +101,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "dyingNew.wav",
-      "CachePath": "C1/{C1965A0B-06FB-B377-B74F-D60CFFBF786B}.wem"
+      "CachePath": "A5/{A5BD4708-A394-E84C-4F39-F8058EE9DBD7}.wem"
      },
      {
       "Id": "984025951",
@@ -93,7 +109,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "death.wav",
-      "CachePath": "08/{085359A0-DDD0-E18D-A769-ED6F30AFE796}.wem"
+      "CachePath": "57/{57248F69-5D80-F9AA-7B1A-340F3B6ED589}.wem"
      },
      {
       "Id": "990274294",
@@ -101,7 +117,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps_stone6.wav",
-      "CachePath": "E7/{E7F4252F-A54E-5B60-9130-A8533E06BCC6}.wem"
+      "CachePath": "41/{4128CC9A-45B8-BF29-17B2-7198B4759B16}.wem"
      },
      {
       "Id": "1027450457",
@@ -109,7 +125,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps1.wav",
-      "CachePath": "B3/{B34C3CAE-3576-3CA8-2E20-CEE2CA410963}.wem"
+      "CachePath": "03/{03CAA314-1658-1971-9EAF-9BEAC4458819}.wem"
      },
      {
       "Id": "1028303702",
@@ -117,7 +133,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps_stone7.wav",
-      "CachePath": "95/{9531F2FB-8FE1-2721-A608-BA7026FD5749}.wem"
+      "CachePath": "B3/{B31D5208-E471-2B6F-8BE8-631F115B67F7}.wem"
      },
      {
       "Id": "1029755974",
@@ -125,7 +141,15 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps_stone1.wav",
-      "CachePath": "7D/{7D13DC6D-7C0E-28AE-96F5-4EE140BE9317}.wem"
+      "CachePath": "C4/{C4119AF3-EDB8-DD92-98F5-31E4E4F705BF}.wem"
+     },
+     {
+      "Id": "1051734397",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "shadow_out.wav",
+      "CachePath": "76/{76913C0F-5681-864C-325B-808583DD04CD}.wem"
      },
      {
       "Id": "1063223615",
@@ -133,7 +157,15 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps2.wav",
-      "CachePath": "1B/{1B031309-5DAC-445F-CF15-F8F1A989A96B}.wem"
+      "CachePath": "51/{51D1DE5B-E17A-2B0D-CAB1-6DAA4EBBD531}.wem"
+     },
+     {
+      "Id": "1063466448",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "shadow_in.wav",
+      "CachePath": "38/{38C5924E-A94A-D70A-1CCC-0A4046508509}.wem"
      },
      {
       "Id": "1068969563",
@@ -141,9 +173,21 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps_stone4.wav",
-      "CachePath": "70/{7020246C-6CC7-B7AD-9D5B-2671EEA7D618}.wem"
+      "CachePath": "87/{878D24C2-6850-6238-4CD7-D48FA5E2DBAA}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2180422931",
+       "Name": "One_Tap_Quarter_Second",
+       "ObjectPath": "\\Effects\\Factory Effects\\Delay\\One_Tap_Quarter_Second",
+       "GUID": "{6BD2D67D-601A-45A6-AD4C-2C089078EBED}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "779278001",
@@ -244,6 +288,58 @@
         ]
        }
       ]
+     },
+     {
+      "Id": "4000322109",
+      "Name": "shadow_in",
+      "ObjectPath": "\\Events\\Default Work Unit\\shadow_in",
+      "GUID": "{645E5864-EFD2-43E9-9C03-DDB92E097E77}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6220807",
+      "DurationMax": "0.6220807",
+      "MediaRefs": [
+       {
+        "Id": "1063466448"
+       }
+      ]
+     },
+     {
+      "Id": "2088474212",
+      "Name": "shadow_out",
+      "ObjectPath": "\\Events\\Default Work Unit\\shadow_out",
+      "GUID": "{AB20203C-01DB-4410-88B1-45790359A46F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.566879",
+      "DurationMax": "0.566879",
+      "MediaRefs": [
+       {
+        "Id": "1051734397"
+       }
+      ]
+     },
+     {
+      "Id": "3137665780",
+      "Name": "turn",
+      "ObjectPath": "\\Events\\Default Work Unit\\turn",
+      "GUID": "{B45087AF-2134-4F24-A7DC-CB9DB3D31DF5}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.20776318",
+      "DurationMax": "0.37012863",
+      "MediaRefs": [
+       {
+        "Id": "460116762"
+       },
+       {
+        "Id": "525093954"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2180422931"
+        }
+       ]
+      }
      }
     ],
     "SwitchGroups": [
@@ -270,6 +366,6 @@
     ]
    }
   ],
-  "FileHash": "{BD0D6AE3-2C36-DA8E-F063-8FB223A5474D}"
+  "FileHash": "{E3B1A24D-9A43-08EF-51DD-5BC62ACFF621}"
  }
 }

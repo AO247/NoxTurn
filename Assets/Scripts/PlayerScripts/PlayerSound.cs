@@ -10,6 +10,10 @@ public class PlayerSound : MonoBehaviour
     private AK.Wwise.Event dyingSound;
     [SerializeField]
     private AK.Wwise.Event deathSound;
+    [SerializeField]
+    private AK.Wwise.Event shadowInSound;
+    [SerializeField]
+    private AK.Wwise.Event shadowOutSound;
 
     public void PlayFootstepSound()
     {
@@ -27,6 +31,18 @@ public class PlayerSound : MonoBehaviour
     public void PlayDeath()
     {
         deathSound.Post(gameObject);
+        Debug.Log("DeathSound");
+    }
+
+    public void PlayIn()
+    {
+        shadowInSound.Post(gameObject);
+        Debug.Log("DeathSound");
+    }
+
+    public void PlayOut()
+    {
+        shadowOutSound.Post(gameObject);
         Debug.Log("DeathSound");
     }
 

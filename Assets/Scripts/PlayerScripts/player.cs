@@ -313,6 +313,16 @@ public class player : MonoBehaviour
         playerSound.PlayFootstepSound();
     }
 
+    private void PlayShadowIn()
+    {
+        playerSound.PlayIn();
+    }
+
+    private void PlayShadowOut()
+    {
+        playerSound.PlayOut();
+    }
+
 
 }
 

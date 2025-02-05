@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4602e998d05bc284e94e48d54bac9e64, type: 3}
+  m_Name: AB20203C-01DB-4410-88B1-45790359A46F
+  m_EditorClassIdentifier: 
+  objectName: shadow_out
+  id: 2088474212
+  guid: AB20203C-01DB-4410-88B1-45790359A46F
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

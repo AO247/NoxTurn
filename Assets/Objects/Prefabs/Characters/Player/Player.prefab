@@ -8308,6 +8308,14 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: ee1ffc51378f6134e94996746c13f210, type: 2}
+  shadowInSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3bf8e72b510d4844aadc12e08f6db5b5, type: 2}
+  shadowOutSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ff6ae1da2d8a83e4aa1d1757ddbf028c, type: 2}
 --- !u!114 &1012683819453149036
 MonoBehaviour:
   m_ObjectHideFlags: 0
