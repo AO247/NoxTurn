@@ -16,6 +16,7 @@ public class player : MonoBehaviour
     [SerializeField] private float _deathTime = 15f;
     [SerializeField] private SkinnedMeshRenderer _renderer;
     [SerializeField] private ParticleSystem deathParticle;
+    [SerializeField] private ParticleSystem dyingParticle;
     [SerializeField] private PlayerSound playerSound;
     private Animator animator;
     private float _time = 1;
@@ -94,19 +95,31 @@ public class player : MonoBehaviour
 
             if (shadowExposure == 0)
             {
+                if (dyingParticle.isPlaying)
+                {
+                    dyingParticle.Stop();
+
+                }
                 AkSoundEngine.SetState("Life", "Safe");
                 targetScale = Vector3.one * normalScale; // Powrót do normalnej wielkości
             }
             else
             {
+                if (dyingParticle.isStopped)
+                {
+                    dyingParticle.Play();
+                }
                 AkSoundEngine.SetState("Life", "Danger");
                 // Im większe shadowExposure, tym mniejsza skala
                 float scaleFactor = Mathf.Lerp(normalScale, minScale, shadowExposure / 8f);
                 targetScale = Vector3.one * scaleFactor;
             }
+            Debug.Log("isPaused: " + dyingParticle.isPaused);
+            Debug.Log("isStopped: " + dyingParticle.isStopped);
+            Debug.Log("isPlaying: " + dyingParticle.isPlaying);
 
             // Stopniowa zmiana skali
-            armature.transform.localScale = Vector3.Lerp(armature.transform.localScale, targetScale, Time.deltaTime * scalingSpeed);
+            //armature.transform.localScale = Vector3.Lerp(armature.transform.localScale, targetScale, Time.deltaTime * scalingSpeed);
 
 
             if (shadowExposure == 0)

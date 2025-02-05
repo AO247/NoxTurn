@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/OutdoorsScene.unity
     guid: 8124e5870f4fd4c779e7a5f994e84ad1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TestingScenes/Adam/A.unity
     guid: 74c5222096984fd4d8720956538e302f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestingScenes/Zuzia/Z.unity
     guid: e6170efaf1007c741922e3d550e8a7a9
   m_configObjects:
