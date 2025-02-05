@@ -32,19 +32,25 @@ public class TurningBlob : MonoBehaviour
             || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton5)) // Fire1 for LB
         {
             animator.SetBool("isJumpIn", true);
-            
+
+            //yield return new WaitForSeconds(0.5f);
+
             _rb.linearVelocity = Vector3.zero;
             _blob = true;
             _player.isImmortal = true;
 
         }
+
         hair.SetActive(_blob);
+
         if (_blob)
         {
-            _player.PlayerVisibility(false);
+            //_player.PlayerVisibility(false);
             if (!_rb.linearVelocity.Compare(Vector3.zero,1))
             {
-                _player.PlayerVisibility(true);
+                animator.SetBool("isJumpIn", false);
+
+               // _player.PlayerVisibility(true);
                 _blob = false;
                 _player.isImmortal = false;
 
