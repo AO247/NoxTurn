@@ -18,7 +18,7 @@ public class player : MonoBehaviour
     [SerializeField] private ParticleSystem deathParticle;
     [SerializeField] private ParticleSystem dyingParticle;
     [SerializeField] private PlayerSound playerSound;
-    private Animator animator;
+    public Animator animator;
     private float _time = 1;
     private Vector3 _input;
     //private Renderer _renderer;
