@@ -484,6 +484,11 @@
 				</SwitchContainer>
 				<RandomSequenceContainer Name="Dying" ID="{4D1D2092-C931-44D6-BE73-A36EBAF3A33A}" ShortID="901130007">
 					<PropertyList>
+						<Property Name="InitialDelay" Type="Real64">
+							<ValueList>
+								<Value>0.5</Value>
+							</ValueList>
+						</Property>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismLoopCount" Type="int32" Value="7"/>
 						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>

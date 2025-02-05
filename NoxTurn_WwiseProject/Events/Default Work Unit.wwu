@@ -14,7 +14,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Dying" ID="{913020DC-1EB3-4954-81B7-75676479C43A}"/>
+				<Event Name="Dying" ID="{913020DC-1EB3-4954-81B7-75676479C43A}">
+					<ChildrenList>
+						<Action Name="" ID="{159FE072-8F0F-49AC-A28D-411658CB935C}" ShortID="1010839864">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dying" ID="{4D1D2092-C931-44D6-BE73-A36EBAF3A33A}" WorkUnitID="{2722560C-B43B-483F-9C66-A31FDE31DE63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Death" ID="{3080D7AF-FBD5-46EC-852A-7A33B4403E1E}">
 					<ChildrenList>
 						<Action Name="" ID="{0D21CED1-4965-4A41-898C-B5D372AEC5DB}" ShortID="483796585">

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{00412662-A71A-4B63-8EB6-11E19CED35C9}",
     "Language": "SFX",
-    "Hash": "{B42D97CE-CFC1-5175-4AE4-17A863C273B2}",
+    "Hash": "{B842CC13-B4B7-3ACB-7B9E-F8904A361BEB}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -21,7 +21,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "item.wav",
-      "CachePath": "D2/{D2599820-D2F1-5CF2-3D5C-D521E39E4626}.wem"
+      "CachePath": "47/{4747C978-30AB-15D3-411F-EBFBA7820B4F}.wem"
      },
      {
       "Id": "45577415",
@@ -85,7 +85,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "gate_open.wav",
-      "CachePath": "0E/{0E3902FA-B0DD-E251-7FC8-343A11BA6A00}.wem"
+      "CachePath": "55/{55F8E715-F13D-3D65-951A-3D7090D45476}.wem"
      },
      {
       "Id": "460116762",
@@ -93,7 +93,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "turn2.wav",
-      "CachePath": "63/{63BA20AF-C0E2-9421-B3AD-1B2783EDAA06}.wem"
+      "CachePath": "34/{341DD0B7-CDD5-1028-93BE-C35016B61E36}.wem"
      },
      {
       "Id": "525093954",
@@ -101,7 +101,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "turn.wav",
-      "CachePath": "B3/{B3A0A362-3D04-39AD-6DBE-1BF67E12E121}.wem"
+      "CachePath": "34/{34C5E4D9-3167-D5CD-53F6-DEB6158D6824}.wem"
      },
      {
       "Id": "666079680",
@@ -125,7 +125,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "gate_locked.wav",
-      "CachePath": "7F/{7F8B0222-6A5E-3772-3739-34EC72B4D9E6}.wem"
+      "CachePath": "5C/{5C97E838-DBBA-3D52-9FD7-D8B0792490FC}.wem"
      },
      {
       "Id": "984025951",
@@ -173,7 +173,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "shadow_out.wav",
-      "CachePath": "76/{76913C0F-5681-864C-325B-808583DD04CD}.wem"
+      "CachePath": "BD/{BDED398A-D313-9AB0-FA34-FFCE756DCBD3}.wem"
      },
      {
       "Id": "1063223615",
@@ -189,7 +189,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "shadow_in.wav",
-      "CachePath": "38/{38C5924E-A94A-D70A-1CCC-0A4046508509}.wem"
+      "CachePath": "90/{9000347C-FD4A-F392-4192-CCA09FDEE4BB}.wem"
      },
      {
       "Id": "1068969563",
@@ -432,6 +432,6 @@
     ]
    }
   ],
-  "FileHash": "{EA7FEE6B-06AC-704E-DFE4-BFAAC3D9C120}"
+  "FileHash": "{C9C12946-5BDA-6876-DAE0-1BF17A7E235E}"
  }
 }
