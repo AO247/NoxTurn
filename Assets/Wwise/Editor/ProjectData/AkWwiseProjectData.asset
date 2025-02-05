@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: dbc399e6a2706f45be0e3f8ca9ea0572
     GuidInternal: 
-    m_lastTime: -8584628226500554226
+    m_lastTime: -8584628205970517607
     List:
     - name: Main
       guid: 622641001aa7634b8eb611e19ced35c9
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 86358358613fb4429ce6260e3fb724cb
     GuidInternal: 
-    m_lastTime: -8584628226500842573
+    m_lastTime: -8584628205970665928
     List:
     - name: Death
       guid: afd78030d5fbec46852a7a33b4403e1e
@@ -111,8 +111,8 @@ MonoBehaviour:
         guid: afd78030d5fbec46852a7a33b4403e1e
       Path: Events\Default Work Unit\Death
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.1487406
+      minDuration: 1.1487406
     - name: Dying
       guid: dc203091b31e544981b775676479c43a
       id: 3328495488
@@ -128,8 +128,8 @@ MonoBehaviour:
         guid: dc203091b31e544981b775676479c43a
       Path: Events\Default Work Unit\Dying
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Footsteps
       guid: 6b4e9f7f2d6ada4a9e2d509dfa0ba33c
       id: 2385628198
@@ -145,8 +145,8 @@ MonoBehaviour:
         guid: 6b4e9f7f2d6ada4a9e2d509dfa0ba33c
       Path: Events\Default Work Unit\Footsteps
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.42986313
+      minDuration: 0.14254594
     - name: shadow_in
       guid: 64585e64d2efe9439c03ddb92e097e77
       id: 4000322109
@@ -162,8 +162,8 @@ MonoBehaviour:
         guid: 64585e64d2efe9439c03ddb92e097e77
       Path: Events\Default Work Unit\shadow_in
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.6220807
+      minDuration: 0.6220807
     - name: shadow_out
       guid: 3c2020abdb01104488b145790359a46f
       id: 2088474212
@@ -179,8 +179,8 @@ MonoBehaviour:
         guid: 3c2020abdb01104488b145790359a46f
       Path: Events\Default Work Unit\shadow_out
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.566879
+      minDuration: 0.566879
     - name: turn
       guid: af8750b43421244fa7dccb9db3d31df5
       id: 3137665780
@@ -196,8 +196,8 @@ MonoBehaviour:
         guid: af8750b43421244fa7dccb9db3d31df5
       Path: Events\Default Work Unit\turn
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.37012863
+      minDuration: 0.20776318
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
