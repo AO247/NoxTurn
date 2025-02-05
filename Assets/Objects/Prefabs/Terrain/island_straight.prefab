@@ -143,7 +143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7629047932269841566, guid: 9abfa0a574b6b3f48956a0d841e51552, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.93
+      value: -11.09
       objectReference: {fileID: 0}
     - target: {fileID: 7629047932269841566, guid: 9abfa0a574b6b3f48956a0d841e51552, type: 3}
       propertyPath: m_LocalPosition.z
@@ -213,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b3147ccaaa3d6146a843253edabceab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b3147ccaaa3d6146a843253edabceab, type: 3}
       propertyPath: m_LocalPosition.z
@@ -366,7 +366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.size.x
-      value: 77.39
+      value: 70.34152
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.size.y
@@ -374,7 +374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.size.z
-      value: 82.09
+      value: 73.664536
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.invertFade
@@ -382,7 +382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.negativeFade.x
-      value: 0.02028686
+      value: 0.022319676
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.negativeFade.y
@@ -390,11 +390,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.negativeFade.z
-      value: 0.019125352
+      value: 0.021312835
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.positiveFade.x
-      value: 0.02028686
+      value: 0.022319676
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.positiveFade.y
@@ -402,7 +402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.positiveFade.z
-      value: 0.019125352
+      value: 0.021312835
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.textureOffset.x
@@ -426,15 +426,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.m_EditorNegativeFade.x
-      value: 0.012921562
+      value: 0.01421635
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.m_EditorNegativeFade.z
-      value: 0.012181761
+      value: 0.013575059
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.m_EditorPositiveFade.x
-      value: 0.012921562
+      value: 0.01421635
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.m_EditorPositiveFade.y
@@ -442,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418825, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: parameters.m_EditorPositiveFade.z
-      value: 0.012181761
+      value: 0.013575059
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418826, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: m_LocalScale.x
@@ -458,15 +458,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418826, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.036143042
+      value: 0.42177966
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418826, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.61
+      value: 1.98
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418826, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.12507842
+      value: -0.35018572
       objectReference: {fileID: 0}
     - target: {fileID: 6337584482045418826, guid: 4233eb875e872fe44ab8eef1532cc271, type: 3}
       propertyPath: m_LocalRotation.w
