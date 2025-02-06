@@ -9,6 +9,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3328495488	Dying			\Default Work Unit\Dying	
 	3991942870	Music			\Default Work Unit\Music	
 	4000322109	shadow_in			\Default Work Unit\shadow_in	
+	4127039931	stone_push			\Default Work Unit\stone_push	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	2385628198	Footsteps			\Default Work Unit\Footsteps	
@@ -52,6 +53,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	460116762	turn2	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\34\{341DD0B7-CDD5-1028-93BE-C35016B61E36}.wem		\Actor-Mixer Hierarchy\Default Work Unit\turn\turn2		7975
 	525093954	turn	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\34\{34C5E4D9-3167-D5CD-53F6-DEB6158D6824}.wem		\Actor-Mixer Hierarchy\Default Work Unit\turn\turn		7580
 	666079680	footsteps_stone5	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\49\{4931DCD3-9DB4-2E5F-8A5F-D73073938316}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\FootstepsStone\footsteps_stone5		7569
+	867606725	stone_push	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\2B\{2BF16FCE-9A98-1391-F705-F31E89219E0E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\stone_push\stone_push		36696
 	937973895	dyingNew	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\A5\{A5BD4708-A394-E84C-4F39-F8058EE9DBD7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dying\dyingNew		166059
 	945806139	gate_locked	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\5C\{5C97E838-DBBA-3D52-9FD7-D8B0792490FC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\gate_locked\gate_locked		18536
 	984025951	death	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\57\{57248F69-5D80-F9AA-7B1A-340F3B6ED589}.wem		\Actor-Mixer Hierarchy\Default Work Unit\death\death		31940
