@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: dbc399e6a2706f45be0e3f8ca9ea0572
     GuidInternal: 
-    m_lastTime: -8584627649921461345
+    m_lastTime: -8584627548544893658
     List:
     - name: Main
       guid: 622641001aa7634b8eb611e19ced35c9
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 86358358613fb4429ce6260e3fb724cb
     GuidInternal: 
-    m_lastTime: -8584627590785316508
+    m_lastTime: -8584627549189273696
     List:
     - name: Death
       guid: afd78030d5fbec46852a7a33b4403e1e
@@ -181,6 +181,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.42986313
       minDuration: 0.14254594
+    - name: Footsteps_enemy
+      guid: 8bdbe40bdc05e745bacc178ac46ce657
+      id: 550365015
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 86358358613fb4429ce6260e3fb724cb
+      - ElementName: Footsteps_enemy
+        ObjectType: 3
+        guid: 8bdbe40bdc05e745bacc178ac46ce657
+      Path: Events\Default Work Unit\Footsteps_enemy
+      maxAttenuation: 20
+      maxDuration: 0.7975329
+      minDuration: 0.31450734
     - name: gate_locked
       guid: ed80e8155357ee4794455df6913bf320
       id: 1589953441
@@ -247,6 +264,23 @@ MonoBehaviour:
         guid: d9dcc1d2f3fa1349acb8aff2761012f0
       Path: Events\Default Work Unit\Music
       maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: portal
+      guid: 32bedb0f48a97d4099775fd2eb5f9f24
+      id: 3118032615
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 86358358613fb4429ce6260e3fb724cb
+      - ElementName: portal
+        ObjectType: 3
+        guid: 32bedb0f48a97d4099775fd2eb5f9f24
+      Path: Events\Default Work Unit\portal
+      maxAttenuation: 20
       maxDuration: 0
       minDuration: 0
     - name: shadow_in
@@ -465,7 +499,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d37373c6087d5b44b3168f93319907bc
     GuidInternal: 
-    m_lastTime: -8584628921283962952
+    m_lastTime: -8584627550206428974
     List:
     - name: Footsteps
       guid: 4dec0ea0dc003343992ae65ef0250057
@@ -517,6 +551,56 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: Footsteps_enemy
+      guid: 49a842c1b721a9439aa7aeb0f08247af
+      id: 550365015
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d37373c6087d5b44b3168f93319907bc
+      - ElementName: Footsteps_enemy
+        ObjectType: 11
+        guid: 49a842c1b721a9439aa7aeb0f08247af
+      Path: Switches\Default Work Unit\Footsteps_enemy
+      values:
+      - name: Grass
+        guid: e13629df4b7fb6418258c08edf12cf0e
+        id: 4248645337
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d37373c6087d5b44b3168f93319907bc
+        - ElementName: Footsteps_enemy
+          ObjectType: 11
+          guid: 49a842c1b721a9439aa7aeb0f08247af
+        - ElementName: Grass
+          ObjectType: 10
+          guid: e13629df4b7fb6418258c08edf12cf0e
+      - name: Stone
+        guid: 8d3ac260ca507142afa5abb6b4f45daf
+        id: 1216965916
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d37373c6087d5b44b3168f93319907bc
+        - ElementName: Footsteps_enemy
+          ObjectType: 11
+          guid: 49a842c1b721a9439aa7aeb0f08247af
+        - ElementName: Stone
+          ObjectType: 10
+          guid: 8d3ac260ca507142afa5abb6b4f45daf
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -529,7 +613,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 2b107a22fecddd4f8830aa755965173d
     GuidInternal: 
-    m_lastTime: -8584629994804358805
+    m_lastTime: -8584627624207059229
     List: []
   ExpandedFileSystemItemIds: 01000000020000000300000004000000050000000600000007000000090000000b0000000c000000150000001600000018000000190000001a0000001c0000001d000000
   ExpandedWaapiItemIds: 

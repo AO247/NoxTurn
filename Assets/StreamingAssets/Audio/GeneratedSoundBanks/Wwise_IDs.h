@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID DEATH = 779278001U;
         static const AkUniqueID DYING = 3328495488U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
+        static const AkUniqueID FOOTSTEPS_ENEMY = 550365015U;
         static const AkUniqueID GATE_LOCKED = 1589953441U;
         static const AkUniqueID GATE_OPEN = 3328279379U;
         static const AkUniqueID ITEM = 1222624712U;
@@ -55,6 +56,17 @@ namespace AK
                 static const AkUniqueID STONE = 1216965916U;
             } // namespace SWITCH
         } // namespace FOOTSTEPS
+
+        namespace FOOTSTEPS_ENEMY
+        {
+            static const AkUniqueID GROUP = 550365015U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID GRASS = 4248645337U;
+                static const AkUniqueID STONE = 1216965916U;
+            } // namespace SWITCH
+        } // namespace FOOTSTEPS_ENEMY
 
     } // namespace SWITCHES
 

@@ -104,6 +104,26 @@
     ],
     "SwitchGroups": [
      {
+      "Id": "550365015",
+      "Name": "Footsteps_enemy",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps_enemy",
+      "GUID": "{C142A849-21B7-43A9-9AA7-AEB0F08247AF}",
+      "Switches": [
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps_enemy\\Stone",
+        "GUID": "{60C23A8D-50CA-4271-AFA5-ABB6B4F45DAF}"
+       },
+       {
+        "Id": "4248645337",
+        "Name": "Grass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps_enemy\\Grass",
+        "GUID": "{DF2936E1-7F4B-41B6-8258-C08EDF12CF0E}"
+       }
+      ]
+     },
+     {
       "Id": "2385628198",
       "Name": "Footsteps",
       "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps",
@@ -126,6 +146,6 @@
     ]
    }
   ],
-  "FileHash": "{07D0C836-08D6-7A42-975C-FCE0415B1CF9}"
+  "FileHash": "{9B022E83-792B-C690-C755-5ADD2B7DC9AE}"
  }
 }

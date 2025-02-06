@@ -1404,6 +1404,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd09546e44ae0a14089898a640a8aa06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2289918488546147758}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd09546e44ae0a14089898a640a8aa06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8711187972481930744}
     - targetCorrespondingSourceObject: {fileID: 2238582819577645417, guid: fd09546e44ae0a14089898a640a8aa06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4163547806464918574}
@@ -1457,6 +1460,7 @@ MonoBehaviour:
   _speed: 5
   _rotationSpeed: 2
   _smoothTime: 0.2
+  enemySound: {fileID: 8711187972481930744}
   light: {fileID: 8008990919999265080}
   playerDetected: 0
 --- !u!195 &2289918488546147758
@@ -1481,6 +1485,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &8711187972481930744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5536008074314311967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a066fabe2a2ed094e8dd9692412c1ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepsEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8909d5794a8424343b7fe8a598cc0aeb, type: 2}
 --- !u!1 &6846519148227861799 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2238582819577645417, guid: fd09546e44ae0a14089898a640a8aa06, type: 3}

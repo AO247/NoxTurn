@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _speed = 5f;
     [SerializeField] private float _rotationSpeed = 2f; // Prêdkoœæ obrotu
     [SerializeField] private float _smoothTime = 0.2f; // Czas wyg³adzania ruchu
+    [SerializeField] private EnemySound enemySound;
     private int _index = 0;
     private bool _start = true;
     private bool _end = false;
@@ -124,6 +125,11 @@ public class Enemy : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void PlayFootstepEnemy()
+    {
+        enemySound.PlayFootstepSound();
     }
 
 }

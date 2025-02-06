@@ -9,6 +9,12 @@
 						<Switch Name="Stone" ID="{72F2B243-F5F8-4124-A555-C3485AB412DC}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Footsteps_enemy" ID="{C142A849-21B7-43A9-9AA7-AEB0F08247AF}">
+					<ChildrenList>
+						<Switch Name="Grass" ID="{DF2936E1-7F4B-41B6-8258-C08EDF12CF0E}"/>
+						<Switch Name="Stone" ID="{60C23A8D-50CA-4271-AFA5-ABB6B4F45DAF}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

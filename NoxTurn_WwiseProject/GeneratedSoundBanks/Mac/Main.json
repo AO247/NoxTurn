@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{00412662-A71A-4B63-8EB6-11E19CED35C9}",
     "Language": "SFX",
-    "Hash": "{2C9C8339-3BE8-147F-CD4C-E4D73B38D81C}",
+    "Hash": "{C770E61B-CAB8-94E1-E459-2151F96AD98E}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -346,6 +346,81 @@
       ]
      },
      {
+      "Id": "550365015",
+      "Name": "Footsteps_enemy",
+      "ObjectPath": "\\Events\\Default Work Unit\\Footsteps_enemy",
+      "GUID": "{0BE4DB8B-05DC-45E7-BACC-178AC46CE657}",
+      "MaxAttenuation": "20",
+      "DurationType": "OneShot",
+      "DurationMin": "0.31450734",
+      "DurationMax": "0.7975329",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "550365015",
+         "Id": "1216965916",
+         "GUID": "{60C23A8D-50CA-4271-AFA5-ABB6B4F45DAF}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "254817739"
+         },
+         {
+          "Id": "291255313"
+         },
+         {
+          "Id": "417915509"
+         },
+         {
+          "Id": "666079680"
+         },
+         {
+          "Id": "990274294"
+         },
+         {
+          "Id": "1028303702"
+         },
+         {
+          "Id": "1029755974"
+         },
+         {
+          "Id": "1068969563"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "550365015",
+         "Id": "4248645337",
+         "GUID": "{DF2936E1-7F4B-41B6-8258-C08EDF12CF0E}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "45577415"
+         },
+         {
+          "Id": "127839435"
+         },
+         {
+          "Id": "172333205"
+         },
+         {
+          "Id": "283228146"
+         },
+         {
+          "Id": "1027450457"
+         },
+         {
+          "Id": "1063223615"
+         }
+        ]
+       }
+      ]
+     },
+     {
       "Id": "1589953441",
       "Name": "gate_locked",
       "ObjectPath": "\\Events\\Default Work Unit\\gate_locked",
@@ -404,7 +479,7 @@
       "Name": "portal",
       "ObjectPath": "\\Events\\Default Work Unit\\portal",
       "GUID": "{0FDBBE32-A948-407D-9977-5FD2EB5F9F24}",
-      "MaxAttenuation": "50",
+      "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -522,6 +597,26 @@
     ],
     "SwitchGroups": [
      {
+      "Id": "550365015",
+      "Name": "Footsteps_enemy",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps_enemy",
+      "GUID": "{C142A849-21B7-43A9-9AA7-AEB0F08247AF}",
+      "Switches": [
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps_enemy\\Stone",
+        "GUID": "{60C23A8D-50CA-4271-AFA5-ABB6B4F45DAF}"
+       },
+       {
+        "Id": "4248645337",
+        "Name": "Grass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps_enemy\\Grass",
+        "GUID": "{DF2936E1-7F4B-41B6-8258-C08EDF12CF0E}"
+       }
+      ]
+     },
+     {
       "Id": "2385628198",
       "Name": "Footsteps",
       "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps",
@@ -544,6 +639,6 @@
     ]
    }
   ],
-  "FileHash": "{1E2E4D74-E186-A0D1-13D7-91DDFC7A6264}"
+  "FileHash": "{59CE3D03-1B9E-7FB7-C2D5-0AF67269A44C}"
  }
 }
