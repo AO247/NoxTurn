@@ -78,7 +78,6 @@ public class player : MonoBehaviour
         GatherInput();
         Look();
         isInShadows();
-        Debug.Log("SpeedAnimation: " + speedAnimation);
     }
 
     private void OnTriggerEnter(Collider other)
