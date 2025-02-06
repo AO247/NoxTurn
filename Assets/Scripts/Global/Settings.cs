@@ -31,12 +31,8 @@ public class Settings : MonoBehaviour
     public Slider sfxSlider;
 
 
-
-    private void Start()
+    private void Awake()
     {
-        pauseMenuUI.SetActive(false);
-        settingsUI.SetActive(true);
-
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
         List<string> options = new List<string>();
@@ -61,6 +57,11 @@ public class Settings : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
         fullScreenToggle.isOn = Screen.fullScreen;
+        settingsUI.SetActive(true);
+    }
+    private void Start()
+    {
+        
     }
 
     private void Update()
@@ -141,8 +142,15 @@ public class Settings : MonoBehaviour
     public void Back()
     {
         settingsUI.SetActive(false);
-        pauseMenuUI.SetActive(true);
-        canvas.GetComponent<PauseMenu>().Select();
+        if (pauseMenuUI != null)
+        {
+            pauseMenuUI.SetActive(true);
+            canvas.GetComponent<PauseMenu>().Select();
+        }
+        else
+        {
+            Floor.isPaused = false;
+        }
     }
 
     public void Select()

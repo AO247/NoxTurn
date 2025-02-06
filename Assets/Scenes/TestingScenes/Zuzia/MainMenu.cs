@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject island;
+    [SerializeField] private GlobalSound globalSound;
+    public InputActionReference interaction;
+
     //SceneFade sceneFade;
     int selectedOption = 0, selectedLevel = -1;
     bool pressed = false;
@@ -40,7 +44,8 @@ public class MainMenu : MonoBehaviour
             selectedOption = 0;
             //Debug.Log("-90");
             PlaySign.GetComponent<MeshRenderer>().material = Glow;
-        } else
+        }
+        else
         {
             PlaySign.GetComponent<MeshRenderer>().material = Dark;
         }
@@ -49,7 +54,8 @@ public class MainMenu : MonoBehaviour
             selectedOption = 1;
             //Debug.Log("90");
             SettingsSign.GetComponent<MeshRenderer>().material = Glow;
-        } else
+        }
+        else
         {
             SettingsSign.GetComponent<MeshRenderer>().material = Dark;
         }
@@ -70,49 +76,34 @@ public class MainMenu : MonoBehaviour
         //    Debug.Log("270");
         //}
 
-        if (Input.GetKeyDown(KeyCode.F) || Input.GetButtonDown("Fire3"))
+        if (interaction.action.triggered && !Floor.isPaused)
         {
             if (selectedOption == 0)
             {
+                globalSound.PlayTurn();
                 PlayGame();
+            }
+            if (selectedOption == 1)
+            {
+                globalSound.PlayTurn();
+
+                Setting();
             }
             if (selectedOption == 2)
             {
                 Debug.Log("quit");
-
+                globalSound.PlayTurn();
                 QuitGame();
 
             }
-            if (selectedOption == 1)
+            else if (selectedOption == 3)
             {
-                Setting();
+                globalSound.PlayTurn();
+                Continue();
             }
-            //else if(selectedOption == 3)
-            //{
-            //    if(pressed)
-            //    {
-            //        SelectLevel(selectedLevel);
-            //    }
-            //}
             pressed = true;
 
         }
-        if (pressed && selectedOption == 3) {
-            if(Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton4)) // Fire1 for LB
-            {
-                if(selectedLevel > 1)
-                    selectedLevel--;
-                Debug.Log("Selected Level: " + selectedLevel);
-                //playerSound.PlayIn();
-            }
-            else if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton5)) // Fire2 for RB
-            {
-                if (selectedLevel < 8)
-                    selectedLevel++;
-                Debug.Log("Selected Level: " + selectedLevel);
-                //playerSound.PlayIn();
-            }
-        } 
     }
     public IEnumerator _LoadScene(int sceneIndex)
     {
@@ -137,9 +128,22 @@ public class MainMenu : MonoBehaviour
 
     public void Setting()
     {
+        Floor.isPaused = true;
         settingsUI.SetActive(true);
         //pauseMenuUI.SetActive(false);
         //settingsUI.GetComponent<Settings>().Select();
+    }
+    public void Continue()
+    {
+        SaveData saveData = SaveManager.LoadGameState();
+        if (saveData != null)
+        {
+            StartCoroutine(_LoadScene(saveData.lvlNumber));
+        }
+        else
+        {
+            StartCoroutine(_LoadScene(SceneManager.GetActiveScene().buildIndex + selectedLevel));
+        }
     }
 }
 

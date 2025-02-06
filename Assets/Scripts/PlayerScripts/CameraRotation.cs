@@ -22,8 +22,9 @@ public class CameraRotation : MonoBehaviour
     private void Start()
     {
         if (player == null)
+        {
             player = GameObject.FindGameObjectWithTag("Player").transform;
-
+        }
         // Aktywacja akcji za pomoc¹ w³aœciwoœci .action
         rotLeft.action.Enable();
         rotRight.action.Enable();

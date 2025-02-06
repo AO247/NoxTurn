@@ -31,8 +31,10 @@ public class LvlChange : MonoBehaviour
             fadingCanvas.StartFadeIn(); // Rozpocznij fade-in
             yield return new WaitForSeconds(2); // Poczekaj na zakoñczenie fade-in
         }
-
+        SaveData saveData = new SaveData(); // Utwórz nowy obiekt SaveData
+        saveData.lvlNumber = SceneManager.GetActiveScene().buildIndex + 1;
         // Za³aduj nastêpn¹ scenê
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 }

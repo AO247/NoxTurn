@@ -18,6 +18,7 @@ public class Floor : MonoBehaviour
     private Quaternion targetRotation;
     private Quaternion baseRotation;
     private bool isRotating = false;
+    public static bool isPaused = false;
     //private bool isPressed = false;
     private float time = 0.0f;
     private GameObject enemy;
@@ -32,14 +33,17 @@ public class Floor : MonoBehaviour
         targetRotation = transform.rotation;
         baseRotation = transform.rotation;
         cameraPos = GameObject.FindGameObjectWithTag("CameraPos");
-        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         enemy = GameObject.FindGameObjectWithTag("Enemy");
     }
 
     private void Update()
     {
 
-        if (!isRotating)
+        if (!isRotating && !isPaused)
         {
             time += Time.deltaTime;
             if (time > 1.0f)

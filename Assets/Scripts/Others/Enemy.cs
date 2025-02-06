@@ -31,33 +31,37 @@ public class Enemy : MonoBehaviour
         }
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         nav = GetComponent<NavMeshAgent>();
+        nav.destination = _waypoints[_index].position;
     }
 
 
     void Update()
     {
-
-        if (Vector3.Distance(transform.position, playerTransform.position) < 2.0f)
+        if (playerTransform != null)
         {
-            Debug.Log("Player SHould Be dead");
-            player player = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
-            if (!player.isDead)
+            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+
+            if (Vector3.Distance(transform.position, playerTransform.position) < 2.0f)
             {
-                StartCoroutine(player.HandleDeath());
+                Debug.Log("Player SHould Be dead");
+                player player = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
+                if (!player.isDead)
+                {
+                    StartCoroutine(player.HandleDeath());
+                }
             }
+            PlayerDetection();
         }
-        PlayerDetection();
         if (!playerDetected)
         {
-            nav.destination = playerTransform.position;
-
             if (_waypoints.Count <= 1)
             {
                 return;
             }
-
-            nav.destination = _waypoints[_index].position;
-
+            if (nav != null)
+            {
+                nav.destination = _waypoints[_index].position;
+            }
 
 
             // Sprawdzamy, czy osi¹gnêliœmy waypoint
@@ -99,6 +103,7 @@ public class Enemy : MonoBehaviour
     }
     private void PlayerDetection()
     {
+        
         // Obliczamy wektor od gracza do przeciwnika
         Vector3 lightDirection = transform.position - playerTransform.position;
         float distanceToLight = lightDirection.magnitude;
