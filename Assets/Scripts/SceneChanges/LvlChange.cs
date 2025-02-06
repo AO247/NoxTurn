@@ -1,23 +1,31 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class LvlChange : MonoBehaviour
 {
     private bool isPlayerInRange = false; // Czy gracz jest w zasiêgu
     private FADINGCANVAS fadingCanvas;    // Referencja do skryptu FADINGCANVAS
     player player;
+    public Slider masterSlider;
+    public Slider musicSlider;
+    public Slider sfxSlider;
+    private void Awake()
+    {
+    }
     void Start()
     {
         // ZnajdŸ obiekt ze skryptem FADINGCANVAS w scenie
         fadingCanvas = Object.FindFirstObjectByType<FADINGCANVAS>();
-        player = Object.FindFirstObjectByType<player>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        //player.canMove = false;
         StartCoroutine(ChangeScene());
-        player.canMove = false;
     }
 
 
@@ -44,6 +52,9 @@ public class LvlChange : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex + 1 < 13)
         {
             saveData.lvlNumber = SceneManager.GetActiveScene().buildIndex + 1;
+            saveData.masterVolume = masterSlider.value;
+            saveData.musicVolume = musicSlider.value;
+            saveData.sfxVolume = sfxSlider.value;
             SaveManager.SaveGameState(saveData);
 
             // Za³aduj nastêpn¹ scenê
@@ -68,6 +79,9 @@ public class LvlChange : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex - 1 > -1)
         {
             saveData.lvlNumber = SceneManager.GetActiveScene().buildIndex - 1;
+            saveData.masterVolume = masterSlider.value;
+            saveData.musicVolume = musicSlider.value;
+            saveData.sfxVolume = sfxSlider.value;
             SaveManager.SaveGameState(saveData);
 
             // Za³aduj nastêpn¹ scenê

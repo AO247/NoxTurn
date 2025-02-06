@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Settings : MonoBehaviour
 {
@@ -28,7 +29,10 @@ public class Settings : MonoBehaviour
     public GameObject firstSelected;
     public EventSystem eventSystem;
 
+    public Slider masterSlider;
+    public Slider musicSlider;
     public Slider sfxSlider;
+
 
 
     private void Awake()
@@ -58,10 +62,21 @@ public class Settings : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
         fullScreenToggle.isOn = Screen.fullScreen;
         settingsUI.SetActive(true);
+        Select();
+        SaveData saveData = SaveManager.LoadGameState();
+        if (saveData != null)
+        {
+            masterSlider.value = saveData.masterVolume;
+            musicSlider.value = saveData.musicVolume;
+            sfxSlider.value = saveData.sfxVolume;
+        }
+        else
+        {
+        }
     }
     private void Start()
     {
-        Select();
+
     }
 
     private void Update()

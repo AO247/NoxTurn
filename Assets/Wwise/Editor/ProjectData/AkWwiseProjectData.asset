@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 86358358613fb4429ce6260e3fb724cb
     GuidInternal: 
-    m_lastTime: -8584627654056723169
+    m_lastTime: -8584627600786591661
     List:
     - name: Death
       guid: afd78030d5fbec46852a7a33b4403e1e
@@ -283,6 +283,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.566879
       minDuration: 0.566879
+    - name: stone_push
+      guid: be72581a0eb0734184c224f4a62be476
+      id: 4127039931
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 86358358613fb4429ce6260e3fb724cb
+      - ElementName: stone_push
+        ObjectType: 3
+        guid: be72581a0eb0734184c224f4a62be476
+      Path: Events\Default Work Unit\stone_push
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: turn
       guid: af8750b43421244fa7dccb9db3d31df5
       id: 3137665780

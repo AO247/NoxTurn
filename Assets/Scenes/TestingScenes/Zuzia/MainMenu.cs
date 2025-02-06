@@ -3,7 +3,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -26,6 +26,10 @@ public class MainMenu : MonoBehaviour
     public GameObject QuitSign;
     public GameObject ContinueSign;
 
+    public Slider masterSlider;
+    public Slider musicSlider;
+    public Slider sfxSlider;
+
     private void Awake()
     {
         //audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -33,6 +37,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         settingsUI.SetActive(false);
+
 
         //sceneFade = Object.FindFirstObjectByType<SceneFade>();
     }
@@ -119,14 +124,18 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
+        saveSliders(new SaveData());
         StartCoroutine(_LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void SelectLevel(int selectedLevel)
-    {
-        StartCoroutine(_LoadScene(SceneManager.GetActiveScene().buildIndex + selectedLevel));
-    }
 
+    public void saveSliders(SaveData saveData)
+    {
+        saveData.masterVolume = masterSlider.value;
+        saveData.musicVolume = musicSlider.value;
+        saveData.sfxVolume = sfxSlider.value;
+        SaveManager.SaveGameState(saveData);
+    }
     public void QuitGame()
     {
         Application.Quit();
@@ -145,10 +154,12 @@ public class MainMenu : MonoBehaviour
         SaveData saveData = SaveManager.LoadGameState();
         if (saveData != null)
         {
+            saveSliders(saveData);
             StartCoroutine(_LoadScene(saveData.lvlNumber));
         }
         else
         {
+            saveSliders(new SaveData());
             StartCoroutine(_LoadScene(SceneManager.GetActiveScene().buildIndex + selectedLevel));
         }
     }
