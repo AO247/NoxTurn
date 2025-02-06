@@ -33,6 +33,8 @@ public class LvlChange : MonoBehaviour
         }
         SaveData saveData = new SaveData(); // Utwórz nowy obiekt SaveData
         saveData.lvlNumber = SceneManager.GetActiveScene().buildIndex + 1;
+        SaveManager.SaveGameState(saveData);
+
         // Za³aduj nastêpn¹ scenê
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
