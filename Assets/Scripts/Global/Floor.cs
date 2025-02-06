@@ -13,6 +13,7 @@ public class Floor : MonoBehaviour
 
     public float turnSpeed = 50f;
     public InputActionReference worldLeft;
+    public InputActionReference worldRight;
     // Docelowa rotacja
     private Quaternion targetRotation;
     private Quaternion baseRotation;
@@ -47,7 +48,7 @@ public class Floor : MonoBehaviour
                 isRotating = true;
                 //isPressed = false;
             }
-            if (Input.GetKeyUp(KeyCode.Q) || Input.GetKeyUp(KeyCode.JoystickButton4)) // Fire1 for LB
+            if (worldLeft.action.triggered) // Fire1 for LB
             {
                 targetRotation = baseRotation;
                 targetRotation *= Quaternion.Euler(0, 90f, 0);
@@ -58,7 +59,7 @@ public class Floor : MonoBehaviour
 
                 //isPressed = false;
             }
-            else if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyUp(KeyCode.JoystickButton5)) // Fire2 for RB
+            else if (worldRight.action.triggered) // Fire2 for RB
             {
                 targetRotation = baseRotation;
                 targetRotation *= Quaternion.Euler(0, -90f, 0);

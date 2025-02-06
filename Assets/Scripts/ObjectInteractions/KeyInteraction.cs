@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.InputSystem;
 
 public class KeyInteraction : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class KeyInteraction : MonoBehaviour
     public int direction = 1;
     [SerializeField] GameObject text;
     [SerializeField] private ObjectSound objectSound;
+    public InputActionReference interaction;
 
     private bool enter = false;
     private bool opened = false;
@@ -28,7 +30,7 @@ public class KeyInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(enter && Input.GetKeyDown(KeyCode.F))
+        if(enter && (interaction.action.triggered))
         {
             if (inventory.findKey())
             {

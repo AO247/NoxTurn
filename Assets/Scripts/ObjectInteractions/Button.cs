@@ -1,5 +1,6 @@
 using System.Threading;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -8,6 +9,8 @@ public class Button : MonoBehaviour
     [SerializeField] ObjectFollowing _object;
     [SerializeField] Parkour _parkour;
     [SerializeField] GameObject _text;
+    public InputActionReference interaction;
+
     private Renderer _renderer;
     private bool _enter = false;
     private bool _pressed = false;
@@ -26,7 +29,7 @@ public class Button : MonoBehaviour
 
         if (_enter)
         {
-            if(Input.GetKeyDown(KeyCode.F) || Input.GetButtonDown("Fire3"))
+            if(interaction.action.triggered)
             {
                 _pressed = true;
                 if (_object != null)

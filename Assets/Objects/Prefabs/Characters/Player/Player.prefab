@@ -7477,6 +7477,7 @@ MonoBehaviour:
   isPaused: 0
   isStanding: 0
   canMove: 1
+  speedAnimation: 0
 --- !u!114 &1504755166482055176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7523,6 +7524,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _blob: 0
   hair: {fileID: 865692488713798838}
+  worldLeft: {fileID: 3966361397335212643, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
+  worldRight: {fileID: 8911859294516746530, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
 --- !u!54 &2149359740038967556
 Rigidbody:
   m_ObjectHideFlags: 0
