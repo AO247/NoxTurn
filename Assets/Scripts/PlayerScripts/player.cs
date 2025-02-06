@@ -38,7 +38,7 @@ public class player : MonoBehaviour
     private Vector3 targetScale;
     private Gamepad pad;
     private Coroutine stopRumbleAfterTime;
-    AudioManager audioManager;
+    //AudioManager audioManager;
     
     public InputActionReference moveAction;
 
@@ -55,7 +55,7 @@ public class player : MonoBehaviour
 
     private void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        //audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody>();
     }
@@ -166,12 +166,12 @@ public class player : MonoBehaviour
         {
             if (_rb.linearVelocity.magnitude > 0.1) { 
                 animator.SetBool("isWalking", true);
-                audioManager.PlaySFXInLoop(audioManager.footsteps);
+                //audioManager.PlaySFXInLoop(audioManager.footsteps);
             }
             else
             {
                 animator.SetBool("isWalking", false);
-                audioManager.StopPlaying();
+                //audioManager.StopPlaying();
             }
 
             Move();
@@ -254,7 +254,7 @@ public class player : MonoBehaviour
 
 
         _rb.linearVelocity = Vector3.zero;
-        audioManager.PlaySFX(audioManager.death);
+        //audioManager.PlaySFX(audioManager.death);
         animator.SetBool("isDead", true);
         //audioManager.PlaySFX(audioManager.death);
         isDead = true;
@@ -269,7 +269,7 @@ public class player : MonoBehaviour
         yield return new WaitForSeconds(.2f);
         PlayerVisibility(false);
         // Poczekaj na zakończenie dźwięku (lub ustalony czas
-        yield return new WaitForSeconds(audioManager.death.length);
+        yield return new WaitForSeconds(0.5f);
 
         // Resetuj właściwości postaci
         _renderer.material.color = originalColor;

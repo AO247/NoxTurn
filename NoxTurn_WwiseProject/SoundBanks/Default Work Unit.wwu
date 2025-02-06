@@ -10,6 +10,7 @@
 						<ObjectRef Name="shadow_out" ID="{AB20203C-01DB-4410-88B1-45790359A46F}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Death" ID="{3080D7AF-FBD5-46EC-852A-7A33B4403E1E}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="gate_locked" ID="{15E880ED-5753-47EE-9445-5DF6913BF320}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{D2C1DCD9-FAF3-4913-ACB8-AFF2761012F0}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Dying" ID="{913020DC-1EB3-4954-81B7-75676479C43A}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="gate_open" ID="{79FEE1B1-49F7-4A7E-B5A5-42E0E01B8444}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Footsteps" ID="{7F9F4E6B-6A2D-4ADA-9E2D-509DFA0BA33C}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>

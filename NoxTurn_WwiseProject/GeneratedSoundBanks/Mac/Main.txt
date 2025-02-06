@@ -7,6 +7,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3137665780	turn			\Default Work Unit\turn	
 	3328279379	gate_open			\Default Work Unit\gate_open	
 	3328495488	Dying			\Default Work Unit\Dying	
+	3991942870	Music			\Default Work Unit\Music	
 	4000322109	shadow_in			\Default Work Unit\shadow_in	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -35,6 +36,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	254817739	footsteps_stone3	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\EB\{EBECD530-3CB5-0C93-F2D1-330105321527}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\FootstepsStone\footsteps_stone3		6234
 	283228146	footsteps4	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\03\{03F44398-28A8-5D5A-DAC7-ABCE478A4EBA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\FootstepsGrass\footsteps4		8275
 	291255313	footsteps_stone2	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\AD\{AD509D6A-DE89-7FFB-99F1-BDCA3D5C9C5F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\FootstepsStone\footsteps_stone2		7220
+	323815398	muza_full	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\11\{119E2204-8CEA-44AF-2954-1447158B56A3}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\muza_full\muza_full		1707805
 	417915509	footsteps_stone8	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\5B\{5B2718AA-4107-D1EB-4D77-0440A28E4C68}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\FootstepsStone\footsteps_stone8		7708
 	435420463	gate_open	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\55\{55F8E715-F13D-3D65-951A-3D7090D45476}.wem		\Actor-Mixer Hierarchy\Default Work Unit\gate_open\gate_open		50918
 	460116762	turn2	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\34\{341DD0B7-CDD5-1028-93BE-C35016B61E36}.wem		\Actor-Mixer Hierarchy\Default Work Unit\turn\turn2		7975

@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: afc7609a08b55247adb3816187c7ccc0
     GuidInternal: 
-    m_lastTime: -8584629173617217690
+    m_lastTime: -8584627991706406422
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: dbc399e6a2706f45be0e3f8ca9ea0572
     GuidInternal: 
-    m_lastTime: -8584628159420534156
+    m_lastTime: -8584627905022539155
     List:
     - name: Main
       guid: 622641001aa7634b8eb611e19ced35c9
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 86358358613fb4429ce6260e3fb724cb
     GuidInternal: 
-    m_lastTime: -8584628102050130355
+    m_lastTime: -8584627909201088693
     List:
     - name: Death
       guid: afd78030d5fbec46852a7a33b4403e1e
@@ -198,6 +198,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.76242036
       minDuration: 0.76242036
+    - name: Music
+      guid: d9dcc1d2f3fa1349acb8aff2761012f0
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 86358358613fb4429ce6260e3fb724cb
+      - ElementName: Music
+        ObjectType: 3
+        guid: d9dcc1d2f3fa1349acb8aff2761012f0
+      Path: Events\Default Work Unit\Music
+      maxAttenuation: 0
+      maxDuration: 84.8
+      minDuration: 84.8
     - name: shadow_in
       guid: 64585e64d2efe9439c03ddb92e097e77
       id: 4000322109
@@ -261,7 +278,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 1275ae8593a89348aba5be65d2d8702c
     GuidInternal: 
-    m_lastTime: -8584629994804526582
+    m_lastTime: -8584627991706581451
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -275,7 +292,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 17303c835a3415419061f3cc9ab348d4
     GuidInternal: 
-    m_lastTime: -8584629023869029802
+    m_lastTime: -8584628135990190372
     List:
     - name: Life
       guid: bffa18506ff8e94c9273a7e1080af0d8
@@ -421,7 +438,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584629994804358805
     List: []
-  ExpandedFileSystemItemIds: 01000000020000000300000004000000050000000600000007000000090000000b0000000c00000015000000160000001800000019000000
+  ExpandedFileSystemItemIds: 01000000020000000300000004000000050000000600000007000000090000000b0000000c000000150000001600000018000000190000001a000000
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
