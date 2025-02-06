@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{00412662-A71A-4B63-8EB6-11E19CED35C9}",
     "Language": "SFX",
-    "Hash": "{F7807004-474D-22BC-D599-2DAE68264D4A}",
+    "Hash": "{26F4BA0D-B391-AEB9-86CD-701559F24BCF}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -30,6 +30,14 @@
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps3.wav",
       "CachePath": "C1/{C1279509-0CDE-CCDE-8A29-5B5FA918B7FC}.wem"
+     },
+     {
+      "Id": "108722613",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "muza.wav",
+      "CachePath": "00/{00CC5605-2073-6EEA-9F75-224DF266EBD4}.wem"
      },
      {
       "Id": "127839435",
@@ -70,14 +78,6 @@
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps_stone2.wav",
       "CachePath": "AD/{AD509D6A-DE89-7FFB-99F1-BDCA3D5C9C5F}.wem"
-     },
-     {
-      "Id": "323815398",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "muza_full.wav",
-      "CachePath": "11/{119E2204-8CEA-44AF-2954-1447158B56A3}.wem"
      },
      {
       "Id": "417915509",
@@ -368,12 +368,10 @@
       "Name": "Music",
       "ObjectPath": "\\Events\\Default Work Unit\\Music",
       "GUID": "{D2C1DCD9-FAF3-4913-ACB8-AFF2761012F0}",
-      "DurationType": "OneShot",
-      "DurationMin": "84.8",
-      "DurationMax": "84.8",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "323815398"
+        "Id": "108722613"
        }
       ]
      },
@@ -454,6 +452,6 @@
     ]
    }
   ],
-  "FileHash": "{73BB6F1A-005C-130F-59D1-1ACF7AA52295}"
+  "FileHash": "{79731AB2-EE01-ACF0-6CE3-D0AD74F91C61}"
  }
 }

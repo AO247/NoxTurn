@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: dbc399e6a2706f45be0e3f8ca9ea0572
     GuidInternal: 
-    m_lastTime: -8584627905022539155
+    m_lastTime: -8584627867411628708
     List:
     - name: Main
       guid: 622641001aa7634b8eb611e19ced35c9
@@ -213,8 +213,8 @@ MonoBehaviour:
         guid: d9dcc1d2f3fa1349acb8aff2761012f0
       Path: Events\Default Work Unit\Music
       maxAttenuation: 0
-      maxDuration: 84.8
-      minDuration: 84.8
+      maxDuration: 0
+      minDuration: 0
     - name: shadow_in
       guid: 64585e64d2efe9439c03ddb92e097e77
       id: 4000322109

@@ -5,9 +5,10 @@
 			<ChildrenList>
 				<MusicPlaylistContainer Name="Music" ID="{B42C2E22-8A6E-4D96-8126-93DA4542EEFF}" ShortID="425816190">
 					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="86"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-10</Value>
+								<Value>-18</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
@@ -27,7 +28,7 @@
 							<Custom>
 								<MusicPlaylistItem Name="" ID="{E13AFAEB-D9E7-4D72-B4C8-16A8787A4B36}" ShortID="1052585335">
 									<PropertyList>
-										<Property Name="LoopCount" Type="int16">
+										<Property Name="LoopCount" Type="int16" Value="0">
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{C4F108F1-AEB0-430B-9E97-7C9DBB8D41E0}"/>
@@ -37,13 +38,14 @@
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 									</PropertyList>
 									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{0D489F03-280D-4C94-9EAC-59FA965AAE54}" ShortID="862482363">
+										<MusicPlaylistItem Name="" ID="{4CA46F54-E3E8-4896-986B-B48B52DDBE88}" ShortID="483818827">
 											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Segment">
-													<ObjectRef Name="muza_full" ID="{739640E7-03F1-4CE4-8EBC-17D190BDB16C}" WorkUnitID="{A6CD13DE-2F52-445F-9D90-A0CA7F504B82}"/>
+													<ObjectRef Name="muza" ID="{0FF70790-7967-4CDF-8FCA-27FB432DA2FB}" WorkUnitID="{A6CD13DE-2F52-445F-9D90-A0CA7F504B82}"/>
 												</Reference>
 											</ReferenceList>
 										</MusicPlaylistItem>
@@ -81,9 +83,16 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicSegment Name="muza_full" ID="{739640E7-03F1-4CE4-8EBC-17D190BDB16C}" ShortID="1067904018">
+						<MusicSegment Name="muza" ID="{0FF70790-7967-4CDF-8FCA-27FB432DA2FB}" ShortID="60787148">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="84800"/>
+								<Property Name="EndPosition" Type="Real64" Value="66976.7346938775"/>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{18F41B33-2624-46C8-9689-0DCB2555256E}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -94,14 +103,14 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="muza_full" ID="{0AA29A94-5243-4F2D-9E09-446D4AE11A1F}" ShortID="883822926">
+								<MusicTrack Name="muza" ID="{1F01D49D-2C90-4166-A875-3AF1E8F4D8F7}" ShortID="877047031">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9A60C7AF-B508-4752-ADB3-816187C7CCC0}"/>
 										</Reference>
 										<Reference Name="TransitionRoot">
 											<Custom>
-												<MusicTransition Name="Root" ID="{9ADE72A6-9B64-4824-BCF8-05B3F9801E2C}">
+												<MusicTransition Name="Root" ID="{6FCE1FC4-BFA0-4B0B-9406-FA6BE6F0151B}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -111,11 +120,11 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="muza_full" ID="{DE76D008-1F14-4F0C-8339-835A9D67728B}">
+										<AudioFileSource Name="muza" ID="{1FBD8AAD-D287-44FE-9A82-AF42588D1E22}">
 											<Language>SFX</Language>
-											<AudioFile>muza_full.wav</AudioFile>
+											<AudioFile>muza.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="323815398"/>
+												<MediaID ID="108722613"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -123,18 +132,18 @@
 										<ObjectList Name="Sequences">
 											<Reference>
 												<Local>
-													<MusicTrackSequence Name="" ID="{5171F373-9899-4813-B9D8-BA2E670A4AFF}">
+													<MusicTrackSequence Name="" ID="{A28D43DE-4ABE-4035-A42E-CBD79C87D4CC}">
 														<ObjectLists>
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="muza_full" ID="{17118102-33AB-4DFD-B76C-D16EE83A2B35}">
+																		<MusicClip Name="muza" ID="{06FFBA51-BBE5-4BFD-B5FB-A08FBFC28C41}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="84800"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="66976.7346938775"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="muza_full" ID="{DE76D008-1F14-4F0C-8339-835A9D67728B}"/>
+																			<AudioSourceRef Name="muza" ID="{1FBD8AAD-D287-44FE-9A82-AF42588D1E22}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
@@ -151,15 +160,15 @@
 								<ObjectList Name="Cues">
 									<Reference>
 										<Local>
-											<MusicCue Name="Entry Cue" ID="{3B4BA407-D56D-456C-92E7-819606721608}"/>
+											<MusicCue Name="Entry Cue" ID="{B000618B-63A4-4507-AA98-D3FDAED7A5BB}"/>
 										</Local>
 									</Reference>
 									<Reference>
 										<Local>
-											<MusicCue Name="Exit Cue" ID="{13B490CE-E2AD-46C8-98BA-4C759C585B3E}">
+											<MusicCue Name="Exit Cue" ID="{11DE7558-86FD-4097-9261-DA7D915E06E1}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="84800"/>
+													<Property Name="TimeMs" Type="Real64" Value="66976.7346938775"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
