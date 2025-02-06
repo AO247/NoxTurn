@@ -47,8 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotLeft: {fileID: 3411087046543851498, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
   rotRight: {fileID: 4439481503163755637, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
+  playerInput: {fileID: 0}
   player: {fileID: 0}
-  turnSpeed: 10
+  turnSpeed: 120
   smoothTime: 0.2
   offset: {x: 0, y: 0, z: 0}
 --- !u!1 &7922430309855839949

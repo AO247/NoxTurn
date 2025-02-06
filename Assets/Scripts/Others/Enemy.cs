@@ -99,35 +99,26 @@ public class Enemy : MonoBehaviour
     }
     private void PlayerDetection()
     {
-        Vector3 lightDirection = transform.position - playerTransform.position; //Kierunek œwiat³a od obiektu do punktu
-        float distanceToLight = lightDirection.magnitude; // D³ugoœæ wektora = odleg³oœæ
+        // Obliczamy wektor od gracza do przeciwnika
+        Vector3 lightDirection = transform.position - playerTransform.position;
+        float distanceToLight = lightDirection.magnitude;
 
-        if (distanceToLight <= light.range) // Sprawdzamy czy obiekt jest w zasiegu
+        if (distanceToLight <= light.range)
         {
-            float angle = Vector3.Angle(-light.transform.forward, lightDirection); // Obliczamy k¹t pomiêdzy kierunkiem œwiat³a a pozycj¹ obiektu
-            if (angle <= light.spotAngle / 2) // Sprawdzamy czy obiekt jest w sto¿ku œwiat³a
+            // Obliczamy k¹t miêdzy kierunkiem œwiat³a a wektorem od gracza do przeciwnika
+            float angle = Vector3.Angle(-light.transform.forward, lightDirection);
+            // Rozszerzamy obszar wykrywania, dodaj¹c margines (np. 10 stopni)
+            float detectionThreshold = (light.spotAngle / 2f) + 10f;
+            if (angle <= detectionThreshold)
             {
+                // Jeœli nie ma przeszkody miêdzy graczem a œwiat³em, ustawiamy cel agenta na pozycjê gracza
                 if (!Physics.Raycast(playerTransform.position, (light.transform.position - playerTransform.position), out RaycastHit hit, distanceToLight))
                 {
-                    Debug.DrawRay(playerTransform.position, (light.transform.position - playerTransform.position), Color.magenta);
                     nav.destination = playerTransform.position;
                     playerDetected = true;
-
-                }
-                else
-                {
-                    Debug.DrawRay(playerTransform.position, (light.transform.position - playerTransform.position), Color.black);
-
                 }
             }
-            else
-            {
-                Debug.DrawRay(light.transform.position, (playerTransform.position - light.transform.position), Color.white); // Obiekt poza sto¿kiem, kolor cyan
-            }
-        }
-        else
-        {
-            Debug.DrawRay(light.transform.position, (playerTransform.position - light.transform.position), Color.grey); // Obiekt poza zasiêgiem, kolor zolty
         }
     }
+
 }

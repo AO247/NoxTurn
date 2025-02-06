@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5006293520840419683}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2399639, y: 0.00886965, z: -0.0021925524, w: 0.9707388}
-  m_LocalPosition: {x: 0.959, y: 4.329, z: 3.101}
+  m_LocalPosition: {x: 0.96, y: 4.329, z: 3.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
