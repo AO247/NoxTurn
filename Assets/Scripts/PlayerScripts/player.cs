@@ -203,6 +203,7 @@ public class player : MonoBehaviour
                 _input = _input.normalized;
             }
                 speedAnimation = _input.magnitude;
+            animator.SetFloat("Speed", speedAnimation);
         }
     }
 
