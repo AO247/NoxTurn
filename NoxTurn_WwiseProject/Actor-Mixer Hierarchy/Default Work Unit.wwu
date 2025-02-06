@@ -1105,6 +1105,8 @@
 							<ChildrenList>
 								<AudioFileSource Name="stone_push" ID="{CD4346DF-2478-4C19-92B1-13E9487D8403}">
 									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.632386334917762"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.775568146597255"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 										<Property Name="TrimBegin" Type="Real64" Value="0.336678185402454"/>
 										<Property Name="TrimEnd" Type="Real64" Value="1.97404844862642"/>
@@ -1128,6 +1130,147 @@
 							</Reference>
 						</ObjectList>
 					</ObjectLists>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="portal" ID="{C8F070BC-54AE-4BCD-9B3E-252DF693ACB1}" ShortID="633527098">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{8AB56566-DBBD-4BDA-B942-995A7F0FEF4E}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="125"/>
+											<Property Name="Min" Type="Real64" Value="-125"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{98995E1B-CB31-4D21-9C6A-CC3C394C2FB5}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="2"/>
+											<Property Name="Min" Type="Real64" Value="-2"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="portal" ID="{A6FB091A-B426-4AD3-B16D-198F214D83CB}" WorkUnitID="{33D1E3E9-141F-4EEB-B36E-57844C04A978}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{572C7E4F-42F9-4A5D-8C06-3CD7ABBC2B5E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFXBus" ID="{FB48561A-B9E5-44FB-9383-A20D501EC201}" WorkUnitID="{9A60C7AF-B508-4752-ADB3-816187C7CCC0}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="portal2" ID="{FC6ED4C6-3819-441E-8A14-21FE41FF04F9}" ShortID="373518702">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{7FEEB44C-82B6-414C-931E-59A83ED30002}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="125"/>
+													<Property Name="Min" Type="Real64" Value="-125"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{53666B23-5C9D-446B-903B-ED932F41D65C}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{572C7E4F-42F9-4A5D-8C06-3CD7ABBC2B5E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9A60C7AF-B508-4752-ADB3-816187C7CCC0}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="portal2" ID="{0CC450A3-0E86-4B81-9449-E223A7C0DBA6}">
+									<Language>SFX</Language>
+									<AudioFile>portal2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="352063989"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="portal2" ID="{0CC450A3-0E86-4B81-9449-E223A7C0DBA6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="portal" ID="{7390CB4E-B6A2-4C32-80C8-4CC08589DA03}" ShortID="34072919">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AA65C5FD-6184-4B40-A8D5-6373EC60CAD2}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="125"/>
+													<Property Name="Min" Type="Real64" Value="-125"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{3BEC60BB-73DE-4D5E-A037-07BC099D51FF}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="2"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{572C7E4F-42F9-4A5D-8C06-3CD7ABBC2B5E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9A60C7AF-B508-4752-ADB3-816187C7CCC0}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="portal" ID="{E3109449-7B36-4EB0-80D0-59877DF819CB}">
+									<Language>SFX</Language>
+									<AudioFile>portal.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="175928273"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="portal" ID="{E3109449-7B36-4EB0-80D0-59877DF819CB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{87166474-450F-46AE-9829-93F065F9562E}"/>
+					</PositioningInfo>
 				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>

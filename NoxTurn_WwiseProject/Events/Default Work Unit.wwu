@@ -127,6 +127,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="portal" ID="{0FDBBE32-A948-407D-9977-5FD2EB5F9F24}">
+					<ChildrenList>
+						<Action Name="" ID="{CE1B6B5C-EECE-416D-A807-7FBC808DE0A3}" ShortID="781884488">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="portal" ID="{C8F070BC-54AE-4BCD-9B3E-252DF693ACB1}" WorkUnitID="{2722560C-B43B-483F-9C66-A31FDE31DE63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

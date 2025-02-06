@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4602e998d05bc284e94e48d54bac9e64, type: 3}
+  m_Name: 0FDBBE32-A948-407D-9977-5FD2EB5F9F24
+  m_EditorClassIdentifier: 
+  objectName: portal
+  id: 3118032615
+  guid: 0FDBBE32-A948-407D-9977-5FD2EB5F9F24
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

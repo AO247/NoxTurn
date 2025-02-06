@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{00412662-A71A-4B63-8EB6-11E19CED35C9}",
     "Language": "SFX",
-    "Hash": "{C855ECD5-CF00-45BD-6ED7-104A0E7D73F0}",
+    "Hash": "{2C9C8339-3BE8-147F-CD4C-E4D73B38D81C}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -56,6 +56,14 @@
       "CachePath": "5B/{5B1E2451-A65C-23E3-9EB3-0EFCF0668239}.wem"
      },
      {
+      "Id": "175928273",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "portal.wav",
+      "CachePath": "60/{60A745E5-BAD7-E62F-7514-7B57BD5DBA7E}.wem"
+     },
+     {
       "Id": "254817739",
       "Language": "SFX",
       "Streaming": "false",
@@ -78,6 +86,14 @@
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps_stone2.wav",
       "CachePath": "AD/{AD509D6A-DE89-7FFB-99F1-BDCA3D5C9C5F}.wem"
+     },
+     {
+      "Id": "352063989",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "portal2.wav",
+      "CachePath": "3B/{3B0187FF-6F42-542A-0B4C-EEE4EC652B81}.wem"
      },
      {
       "Id": "417915509",
@@ -125,7 +141,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "stone_push.wav",
-      "CachePath": "2B/{2BF16FCE-9A98-1391-F705-F31E89219E0E}.wem"
+      "CachePath": "77/{77A3683D-97EA-8CAF-DBE5-651F1E95476B}.wem"
      },
      {
       "Id": "937973895",
@@ -384,6 +400,22 @@
       ]
      },
      {
+      "Id": "3118032615",
+      "Name": "portal",
+      "ObjectPath": "\\Events\\Default Work Unit\\portal",
+      "GUID": "{0FDBBE32-A948-407D-9977-5FD2EB5F9F24}",
+      "MaxAttenuation": "50",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "175928273"
+       },
+       {
+        "Id": "352063989"
+       }
+      ]
+     },
+     {
       "Id": "4000322109",
       "Name": "shadow_in",
       "ObjectPath": "\\Events\\Default Work Unit\\shadow_in",
@@ -512,6 +544,6 @@
     ]
    }
   ],
-  "FileHash": "{9D4C93A4-13F0-E9A5-642C-2C3BC249BE35}"
+  "FileHash": "{C7EA375F-56D0-367A-4002-00046E7C6227}"
  }
 }

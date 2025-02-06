@@ -4,6 +4,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1589953441	gate_locked			\Default Work Unit\gate_locked	
 	2088474212	shadow_out			\Default Work Unit\shadow_out	
 	2385628198	Footsteps			\Default Work Unit\Footsteps	
+	3118032615	portal			\Default Work Unit\portal	
 	3137665780	turn			\Default Work Unit\turn	
 	3328279379	gate_open			\Default Work Unit\gate_open	
 	3328495488	Dying			\Default Work Unit\Dying	
@@ -45,15 +46,17 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	108722613	muza	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\00\{00CC5605-2073-6EEA-9F75-224DF266EBD4}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\muza\muza		1365994
 	127839435	footsteps5	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\F0\{F0C48AF9-AE2E-D9EE-25D7-58AE947E0913}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\FootstepsGrass\footsteps5		7353
 	172333205	footsteps6	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\5B\{5B1E2451-A65C-23E3-9EB3-0EFCF0668239}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\FootstepsGrass\footsteps6		7115
+	175928273	portal	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\60\{60A745E5-BAD7-E62F-7514-7B57BD5DBA7E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\portal\portal		20195
 	254817739	footsteps_stone3	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\EB\{EBECD530-3CB5-0C93-F2D1-330105321527}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\FootstepsStone\footsteps_stone3		6234
 	283228146	footsteps4	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\03\{03F44398-28A8-5D5A-DAC7-ABCE478A4EBA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\FootstepsGrass\footsteps4		8275
 	291255313	footsteps_stone2	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\AD\{AD509D6A-DE89-7FFB-99F1-BDCA3D5C9C5F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\FootstepsStone\footsteps_stone2		7220
+	352063989	portal2	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\3B\{3B0187FF-6F42-542A-0B4C-EEE4EC652B81}.wem		\Actor-Mixer Hierarchy\Default Work Unit\portal\portal2		20394
 	417915509	footsteps_stone8	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\5B\{5B2718AA-4107-D1EB-4D77-0440A28E4C68}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\FootstepsStone\footsteps_stone8		7708
 	435420463	gate_open	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\55\{55F8E715-F13D-3D65-951A-3D7090D45476}.wem		\Actor-Mixer Hierarchy\Default Work Unit\gate_open\gate_open		50918
 	460116762	turn2	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\34\{341DD0B7-CDD5-1028-93BE-C35016B61E36}.wem		\Actor-Mixer Hierarchy\Default Work Unit\turn\turn2		7975
 	525093954	turn	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\34\{34C5E4D9-3167-D5CD-53F6-DEB6158D6824}.wem		\Actor-Mixer Hierarchy\Default Work Unit\turn\turn		7580
 	666079680	footsteps_stone5	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\49\{4931DCD3-9DB4-2E5F-8A5F-D73073938316}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\FootstepsStone\footsteps_stone5		7569
-	867606725	stone_push	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\2B\{2BF16FCE-9A98-1391-F705-F31E89219E0E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\stone_push\stone_push		36696
+	867606725	stone_push	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\77\{77A3683D-97EA-8CAF-DBE5-651F1E95476B}.wem		\Actor-Mixer Hierarchy\Default Work Unit\stone_push\stone_push		34696
 	937973895	dyingNew	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\A5\{A5BD4708-A394-E84C-4F39-F8058EE9DBD7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dying\dyingNew		166059
 	945806139	gate_locked	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\5C\{5C97E838-DBBA-3D52-9FD7-D8B0792490FC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\gate_locked\gate_locked		18536
 	984025951	death	C:\Users\SMART FIX\Desktop\studia\Semestr V\podstawy gier\NoxTurn\NoxTurn_WwiseProject\.cache\57\{57248F69-5D80-F9AA-7B1A-340F3B6ED589}.wem		\Actor-Mixer Hierarchy\Default Work Unit\death\death		31940

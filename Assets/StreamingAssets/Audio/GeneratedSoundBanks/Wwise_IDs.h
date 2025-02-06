@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID GATE_OPEN = 3328279379U;
         static const AkUniqueID ITEM = 1222624712U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID PORTAL = 3118032615U;
         static const AkUniqueID SHADOW_IN = 4000322109U;
         static const AkUniqueID SHADOW_OUT = 2088474212U;
         static const AkUniqueID STONE_PUSH = 4127039931U;

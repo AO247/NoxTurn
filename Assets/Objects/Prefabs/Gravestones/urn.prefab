@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4410988594722983239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5957419475665008298}
+  - component: {fileID: 2636766435763126070}
+  m_Layer: 0
+  m_Name: UrnSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5957419475665008298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4410988594722983239}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.811625, y: -5.757693, z: -5.663517}
+  m_LocalScale: {x: 0.7692308, y: 0.7692308, z: 0.7692308}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 981684391958284422}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2636766435763126070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4410988594722983239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67cc4689cc7816d43b9ec2aefc7e8833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  urnEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2c258f6963a56164faa748a00c10990c, type: 2}
 --- !u!1001 &726519615269990253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78,7 +126,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 138e5fc684f0a0f4e8163bc5246773f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5957419475665008298}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 138e5fc684f0a0f4e8163bc5246773f0, type: 3}
       insertIndex: -1
@@ -182,3 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b5e73246d151c49b338000d973efc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  urnSound: {fileID: 2636766435763126070}
+--- !u!4 &981684391958284422 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 138e5fc684f0a0f4e8163bc5246773f0, type: 3}
+  m_PrefabInstance: {fileID: 726519615269990253}
+  m_PrefabAsset: {fileID: 0}
