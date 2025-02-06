@@ -292,7 +292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _object: {fileID: 0}
   _parkour: {fileID: 0}
-  _text: {fileID: 0}
+  _text: {fileID: 1464149090874539494}
+  interaction: {fileID: 1781555164194001046, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
 --- !u!65 &6466396673546991304
 BoxCollider:
   m_ObjectHideFlags: 0

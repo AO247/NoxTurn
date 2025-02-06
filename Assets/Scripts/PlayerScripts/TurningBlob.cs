@@ -13,6 +13,8 @@ public class TurningBlob : MonoBehaviour
     private Animator animator;
     private bool stopMoving = false;
     private bool stopMovingOne = false;
+    public InputActionReference worldLeft;
+    public InputActionReference worldRight;
 
     float time = 0.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -48,8 +50,7 @@ public class TurningBlob : MonoBehaviour
         }
         // Gdy wciskamy Q lub joystick przycisk, aktywujemy tryb blob,
         // blokuj¹c mo¿liwoœæ ruchu gracza (przyjmujemy, ¿e masz flagê canMove w skrypcie player)
-        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton4)
-        || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton5))
+        if (worldLeft.action.triggered || worldRight.action.triggered)
         {
             stopMovingOne = true;
             _player.canMove = false;  // blokujemy ruch

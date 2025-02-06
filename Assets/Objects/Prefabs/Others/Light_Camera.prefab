@@ -797,7 +797,8 @@ MonoBehaviour:
   player: {fileID: 0}
   globalSound: {fileID: 6289140684252595613}
   turnSpeed: 150
-  worldLeft: {fileID: 0}
+  worldLeft: {fileID: 3966361397335212643, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
+  worldRight: {fileID: 8911859294516746530, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
 --- !u!1 &8595278937257450945
 GameObject:
   m_ObjectHideFlags: 0

@@ -259,6 +259,8 @@ MonoBehaviour:
   inventory: {fileID: 0}
   leftGate: {fileID: 0}
   rightGate: {fileID: 0}
+  direction: 1
   text: {fileID: 5063898409693762974}
   objectSound: {fileID: 0}
+  interaction: {fileID: 1781555164194001046, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
   turnSpeed: 50
