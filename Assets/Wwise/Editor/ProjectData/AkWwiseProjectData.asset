@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: afc7609a08b55247adb3816187c7ccc0
     GuidInternal: 
-    m_lastTime: -8584627991706406422
+    m_lastTime: -8584627654111722259
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +54,40 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: MusicBus
+      guid: 1f1bb02659bd8545a24cc57ed7b4afc5
+      id: 2886307548
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: afc7609a08b55247adb3816187c7ccc0
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: MusicBus
+        ObjectType: 2
+        guid: 1f1bb02659bd8545a24cc57ed7b4afc5
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MusicBus
+    - name: SFXBus
+      guid: 1a5648fbe5b9fb449383a20d501ec201
+      id: 3803850708
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: afc7609a08b55247adb3816187c7ccc0
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFXBus
+        ObjectType: 2
+        guid: 1a5648fbe5b9fb449383a20d501ec201
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFXBus
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: dbc399e6a2706f45be0e3f8ca9ea0572
     GuidInternal: 
-    m_lastTime: -8584627867411628708
+    m_lastTime: -8584627653388945132
     List:
     - name: Main
       guid: 622641001aa7634b8eb611e19ced35c9
@@ -278,8 +312,50 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 1275ae8593a89348aba5be65d2d8702c
     GuidInternal: 
-    m_lastTime: -8584627991706581451
-    List: []
+    m_lastTime: -8584627654559324127
+    List:
+    - name: MasterVolume
+      guid: f48b3842560b724f94108aa3715bb38c
+      id: 2918011349
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1275ae8593a89348aba5be65d2d8702c
+      - ElementName: MasterVolume
+        ObjectType: 13
+        guid: f48b3842560b724f94108aa3715bb38c
+      Path: Game Parameters\Default Work Unit\MasterVolume
+    - name: MusicVolume
+      guid: 8072e8687bbf8746adab74d80e7ac328
+      id: 2346531308
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1275ae8593a89348aba5be65d2d8702c
+      - ElementName: MusicVolume
+        ObjectType: 13
+        guid: 8072e8687bbf8746adab74d80e7ac328
+      Path: Game Parameters\Default Work Unit\MusicVolume
+    - name: SFXVolume
+      guid: 38118bb28e345440afbfb3064da60eca
+      id: 988953028
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1275ae8593a89348aba5be65d2d8702c
+      - ElementName: SFXVolume
+        ObjectType: 13
+        guid: 38118bb28e345440afbfb3064da60eca
+      Path: Game Parameters\Default Work Unit\SFXVolume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -438,7 +514,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584629994804358805
     List: []
-  ExpandedFileSystemItemIds: 01000000020000000300000004000000050000000600000007000000090000000b0000000c000000150000001600000018000000190000001a000000
+  ExpandedFileSystemItemIds: 01000000020000000300000004000000050000000600000007000000090000000b0000000c000000150000001600000018000000190000001a0000001c0000001d000000
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

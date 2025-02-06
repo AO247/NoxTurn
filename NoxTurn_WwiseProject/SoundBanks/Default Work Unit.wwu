@@ -5,9 +5,12 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{00412662-A71A-4B63-8EB6-11E19CED35C9}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9A60C7AF-B508-4752-ADB3-816187C7CCC0}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="item" ID="{52CD7ED0-1E07-4364-BE3C-24209A336697}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="shadow_in" ID="{645E5864-EFD2-43E9-9C03-DDB92E097E77}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="shadow_out" ID="{AB20203C-01DB-4410-88B1-45790359A46F}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SFXBus" ID="{FB48561A-B9E5-44FB-9383-A20D501EC201}" WorkUnitID="{9A60C7AF-B508-4752-ADB3-816187C7CCC0}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MusicBus" ID="{26B01B1F-BD59-4585-A24C-C57ED7B4AFC5}" WorkUnitID="{9A60C7AF-B508-4752-ADB3-816187C7CCC0}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Death" ID="{3080D7AF-FBD5-46EC-852A-7A33B4403E1E}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="gate_locked" ID="{15E880ED-5753-47EE-9445-5DF6913BF320}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music" ID="{D2C1DCD9-FAF3-4913-ACB8-AFF2761012F0}" WorkUnitID="{58833586-3F61-42B4-9CE6-260E3FB724CB}" Origin="Manual" Filter="7"/>

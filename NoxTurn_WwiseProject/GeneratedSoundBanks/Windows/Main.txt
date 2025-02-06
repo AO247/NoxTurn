@@ -25,6 +25,16 @@ State	ID	Name	State Group			Notes
 	938058686	Safe	Life			
 	4174463524	Danger	Life			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	988953028	SFXVolume			\Default Work Unit\SFXVolume	
+	2346531308	MusicVolume			\Default Work Unit\MusicVolume	
+	2918011349	MasterVolume			\Default Work Unit\MasterVolume	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	2886307548	MusicBus			\Default Work Unit\Master Audio Bus\MusicBus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3803850708	SFXBus			\Default Work Unit\Master Audio Bus\SFXBus	
+
 Effect plug-ins	ID	Name	Type				Notes
 	2180422931	One_Tap_Quarter_Second	Wwise Delay			
 

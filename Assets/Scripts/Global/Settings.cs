@@ -91,18 +91,19 @@ public class Settings : MonoBehaviour
 
     public void SetMaster(float volume)
     {
-        Debug.Log(audioMixer.GetFloat("Volume", out volume));
-        audioMixer.SetFloat("Volume", volume);
+        /*        Debug.Log(audioMixer.GetFloat("Volume", out volume));
+                audioMixer.SetFloat("Volume", volume);*/
+        AkUnitySoundEngine.SetRTPCValue("MasterVolume", volume);
     }
 
     public void SetMusic(float volume)
     {
-        audioMixer.SetFloat("Music", volume);
+        AkUnitySoundEngine.SetRTPCValue("MusicVolume", volume);
     }
 
     public void SetSFX(float volume)
     {
-        audioMixer.SetFloat("SFX", volume);
+        AkUnitySoundEngine.SetRTPCValue("SFXVolume", volume);
     }
 
     public void SetFullScreen(bool isFullScreen)
