@@ -15,9 +15,7 @@ public class PickUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (isPickedUp) return; // Jeœli przedmiot zosta³ ju¿ podniesiony, ignorujemy
-        itemSound.PlayItem();
-
+        if (isPickedUp) return;
         if (other.CompareTag("Player"))
         {
             for (int i = 0; i < inventory.slots.Length; i++)
@@ -26,6 +24,7 @@ public class PickUp : MonoBehaviour
                 {
                     if(!isPickedUp)
                     {
+                        itemSound.PlayItem();
                         isPickedUp = true; // Oznacz przedmiot jako podniesiony
                         inventory.isFull[i] = true;
                         Instantiate(item, inventory.slots[i].transform, false);
