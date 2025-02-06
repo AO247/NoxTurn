@@ -20,7 +20,7 @@ public class player : MonoBehaviour
     [SerializeField] private PlayerSound playerSound;
     public Animator animator;
     private float _time = 1;
-    private Vector3 _input;
+    public Vector3 _input;
     //private Renderer _renderer;
     private Color _defaultColor;
     private bool _isGrounded = true;
@@ -49,7 +49,7 @@ public class player : MonoBehaviour
     public bool isMoving = false;
     public bool isPaused = false;
     public bool isStanding = false;
-
+    public bool canMove = true;
 
 
     private void Awake()
@@ -213,6 +213,7 @@ public class player : MonoBehaviour
 
     private void Move()
     {
+        if (!canMove) return;
         Vector3 moveDirection = GetCameraRelativeInput();
         Vector3 velocity = moveDirection.normalized * _input.magnitude * _speed;
         _rb.linearVelocity = new Vector3(velocity.x, _rb.linearVelocity.y, velocity.z);
