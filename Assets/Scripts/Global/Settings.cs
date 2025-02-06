@@ -61,7 +61,7 @@ public class Settings : MonoBehaviour
     }
     private void Start()
     {
-        
+        Select();
     }
 
     private void Update()

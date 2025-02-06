@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -47,6 +48,11 @@ public class PauseMenu : MonoBehaviour
         settingsUI.SetActive(true);
         pauseMenuUI.SetActive(false);
         settingsUI.GetComponent<Settings>().Select();
+    }
+    public void MainMenu()
+    {
+        TogglePause();
+        SceneManager.LoadScene(0);
     }
     public void Select()
     {

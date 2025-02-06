@@ -38,7 +38,6 @@ public class MainMenu : MonoBehaviour
     private void Update()
     {
         float rot = island.transform.rotation.eulerAngles.y;
-        Debug.Log(rot);
         if (rot == 90) //PLAY
         {
             selectedOption = 0;
@@ -70,11 +69,13 @@ public class MainMenu : MonoBehaviour
         {
             QuitSign.GetComponent<MeshRenderer>().material = Dark;
         }
-        //else if (rot == 270)
-        //{
-        //    selectedOption = 3;
-        //    Debug.Log("270");
-        //}
+        if (rot == 0) //QUIT
+        {
+            selectedOption = 3;
+        }
+        else
+        {
+        }
 
         if (interaction.action.triggered && !Floor.isPaused)
         {
