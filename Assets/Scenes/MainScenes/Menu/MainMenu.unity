@@ -631,6 +631,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6008687647016849915, guid: 7bf97f7b4d63b184c8a254b0b8f1660e, type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 1529088810}
+    - target: {fileID: 6008687647016849915, guid: 7bf97f7b4d63b184c8a254b0b8f1660e, type: 3}
+      propertyPath: pauseMenuUI
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6138151756721335668, guid: 7bf97f7b4d63b184c8a254b0b8f1660e, type: 3}
       propertyPath: m_IsActive
       value: 0
