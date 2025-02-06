@@ -13,6 +13,9 @@ TagManager:
   - Inventory
   - Key
   - Enemy
+  - MasterSlider
+  - MusicSlider
+  - SFXSlider
   layers:
   - Default
   - TransparentFX

@@ -116,6 +116,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="stone_push" ID="{1A5872BE-B00E-4173-84C2-24F4A62BE476}">
+					<ChildrenList>
+						<Action Name="" ID="{A7B7F747-8253-4E7F-9F47-917B26E068FE}" ShortID="661029709">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="stone_push" ID="{D2B0166D-266F-4B0F-A4FB-D4C7920FEDD3}" WorkUnitID="{2722560C-B43B-483F-9C66-A31FDE31DE63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

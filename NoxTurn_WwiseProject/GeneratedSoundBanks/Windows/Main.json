@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{00412662-A71A-4B63-8EB6-11E19CED35C9}",
     "Language": "SFX",
-    "Hash": "{4C9461ED-747D-E004-EF17-C8D373950106}",
+    "Hash": "{C855ECD5-CF00-45BD-6ED7-104A0E7D73F0}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -118,6 +118,14 @@
       "Location": "Memory",
       "ShortName": "footsteps\\footsteps_stone5.wav",
       "CachePath": "49/{4931DCD3-9DB4-2E5F-8A5F-D73073938316}.wem"
+     },
+     {
+      "Id": "867606725",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "stone_push.wav",
+      "CachePath": "2B/{2BF16FCE-9A98-1391-F705-F31E89219E0E}.wem"
      },
      {
       "Id": "937973895",
@@ -404,6 +412,18 @@
       ]
      },
      {
+      "Id": "4127039931",
+      "Name": "stone_push",
+      "ObjectPath": "\\Events\\Default Work Unit\\stone_push",
+      "GUID": "{1A5872BE-B00E-4173-84C2-24F4A62BE476}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "867606725"
+       }
+      ]
+     },
+     {
       "Id": "3137665780",
       "Name": "turn",
       "ObjectPath": "\\Events\\Default Work Unit\\turn",
@@ -492,6 +512,6 @@
     ]
    }
   ],
-  "FileHash": "{F20ABCC5-278E-7498-764D-28AC132F45B7}"
+  "FileHash": "{9D4C93A4-13F0-E9A5-642C-2C3BC249BE35}"
  }
 }
