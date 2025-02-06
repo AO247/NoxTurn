@@ -88,5 +88,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073877e1e0097f4499e6fa91cc27a519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDescription: To jest KLUCZ. WOW
+  itemDescription: The KEY ??? Hmmm...
   name: Key

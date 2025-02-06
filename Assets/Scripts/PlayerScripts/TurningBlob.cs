@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.HighDefinition;
 
 public class TurningBlob : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class TurningBlob : MonoBehaviour
     private bool stopMovingOne = false;
     public InputActionReference worldLeft;
     public InputActionReference worldRight;
-
+    public DecalProjector projector;
+    Vector3 originalSize;
     float time = 0.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,6 +26,7 @@ public class TurningBlob : MonoBehaviour
         _renderer = GetComponent<Renderer>();
         _player = GetComponent<player>();
         animator = GetComponent<Animator>();
+        originalSize = projector.size;
     }
 
     // Update is called once per frame
@@ -36,6 +39,8 @@ public class TurningBlob : MonoBehaviour
             {
                 stopMovingOne = false;
                 hair.SetActive(true);
+                projector.size = new Vector3(originalSize.x + 0.8f, originalSize.y + 0.8f, originalSize.z);
+
                 time = 0.0f;
             }
         }
@@ -72,6 +77,7 @@ public class TurningBlob : MonoBehaviour
                 Debug.Log("Blob");
                 animator.SetBool("isJumpIn", false);
                 hair.SetActive(false);
+                projector.size = new Vector3(originalSize.x, originalSize.y, originalSize.z);
                 _blob = false;
                 stopMoving = true;
 
