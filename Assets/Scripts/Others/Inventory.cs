@@ -195,7 +195,7 @@ public class Inventory : MonoBehaviour
         }
         itemDescription.SetActive(itemDescriptionActive);
     }
-    private void GetItemDescription()
+    public void GetItemDescription()
     {
         itemDescription.transform.position = slots[selectedSlot].transform.position;
         itemDescription.GetComponent<TextMeshProUGUI>().SetText(slots[selectedSlot].GetComponent<ItemDescription>().itemDescription);

@@ -42,10 +42,16 @@ EditorBuildSettings:
     path: Assets/Scenes/TestingScenes/Filip/F 10.unity
     guid: 5dd3a2ce40e2a9e4095386a8ad7cab52
   - enabled: 1
-    path: Assets/Scenes/TestingScenes/Filip/F 10,5.unity
-    guid: b669725d00d6d44478a679bf122f1612
+    path: Assets/Scenes/TestingScenes/Filip/F 11.unity
+    guid: 9bb496cbfe504944fb96b223038c012b
   - enabled: 1
     path: Assets/Scenes/TestingScenes/Filip/F 12.unity
+    guid: b669725d00d6d44478a679bf122f1612
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 13.unity
+    guid: e12220ba385ea6441ac3ff7a17fa7c05
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/Filip/F 14.unity
     guid: 459365140d83ef24ca70ddcdefa69736
   - enabled: 0
     path: Assets/Scenes/TestingScenes/Adam/A.unity

@@ -355,7 +355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9253c62a154f91d43a9f4563f72428f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9253c62a154f91d43a9f4563f72428f7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1014,6 +1014,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 60d44d7d2006eac43b4467bc1af63793, type: 3}
   m_PrefabInstance: {fileID: 342591695}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &342591697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 60d44d7d2006eac43b4467bc1af63793, type: 3}
+  m_PrefabInstance: {fileID: 342591695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &343706204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1426,7 +1431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a2c16dbb8562cb4b9edf32f99704c55, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a2c16dbb8562cb4b9edf32f99704c55, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2299,7 +2304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 35800391b827a6a47be2e8d64aecc713, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 35800391b827a6a47be2e8d64aecc713, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4396,7 +4401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 82b4c89b7987bc14aafe57ada6393a52, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 82b4c89b7987bc14aafe57ada6393a52, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4564,6 +4569,7 @@ MonoBehaviour:
   SettingsSign: {fileID: 646672802}
   QuitSign: {fileID: 1732960853}
   ContinueSign: {fileID: 1758264407}
+  NoxTurn: {fileID: 342591697}
   masterSlider: {fileID: 471422449}
   musicSlider: {fileID: 111144997}
   sfxSlider: {fileID: 1626051328}

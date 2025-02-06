@@ -49,7 +49,7 @@ public class LvlChange : MonoBehaviour
             yield return new WaitForSeconds(2); // Poczekaj na zakoñczenie fade-in
         }
         SaveData saveData = new SaveData(); // Utwórz nowy obiekt SaveData
-        if (SceneManager.GetActiveScene().buildIndex + 1 < 13)
+        if (SceneManager.GetActiveScene().buildIndex + 1 < 15)
         {
             saveData.lvlNumber = SceneManager.GetActiveScene().buildIndex + 1;
             saveData.masterVolume = masterSlider.value;

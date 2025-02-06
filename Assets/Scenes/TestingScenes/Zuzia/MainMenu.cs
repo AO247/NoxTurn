@@ -25,6 +25,7 @@ public class MainMenu : MonoBehaviour
     public GameObject SettingsSign;
     public GameObject QuitSign;
     public GameObject ContinueSign;
+    public GameObject NoxTurn;
 
     public Slider masterSlider;
     public Slider musicSlider;
@@ -79,11 +80,14 @@ public class MainMenu : MonoBehaviour
         {
             selectedOption = 3;
             ContinueSign.GetComponent<MeshRenderer>().material = Glow;
+            NoxTurn.GetComponent<MeshRenderer>().material = Glow;
 
         }
         else
         {
             ContinueSign.GetComponent<MeshRenderer>().material = Dark;
+            NoxTurn.GetComponent<MeshRenderer>().material = Dark;
+
 
         }
 
