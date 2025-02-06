@@ -39,24 +39,20 @@ public class Inventory : MonoBehaviour
     {
         originalPosition = new Vector3(0.036f * Screen.width, Screen.height/2, 0.0f);
         leftPosition = new Vector3(originalPosition.x - (0.0677f * Screen.width), originalPosition.y, 0.0f);
-        //originalPosition = inventory.transform.position;
-        //leftPosition = new Vector3(originalPosition.x - 130, originalPosition.y, originalPosition.z);
         targetPosition = leftPosition; // Startowa pozycja
         inventory.transform.position = leftPosition;
         slotHighlight();
     }
 
     void updatePosition()
-    { 
+    {
         originalPosition = new Vector3(0.036f * Screen.width, Screen.height / 2, 0.0f);
         leftPosition = new Vector3(originalPosition.x - (0.0677f * Screen.width), originalPosition.y, 0.0f);
+        targetPosition = leftPosition; // Startowa pozycja
+        inventory.transform.position = leftPosition;
+        isClosed = true;
         notification = false;
         moving = false;
-        if (isClosed)
-            targetPosition = leftPosition;
-        else
-            targetPosition = originalPosition;
-        isClosed = !isClosed;
         itemDescriptionVisibility(false);
 
         needUpadate = false;

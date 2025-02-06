@@ -12,7 +12,7 @@ public class KeyInteraction : MonoBehaviour
     [SerializeField] GameObject text;
     [SerializeField] private ObjectSound objectSound;
     public InputActionReference interaction;
-
+    public bool isNormalGate = false;
     private bool enter = false;
     private bool opened = false;
     private bool door = false;
@@ -24,9 +24,15 @@ public class KeyInteraction : MonoBehaviour
     void Start()
     {
         targetRotationRightGate = Quaternion.Euler(0, direction * -75f, 0);
-        targetRotationLeftGate = Quaternion.Euler(0, direction * -75f, 0);
+        if (isNormalGate)
+        {
+            targetRotationLeftGate = Quaternion.Euler(0, -direction * -75f, 0);
+        }
+        else
+        {
+            targetRotationLeftGate = Quaternion.Euler(0, direction * -75f, 0);
+        }
     }
-
     // Update is called once per frame
     void Update()
     {
