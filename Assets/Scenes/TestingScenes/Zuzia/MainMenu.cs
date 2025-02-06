@@ -24,6 +24,7 @@ public class MainMenu : MonoBehaviour
     public GameObject PlaySign;
     public GameObject SettingsSign;
     public GameObject QuitSign;
+    public GameObject ContinueSign;
 
     private void Awake()
     {
@@ -72,9 +73,13 @@ public class MainMenu : MonoBehaviour
         if (rot == 0) //QUIT
         {
             selectedOption = 3;
+            ContinueSign.GetComponent<MeshRenderer>().material = Glow;
+
         }
         else
         {
+            ContinueSign.GetComponent<MeshRenderer>().material = Dark;
+
         }
 
         if (interaction.action.triggered && !Floor.isPaused)
