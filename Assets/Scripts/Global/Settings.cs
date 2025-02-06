@@ -178,6 +178,8 @@ public class Settings : MonoBehaviour
         }
         else
         {
+            SceneManager.LoadScene(0);
+            settingsUI.SetActive(false);
             Floor.isPaused = false;
         }
     }
