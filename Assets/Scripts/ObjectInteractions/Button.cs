@@ -50,7 +50,7 @@ public class Button : MonoBehaviour
                 _timer -= Time.deltaTime;
             } else
             {   
-                _renderer.material.color = Color.blue;
+                _renderer.material.color = Color.gray;
                 _pressed = false;
                 _timer = 1;
             }
