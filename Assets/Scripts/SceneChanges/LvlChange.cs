@@ -32,11 +32,20 @@ public class LvlChange : MonoBehaviour
             yield return new WaitForSeconds(2); // Poczekaj na zakoñczenie fade-in
         }
         SaveData saveData = new SaveData(); // Utwórz nowy obiekt SaveData
-        saveData.lvlNumber = SceneManager.GetActiveScene().buildIndex + 1;
-        SaveManager.SaveGameState(saveData);
+        if (SceneManager.GetActiveScene().buildIndex + 1 < 13)
+        {
+            saveData.lvlNumber = SceneManager.GetActiveScene().buildIndex + 1;
+            SaveManager.SaveGameState(saveData);
 
-        // Za³aduj nastêpn¹ scenê
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            // Za³aduj nastêpn¹ scenê
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+
+        }
 
     }
 }

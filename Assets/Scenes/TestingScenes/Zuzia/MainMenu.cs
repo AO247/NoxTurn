@@ -131,6 +131,7 @@ public class MainMenu : MonoBehaviour
     {
         Floor.isPaused = true;
         settingsUI.SetActive(true);
+        settingsUI.GetComponent<Settings>().Select();
         //pauseMenuUI.SetActive(false);
         //settingsUI.GetComponent<Settings>().Select();
     }

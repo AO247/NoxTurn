@@ -132,6 +132,19 @@ public class Settings : MonoBehaviour
     {
         controlsSettings.SetActive(true);
         graphicsSettings.SetActive(false);
+
+        Navigation nav = graphicsButton.navigation;
+        nav.selectOnDown = backButton;
+        graphicsButton.navigation = nav;
+
+        nav = controlsButton.navigation;
+        nav.selectOnDown = backButton;
+        controlsButton.navigation = nav;
+
+        nav = backButton.navigation;
+        nav.selectOnUp = controlsButton;
+        backButton.navigation = nav;
+
     }
 
     public void Save()
