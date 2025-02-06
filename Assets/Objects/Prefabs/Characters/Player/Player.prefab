@@ -7464,6 +7464,7 @@ MonoBehaviour:
   dyingParticle: {fileID: 7896515369867749537}
   playerSound: {fileID: 3453698422634350770}
   animator: {fileID: 3224285328864062816}
+  _input: {x: 0, y: 0, z: 0}
   shadowExposure: 0
   armature: {fileID: 2904097794657777333}
   normalScale: 100
@@ -7475,6 +7476,7 @@ MonoBehaviour:
   isMoving: 0
   isPaused: 0
   isStanding: 0
+  canMove: 1
 --- !u!114 &1504755166482055176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16292,6 +16294,10 @@ PrefabInstance:
     - target: {fileID: 8649333054949900638, guid: 6f189459360ae40478e998612ffdd95c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649333054949900638, guid: 6f189459360ae40478e998612ffdd95c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8650739761096291537, guid: 6f189459360ae40478e998612ffdd95c, type: 3}
       propertyPath: m_Layer

@@ -31,7 +31,7 @@ public class player : MonoBehaviour
     public float normalScale = 100f; // Normalna wielkość
     public float minScale = 0.1f; // Minimalna wielkość
     public float scalingSpeed = 1f; // Szybkość skalowania
-
+    
 
     private Color originalColor = Color.black; 
     private Color targetColor = Color.white;
@@ -51,6 +51,7 @@ public class player : MonoBehaviour
     public bool isStanding = false;
     public bool canMove = true;
 
+    public float speedAnimation;
 
     private void Awake()
     {
@@ -77,6 +78,7 @@ public class player : MonoBehaviour
         GatherInput();
         Look();
         isInShadows();
+        Debug.Log("SpeedAnimation: " + speedAnimation);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -197,6 +199,11 @@ public class player : MonoBehaviour
                 //Jump();
             }
             _input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+            if((_input.x == 1.0f || _input.x == -1.0f) && (_input.z == 1.0f || _input.z == -1.0f))
+            {
+                _input = _input.normalized;
+            }
+                speedAnimation = _input.magnitude;
         }
     }
 

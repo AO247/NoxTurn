@@ -27,13 +27,13 @@ public class TurningBlob : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hair.SetActive(_blob);
         if (stopMovingOne)
         {
             time += Time.deltaTime;
             if (time > 0.6f)
             {
                 stopMovingOne = false;
+                hair.SetActive(true);
                 time = 0.0f;
             }
         }
@@ -70,6 +70,7 @@ public class TurningBlob : MonoBehaviour
             {
                 Debug.Log("Blob");
                 animator.SetBool("isJumpIn", false);
+                hair.SetActive(false);
                 _blob = false;
                 stopMoving = true;
 
